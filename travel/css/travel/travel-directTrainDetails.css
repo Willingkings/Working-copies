@@ -1,0 +1,273 @@
+.specialLineDetails {
+    background: #f1f0f6;
+    overflow: hidden;
+}
+
+.detailsHeader {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 17.5rem;
+    padding-bottom: 3.5rem;
+    overflow: hidden;
+}
+.detailsHeader > .lozd{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18.76rem;
+    height: 7.5rem;
+}
+.headerDetails {
+    background: #fff;
+    padding: 0.7rem 0.5rem 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    right: 0;
+}
+
+.detailsTitle {
+    font-size: 0.85rem;
+    font-weight: 600;
+    width: 88%;
+}
+
+.detailsPrice {
+    display: inline-block;
+    padding-left: 15px;
+}
+.detailsPrice > span {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #FF6E00;
+}
+.detailsPrice > span i {
+    font-weight: bold;
+    font-size: 60%;
+    font-style:normal;
+    color: #FF6E00;
+}
+
+.detailsLab {
+    font-size: 0.6rem;
+    padding: 5px 0;
+    border-bottom: 1px dashed #f1f0f6;
+    overflow: hidden;
+}
+
+.detailsLab > span {
+    color: #7d7d7d;
+}
+
+.detailsLab > span:first-child {
+    color: #ff3a58;
+}
+
+.detailsLab > span > i {
+    color: #d5d5d5;
+}
+
+.detailsDes {
+    font-size: 0.6rem;
+    color: #70D0A2;
+    padding-top: 5px;
+}
+
+.detailsCont {
+    min-height: 20rem;
+    background: #fff;
+    padding: 0.75rem 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.contTab {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contTab span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 .8rem 0.3rem;
+}
+
+.contTab span.active {
+    color: #fa4b58;
+    border-bottom: 2px solid #fa4b58;
+}
+
+.lineService {
+    padding-top: 0.75rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
+}
+
+.lineServiceTit {
+    display: block;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.lineServiceTit i {
+    float: left;
+    width: 1.5rem;
+    height: 1rem;
+    margin: 0 0.5rem;
+}
+
+.lineList {
+    overflow: hidden;
+}
+
+.lineList li {
+    position: relative;
+    padding-left: 30px;
+}
+
+.lineList li:before {
+    position: absolute;
+    content: '';
+    top: 0.9rem;
+    left: 14px;
+    width: 2px;
+    height: 88%;
+    border-left: 2px solid #ed505b;
+    z-index: 66;
+}
+
+.lineList li:last-child:before {
+    display: none;
+}
+
+.lineList li i {
+    position: absolute;
+    top: 0.2rem;
+    left: 9px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #ed505b;
+    border-radius: 100%;
+    box-sizing: border-box;
+    z-index: 99;
+}
+
+.lineList li div {
+    overflow: hidden;
+}
+
+.lineList li div span {
+    display: block;
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+
+.lineList li div span a {
+    float: right;
+    color: #fd515d;
+    padding-right: 1rem;
+}
+
+.lineList li div p {
+    font-size: 0.6rem;
+    color: #909090;
+    padding: 0.4rem 0;
+}
+
+.itemImg {
+    position: relative;
+    height: 5rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.itemImg span {
+    float: left;
+    width: 6rem;
+    height: 4.5rem;
+    margin-right: 0.5rem;
+}
+.itemImg > span > div{
+    position: absolute;
+    width: 7rem;
+    height: 4rem;
+    left: 0;
+    top: 0;
+}
+.detailsFooter {
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    overflow: hidden;
+    z-index: 555;
+}
+.detailsFooter div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #dedede;
+    padding: 0.2rem 0;
+}
+.detailsFooter div span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    width: 100%;
+    height: 100%;
+}
+.detailsFooter div span b {
+    margin-left: 0.3rem;
+    color: #9B9B9B;
+}
+.detailsFooter div i {
+    width: 2%;
+    height: 100%;
+    border-left: 1px solid #dedede;
+}
+.detailsFooter div span img {
+    display: inline-block;
+    width: 0.9rem;
+    height: 0.9rem;
+    margin: 2px;
+}
+.detailsFooter > span {
+    display: block;
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    background: #ec5a5a;
+    padding: 0.7rem;
+}
+#bookingInform, #productFeature{
+    padding-top: .75rem;
+}
+.MsoNormal span,.MsoNormal span span{
+    line-height: 1.2rem;
+    color: #9A9A9A !important;
+    font-size: .7rem !important;
+}
+
+
+
+
+
+
+
+

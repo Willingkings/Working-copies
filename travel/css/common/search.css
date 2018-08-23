@@ -1,0 +1,174 @@
+.searchCont {
+    height: 100%;
+    background: #ffffff;
+    padding-top: 1rem;
+    position: relative;
+}
+.searchLoading {
+    position: absolute;
+    top: 3.2rem;
+    bottom: 0;
+    width: 100%;
+    background: #ffffff;
+}
+.searchLoading span {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -16px;
+    margin-top: -16px;
+}
+.fuzzySearch {
+    height: 2rem;
+    line-height: 1.4rem;
+    position: relative;
+    padding: 0 0.75rem 0.5rem;
+    overflow: hidden;
+}
+.fuzzySearch span {
+    float: left;
+    width: 80%;
+    border-radius: 1rem;
+    color: #abacb1;
+    background: #e9e9f0;
+    padding: 0 15px;
+}
+.fuzzySearch span i {
+    font-size: 0.6rem;
+    margin-right: 0.1rem;
+}
+.fuzzySearch span input {
+    width: 82%;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.7rem;
+    background: #e9e9f0;
+}
+.fuzzySearch a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    color: red;
+}
+.searchResults {
+    padding: 0.5rem 0.75rem;
+}
+
+.searchResults p {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+.searchResults p > img {
+    display: inline-block;
+    width: 1rem;
+    margin-right: 0.4rem;
+}
+.searchResults span {
+    display: block;
+    font-size: 0.7rem;
+    padding: 0.5rem 0 0.25rem;
+    border-bottom: 1px solid #cccccc;
+}
+.searchResults ul {
+    display: flex;
+    flex-wrap: wrap;
+    color: #333333;
+    font-size: 0.6rem;
+    padding: 0.25rem 1.5rem;
+    margin-bottom: 0.7rem;
+    border-bottom: 0.05rem solid #cccccc;
+}
+
+.searchResults div:last-of-type ul {
+    border-bottom: none;
+}
+
+.searchResults ul li{
+    display: block;
+    line-height: 1rem;
+    padding: 0.3rem 0.5rem;
+    background: #e9e9f0;
+    margin-bottom: 0.3rem;
+    margin-right: 0.5rem;
+    text-align: center;
+}
+.searchTopic {
+    padding: 0.5rem 0.75rem;
+}
+.hotRegion {
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+.hotRegionName, .popularPressName, .topSearchName{
+    color: #9f9f9f;
+    font-size: 0.7rem;
+}
+.hotRegionItem {
+    font-size: 0.6rem;
+}
+.hotRegionItem li {
+    float: left;
+    padding: 3px 12px;
+    margin: 5px;
+    border-radius: 3px;
+    background: #f3f4f6;
+}
+.popularPressItem {
+    display: flex;
+    flex-flow: wrap;
+    font-size: 0.6rem;
+    overflow: hidden;
+}
+.popularPressItem li {
+    padding: 0.2rem 0.25rem;
+    overflow: hidden;
+}
+.popularPressItem li b {
+    display: block;
+    width: 100%;
+    height: 4rem;
+    background: #2aabd2;
+    margin-bottom: 3px;
+}
+.popularPressItem li span {
+    display: block;
+    font-size: 0.7rem;
+    text-align: center;
+}
+.topSearchItem {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.topSearchItem span {
+    display: block;
+    height: 1.5rem;
+    width: 1.5rem;
+    background: #d9534f;
+}
+.topSearchItem ul {
+    overflow: hidden;
+}
+.topSearchItem ul li {
+    float: left;
+    font-size: 0.6rem;
+    border-radius: 3px;
+    background: #f3f4f8;
+    padding: 3px 12px;
+    margin: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

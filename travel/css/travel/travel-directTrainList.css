@@ -1,0 +1,362 @@
+﻿.specialLine {
+    position: relative;
+    height: 100%;
+    margin-top: 4.2rem;
+    padding-bottom: 1rem;
+}
+.specialTop {
+    padding: 0.5rem ;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+}
+.specialTop i {
+    float: left;
+    width: 30%;
+    padding: 3px 0;
+    overflow: hidden;
+}
+.specialTop span {
+    float: left;
+    width: 40%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.specialStation, .specialSearch {
+    float: right;
+    width: 0.9rem;
+    height: 0.9rem;
+    margin-right: 10px;
+}
+.specialLine .fiexd{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    padding-top: 0.3rem;
+    z-index: 10;
+}
+.filtrate {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.filtrateItem {
+    display: flex;
+    padding: 0.3rem;
+    border-bottom: 1px solid #ccc;
+    justify-content: space-around;
+}
+.filtrateItem span {
+    height: 1rem;
+    line-height: 1rem;
+    color: #666666;
+    font-size: 0.6rem;
+}
+.filtrateItem span i {
+    font-size: 12px;
+    color: #c5c5c5;
+}
+.verticalBar {
+    display: inline-block;
+    border-right: 1px solid #c5c5c5;
+}
+.ticketType {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+}
+.ticketTypeItem {
+    width: 75px;
+    margin-right: 5px;
+    font-size: 0.6rem;
+    text-align: center;
+    color: #656567;
+    background: #f5f6fb;
+    padding: 0.25em 0.3rem;
+    border-radius: 1rem;
+}
+.ticketType .active {
+    color: #ffffff;
+    background: #dd5754;
+}
+.specialLineTab {
+    min-height: 3.5rem;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    border-bottom: 2px solid #f3f3f5;
+    overflow: hidden;
+}
+.ticketImg {
+    float: left;
+    width: 6rem;
+    height: 4.5rem;
+    margin-right: 10px;
+}
+.specialLineCont {
+    display: flex;
+    flex-direction: column;
+}
+.lineTitle {
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.lineCont {
+    font-size: 0.6rem;
+    padding-bottom: 0.5rem;
+}
+.specialLineCost {
+    float: right;
+    text-align: right;
+    overflow: hidden;
+}
+.specialLineCost span {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #FF6E00;
+}
+.specialLineCost span i {
+    font-weight: bold;
+    font-size: 60%;
+    font-style:normal;
+    color: #FF6E00;
+}
+.specialLineEnt {
+    float: left;
+    width: 63%;
+    padding-left: 10px;
+    overflow: hidden;
+}
+.specialLineEnt li {
+    position: relative;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.specialLineEnt li span {
+    font-size: 0.7rem;
+}
+.specialLineEnt li i {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    line-height: 1.2rem;
+    background: #88d2bb;
+    border-radius: 100%;
+    margin-right: 0.1rem;
+}
+.specialLineEnt li:first-child::before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 100%;
+    top: 0.6rem;
+    left: 0.15rem;
+    border-right: 3px solid #f8f2f2;
+    z-index: -1;
+}
+.specialLineEnt li:last-child i {
+    background: #fd7577;
+}
+.specialLineEnt li:last-child b {
+    color: #ff7372;
+    padding: 2px;
+    border: 1px solid #ff7372;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+}
+.specialLineTime {
+    /*width: 15%;*/
+    font-size: 1rem;
+}
+.specialLineCont span.possess {
+    font-size: 0.6rem;
+    text-align: center;
+}
+.specialLineCont .specialLineTime {
+    font-size: 0.9rem;
+}
+.specialLineLab {
+    position: relative;
+    overflow: hidden;
+}
+.specialLineLab li {
+    float: left;
+    line-height: 12px;
+    font-size: 0.5rem;
+    color: #74b3fa;
+    border: 1px solid #74b3fa;
+    padding: 2px 3px;
+    margin-right: 5px;
+}
+.specialLineLab li:first-child {
+    position: relative;
+    color: #dd5754;
+    border-color: #dd5754;
+    margin-right: 2.3rem;
+}
+.specialLineLab img {
+    position: absolute;
+    left: 2.2rem;
+    top: -0.2rem;
+    width: 1.75rem;
+    height: 0.8rem;
+}
+/**** 遮罩层 ****/
+.specialLineMask {
+    position: fixed;
+    top: 7rem;
+    bottom: 0;
+    width: 100%;
+    background: #000;
+    opacity: 0.5;
+    z-index: 5;
+}
+.lineTabLoading {
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 8rem;
+    bottom: 0;
+    z-index: 333;
+}
+.lineTabLoading span {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -16px;
+    margin-top: -16px;
+}
+/**
+* * * * * * * * * * 目的地下拉菜单 * * * * * * *
+**/
+.filtrateOption {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    z-index: 222;
+    overflow: hidden;
+}
+.filtrateDestination {
+    display: flex;
+    height: 15rem;
+    overflow: hidden;
+}
+.desRegion , .desAttract{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: auto;
+}
+.desAttract{
+    background-color: #f6f6f8;
+}
+.desRegion span {
+    line-height: inherit;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #e4e4e4;
+}
+.desRegion span.active {
+    color: #fe505a;
+    background: #f6f6f8;
+}
+.desAttract div {
+    overflow-y: auto;
+}
+.desAttract div span {
+    display: block;
+    line-height: inherit;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #e7e7e9;
+}
+.desAttract div span.active {
+    color: #fe505a;
+    position: relative;
+}
+.desAttract div span.active:before {
+    position: absolute;
+    content: "\e013";
+    color: #fe505a;
+    right: 30%;
+    font-size: 12px;
+}
+.filtrateSorting {
+    overflow: hidden;
+}
+.filtrateSorting ul {
+    overflow: hidden;
+
+}
+.filtrateSorting ul li{
+    line-height: 1rem;
+    font-size: 0.7rem;
+    padding: 10px 15px;
+    overflow: hidden;
+}
+.filtrateSorting ul li.active{
+    color: #fe505a;
+}
+
+.filtrateClassify {
+    padding-top: 0.5rem;
+    overflow: hidden;
+}
+.filtrateClassify > span {
+    display: block;
+    font-size: 0.8rem;
+    color: #676767;
+    padding: 0 0.75rem;
+}
+.filtrateClassify ul {
+    display: flex;
+
+    flex-wrap: wrap;
+    padding: 0.5rem 0.75rem;
+}
+.filtrateClassify ul li{
+    font-size: 0.7rem;
+    background: #f9f9f9;
+    padding: 5px 10px;
+    margin-bottom: 0.5rem;
+    margin-right: 9px;
+}
+.filtrateClassify ul li.active {
+    color: #eb4350;
+    border: 1px solid #eb4350;
+}
+.filtrateClassify div {
+    display: flex;
+    justify-content: space-between;
+
+}
+.filtrateClassify div span {
+    display: block;
+    width: 50%;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-top: 1px solid #f5f5f5;
+}
+.filtrateClassify div span:last-child {
+    color: #fff;
+    background: #fe4a55;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

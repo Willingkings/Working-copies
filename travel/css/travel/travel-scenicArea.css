@@ -1,0 +1,215 @@
+.mainBox{
+    background: white;
+    padding: 0.75rem;
+    overflow: hidden;
+    margin-bottom: .5rem;
+}
+.mainBox:last-child{
+    margin-bottom: 0;
+}
+.scenicArea-icon, .themeLine{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.scenicArea-icon a>img{
+    padding: 0.7rem 0.7rem 0.4rem 0.7rem;
+}
+.scenicArea-icon p{
+    color: #000;
+}
+.conter-row{
+    margin-top: 1rem;
+}
+.themePlay span{
+    text-align: center;
+    display: block;
+}
+.themeLine li{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: .25rem;
+}
+.themeLine li .lineImg{
+    position: relative;
+    width: 100%;
+    height: 5rem;
+    border-radius: .45rem;
+}
+.themeLine li .lineImg > img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: .45rem;
+}
+
+.hotSpecial{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5rem;
+    color: white !important;
+    font-size: .5rem;
+    padding: .2rem 0;
+    line-height: initial;
+    z-index: 10;
+}
+.hotSpecial.red{
+    background: url("../../images/icon/icon-red-special.png") no-repeat center;
+    background-size: 100%;
+}
+.hotSpecial.yellow{
+    background: url("../../images/icon/icon-yellow-special.png") no-repeat center;
+    background-size: 100%;
+}
+.baack-sx{
+    display: inline-block;
+    position: absolute;
+    top: 1.05rem;
+    left: 0;
+    color: #fff;
+    font-size: .5rem;
+    padding: .1rem .5rem;
+    background: url("../../images/icon/icon-baack-sx.png") no-repeat center;
+    background-size: 100%;
+    z-index: 10;
+}
+@media screen and (max-width: 320px) {
+    .baack-sx{
+        top: 1.2rem;
+    }
+}
+.areaswiBox{
+    margin: .5rem -0.7rem 0 0;
+}
+.areaSwiSlide{
+    width: 6.5rem !important;
+    margin-right: .5rem;
+    margin-bottom: 1rem;
+    padding-left: .15rem;
+}
+.thumbnailArea{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .085);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .085);
+}
+.thumbnailArea .labelTop{
+    position: relative;
+    width: 100%;
+    height: 4.5rem;
+}
+div.lozd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f1f1f1;
+}
+div.lozd> img{
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+}
+.thumbnailArea .labelTop .ranking{
+    width: 2.5rem;
+    height: 1.2rem;
+    line-height: 1.1rem;
+    background-position: center;
+    background-size: 100%;
+    text-align: center;
+    left: 0;
+    top: 0;
+}
+.thumbnailArea .caption{
+    text-align: center;
+    font-size: .6rem;
+}
+.thumbnailArea .caption h4{
+    font-size: .6rem;
+    margin: .75rem 0 .25rem;
+    font-weight: 600;
+    color: #2B2B2B;
+}
+.thumbnailArea .caption p{
+    color: #979797;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 .3rem;
+}
+.thumbnailArea .caption a{
+    background: #EB595A;
+    border-radius: 1rem;
+    color: white;
+    padding: .2rem .6rem;
+    margin: .25rem 0 .75rem;
+    display: inline-block;
+}
+.recommendLine li{
+    margin: .5rem 0 !important;
+    padding-bottom: .75rem;
+    border-bottom: 1px solid #F1F1F1;
+}
+.recommendLine li:last-child{
+    border-bottom: 0;
+}
+.recommendLine img{
+    width: 6rem;
+    height: 4.5rem;
+}
+.recommendLine h4{
+    margin-top: .3rem;
+    font-size: .7rem;
+}
+.recommendLine .lineLabel > span{
+    font-size: 0.5rem;
+}
+.recommendLine .price{
+    position: absolute;
+    right: 0.75rem;
+}
+.price{
+    color: #FF6E00;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.price small{
+    font-size: 60%;
+}
+.media-left {
+    width: 6rem;
+    height: 4.5rem;
+    position: relative;
+}
+
+
+.wid {
+    font-size:0.8rem;
+    width: auto !important;
+    margin-right: 1.5rem;
+}
+.areaswiBox div.swiper-wrapper div.active {
+    color: #f5525a;
+    border-bottom: 1px solid #f5525a;
+}
+.areaSwiSlide {
+    margin-bottom: 0;
+}
+
+
+
+
+
+

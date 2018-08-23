@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="indexApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title ng-bind="pageTitle"></title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <!-- common CSS -->
+    <link rel="stylesheet" href="./css/common/global.css">
+    <link rel="stylesheet" href="./css/common/search.css">
+<!--    <link rel="stylesheet" href="./css/common/switchingArea.css">
+    <link rel="stylesheet" href="./css/common/specialPayment.css">-->
+    <!-- 直通车 -->
+    <link rel="stylesheet" href="css/travel/travel.css">
+    <link rel="stylesheet" href="css/travel/travel-directTrain.css">
+    <link rel="stylesheet" href="css/travel/travel-directTrainList.css">
+    <link rel="stylesheet" href="css/travel/travel-directTrainDetails.css">
+    <!--全部景点-->
+    <link rel="stylesheet" href="css/travel/travel-scenicAreaList.css">
+    <!--玩转景区-->
+    <link rel="stylesheet" href="css/travel/travel-scenicArea.css">
+    <link rel="stylesheet" href="css/travel/travel-scenicAreaDetails.css">
+    <link rel="stylesheet" href="css/travel/travel-scenicAreaDetailsLine.css">
+</head>
+<body>
+    <div style="height: 100%;" ui-view></div>
+
+    <!-- JS 框架引入 -->
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/angularJS/angular.js"></script>
+    <script src="./lib/angularJS/angular-ui-router.min.js"></script>
+    <script src="./lib/bootstrap/js/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+    <script src="./lib/base64.js"></script>
+    <script src="./lib/MD5.js"></script>
+    <script src="./lib/layer/layer.js"></script>
+    <script src="./lib/jweixin-1.2.0.js"></script>
+    <!-- develop -->
+    <script src="js/app.js"></script>
+    <!-- global -->
+    <script src="js/common/common.js"></script>
+    <script src="js/common/httpService.js"></script>
+    <script src="js/travel.js"></script>
+    <script src="js/scenicArea.js"></script>
+</body>
+</html>

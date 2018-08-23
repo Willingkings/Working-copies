@@ -1,0 +1,112 @@
+<div class="specialPayment">
+    <div class="orderDescribe">
+        <div class="orderDesTitle" ng-bind="paymentDetails.title"></div>
+        <div class="orderDesDestination">
+            <span><i></i>{{paymentDetails.start_address}}</span>
+            <span><i></i>{{paymentDetails.end_address}}</span>
+        </div>
+        <div class="orderDesLab">
+            <div>
+                <i></i>
+                <span>支持退票</span>
+            </div>
+            <div>
+                <i></i>
+                <span>安全出行</span>
+            </div>
+        </div>
+    </div>
+    <div class="flightDate">
+        <ul>
+            <li class="datePicker">
+                <span>游玩日期</span>
+                <div class="dataItem" ng-click="selectDateShow = true"
+                     ng-class="{true:'active',false:''}[active_month + '-' + Today  != active_day && tom_month + '-' + tomorrow  != active_day ]">
+                     <span>
+                        <span>其他</span>
+                        <span ng-if="active_month + '-' + Today  == active_day || tom_month + '-' + tomorrow  == active_day">时间</span>
+                        <span ng-if="active_month + '-' + Today  != active_day && tom_month + '-' + tomorrow  != active_day">{{otherMon + "月" + otherDay + "日"}}</span>
+                    </span>
+                </div>
+                <div class="dataItem" ng-class="{true:'active',false:''}[tom_month + '-' + tomorrow  == active_day]"
+                     ng-click="change_day( active_year, tom_month, tomorrow ,false)">
+                    <span>明天</span><span>{{tom_month + "月" + tomorrow + "日"}}</span>
+                </div>
+                <div class="dataItem" ng-class="{true:'active',false:''}[active_month + '-' + Today  == active_day]"
+                     ng-click="change_day( active_year, active_month, Today ,false)">
+                    <span>今天</span><span>{{active_month + "月" + Today + "日"}}</span>
+                </div>
+            </li>
+            <li class="instructions">需在当天晚上24点前购买</li>
+        </ul>
+        <div class="selectShift">
+            <span>班次选择</span>
+            <div class="selectShiftItem">
+                <ul ng-if="scheduleID != 0">
+                    <li ng-repeat="shiftItem in scheduleDetail track by $index" ng-click="selectSchedule(shiftItem.id, shiftItem.money)"
+                        ng-class="{true:'active',false:''}[shiftItem.id == scheduleID]">
+                        <span>{{shiftItem.name}}</span>
+                        <span>余票: {{shiftItem.stock - shiftItem.salesNum}}</span>
+                    </li>
+                </ul>
+                <p ng-if="scheduleID == 0">抱歉，所选日期暂无班次票务信息</p>
+            </div>
+            <div class="selectShiftNum">
+                <span>购买数量</span>
+                <div>
+                    <div ng-click="shiftNum(-1)"><i class="reduce"></i></div>
+                    <span ng-bind="orderNums"></span>
+                    <div ng-click="shiftNum(1)"><i class="increase"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="" name="myForm">
+        <div class="contact">
+            <div>
+                <span class="col-xs-3">联系人</span>
+                <input type="text" name="sex" id="contact" placeholder="请输入联系人"  ng-model="orderContactor"/>
+            </div>
+            <div>
+                <span class="col-xs-3">手机号码</span>
+                <input type="text" name="orderTel" id="phoneNum" placeholder="请输入手机号码" ng-model="orderTel" ng-pattern="/(^$)|^(((\+86)|(86))?1[34578]\d{9})$/">
+                <span style="color:red; font-size: 0.5rem" ng-show="myForm.orderTel.$dirty && myForm.orderTel.$invalid">手机号码格式错误</span>
+            </div>
+        </div>
+        <div class="payFooter">
+            <div>共计: <span><i>￥ </i>{{total}}</span></div>
+            <div ng-disabled="!myForm.orderTel.$dirty && !myForm.orderTel.$invalid" ng-click="immediatePays()">立即付款</div>
+        </div>
+    </form>
+</div>
+
+<div class="selectDate" ng-show="selectDateShow" data-ng-init="show_now()">
+    <div class="dateMask" ng-click="selectDateShow = false"></div>
+    <div class="dateTop">
+        <div class="dateTitle">
+            <span>选择日期</span>
+            <i class="glyphicon glyphicon-remove" ng-click="selectDateShow = false"></i>
+        </div>
+        <div class="dateWeek">
+            <span>日</span>
+            <span>一</span>
+            <span>二</span>
+            <span>三</span>
+            <span>四</span>
+            <span>五</span>
+            <span>六</span>
+        </div>
+    </div>
+    <div class="dateList">
+        <div class="dateListItem" ng-repeat="showTime in selectDate track by $index">
+            <p class="dateMonth" ng-bind="showTime.year + '年' + showTime.month + '月'"></p>
+            <ul class="dateDays" ng-repeat="week in showTime.selectDays track by $index">
+                <li ng-repeat="days in week track by $index" ng-click="change_day( showTime.year, showTime.month,days.day,days.disables)" id="{{days.id}}"
+                    ng-class="{'active':days.id == active_day,'disable':days.disables }" ng-model="days.day">
+                    <span ng-bind="days.day"></span>
+                    <span ng-show="!days.disables  && days != ''"><small>￥</small>{{days.price}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

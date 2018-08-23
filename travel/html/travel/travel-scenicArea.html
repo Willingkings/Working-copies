@@ -1,0 +1,105 @@
+<div class="mainBox scenicArea">
+    <div class="moduleTitle">玩桂林.每天不重样</div>
+    <div class="scenicArea-icon">
+        <a class="col-25" ng-repeat="item in bussinessList track by $index" id="{{item.btCode}}" ng-click="currentScenic('product',item)">
+            <img class="img-responsive" src={{item.btImgUrl}}>
+            <p ng-bind="item.btName"></p>
+        </a>
+    </div>
+    <div class="conter-row themePlay" ng-if="false">
+        <span class="tible-gray">主题游玩</span>
+        <ul class="themeLine">
+            <li>
+                <div class="lineImg">
+                    <div class="hotSpecial red">端午节日特惠</div>
+                    <div class="baack-sx">送您粽子</div>
+                    <img guoyu-src="./images/zhuyou/500907645.png" onerror='this.src="./images/logo.png"' alt="">
+                    <div class="lozd"><img src="./images/icon/loading.gif" alt=""></div>
+                </div>
+            </li>
+            <li>
+                <div class="lineImg">
+                    <div class="hotSpecial yellow">暑假优惠多多</div>
+                    <div class="baack-sx">学生打折</div>
+                    <img guoyu-src="./images/zhuyou/500907645.png" onerror='this.src="./images/logo.png"' alt="">
+                    <div class="lozd"><img src="./images/icon/loading.gif" alt=""></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="conter-row">
+        <span class="tible-gray">景点游玩推荐</span>
+        <div class="swiper-container areaswiBox">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide areaSwiSlide" ng-repeat="item in selectArea | orderBy: order" ui-sref="scenicAreaDetails({areaDetails:item.ID})"
+                     ng-click="currentScenic('scenic',item.ID)">
+                    <div class="thumbnailArea">
+                        <div class="labelTop">
+                            <i class="ranking">TOP {{$index +1}}</i>
+                            <img guoyu-src="{{item.ImgUrl}}" onerror='this.src="./images/logo.png"' alt="">
+                            <div class="lozd"><img src="./images/icon/loading.gif" alt=""></div>
+                        </div>
+                        <div class="caption">
+                            <h4>{{item.Name}}</h4>
+                            <a>马上查看</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="allLine" ng-click="currentScenic('all')">
+        <b><img src="./images/icon/icon-allLine.png"></b>
+        全部景点
+        <i class="glyphicon glyphicon-triangle-right"></i>
+    </div>
+</div>
+<div class="travelHeadlines flex" ng-if="false">
+    <div class="travelLeft">
+        <img src="./images/icon/icon-travelHeadlines.png" >
+    </div>
+    <div class="travelRight">
+        <div class="newTitle">
+            <span class="newName">你的护照办好了吗？</span>
+            <span class="recommended">推荐</span>
+        </div>
+        <div class="newDescribe">办护照只要跑一次，还有这些好事你不知道!</div>
+    </div>
+</div>
+<div class="mainBox" style="min-height: 25rem">
+    <!--<div class="moduleTitle">推荐产品</div>-->
+    <!--<ul class="headerTab flex pl-pr0">-->
+        <!--<li class="tabItem" ng-class="{'active':focusIndex==$index}" ng-click="headerFocus($index)" ng-repeat="item in bussinessList track by $index" ng-show="bussinessList[$index].currentPoduct.length">{{ item.btName }}</li>-->
+    <!--</ul>-->
+    <div class="conter-row">
+        <div class="moduleTitle">推荐产品</div>
+        <div class="swiper-container areaswiBox">
+            <div class="swiper-wrapper flex pl-pr0 ">
+                <div class="tabItem swiper-slide areaSwiSlide  wid" ng-repeat="item in bussinessList track by $index" ng-click="headerFocus($index)"  ng-class="{'active':focusIndex==$index}">
+                    <!--<li class="tabItem" ng-class="{'active':focusIndex==$index}"  ng-click="headerFocus($index)" ng-repeat="item in bussinessList track by $index" ng-show="bussinessList[$index].currentPoduct.length">{{ item.btName }}</li>-->
+                    {{ item.btName }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="media-list recommendLine" ng-show="focusIndex==$index" ng-repeat="productItem in bussinessList track by $index">
+        <li class="media" ng-repeat="item in productItem.currentPoduct" ui-sref="scenicAreaTicket({productUiCode:item.uiCode})"
+            ng-click="currentScenic('scenic',item.attractionsID)">
+            <div class="media-left media-middle">
+                <img class="media-object" guoyu-src="{{item.imgUrl}}" onerror='this.src="./images/logo.png"' alt="">
+                <div class="lozd"><img src="./images/icon/loading.gif" alt=""></div>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading ">{{item.name}}</h4>
+                <p>{{item.beforeDays}}</p>
+                <div class="lineLabel">
+                    <span ng-repeat="lab in item.label">{{lab}}</span>
+                    <b class="price"><small>￥ </small>{{item.price
+                        }}<small> 起</small></b>
+                </div>
+                <div><b>已售{{item.allTicket}}</b></div>
+            </div>
+        </li>
+    </ul>
+</div>
+

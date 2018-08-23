@@ -1,0 +1,376 @@
+.specialPayment {
+    background: #f1f1f1;
+    overflow: hidden;
+}
+.payTop {
+    background: #fff;
+    padding: 1.5rem 0.5rem 0.5rem;
+    overflow: hidden;
+}
+.payTop a {
+    float: left;
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+}
+.payTop span {
+    color: #444653;
+    font-size: 0.7rem;
+    text-align: center;
+}
+.orderDescribe {
+    background: #fff;
+    font-size: 0.6rem;
+    padding: 0.5rem 1rem 0;
+    margin-bottom: 0.5rem;
+}
+.orderDesTitle {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+.orderDesDestination {
+    padding-bottom: 0.5rem;
+}
+.orderDesDestination span {
+    margin-right: 15px;
+}
+.orderDesDestination span i {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+.orderDesDestination span:first-child i {
+    background-color: #6ad5b7;
+}
+.orderDesDestination span:last-child i {
+    background-color: #fe696f;
+}
+.orderDesLab {
+    display: flex;
+    padding-bottom: 0.5rem;
+    overflow: hidden;
+}
+.orderDesLab div {
+    display: flex;
+    align-items: center;
+}
+.orderDesLab div span {
+    display: block;
+    margin-right: 0.5rem;
+}
+.orderDesLab div i {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url(../../images/icon_04.png) no-repeat;
+    background-size: contain;
+    margin-right: 3px;
+}
+.flightDate {
+    background: #ffffff;
+    padding: 0.5rem 0.75rem;
+    overflow: hidden;
+}
+.datePicker {
+    overflow: hidden;
+}
+.datePicker > span {
+    float: left;
+    line-height: 2.1rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+.dataItem {
+    float: right;
+    font-size: 0.6rem;
+    color: #cccccc;
+    border: 1px solid #cccccc;
+    padding: 3px 0;
+    margin-left: 5px;
+}
+.dataItem span {
+    display: block;
+    text-align: center;
+    padding: 0 8px;
+}
+.datePicker div.active {
+    color: #ed585a;
+    border-color: #ed585a;
+}
+.datePicker div.disabled {
+    background: #f2f2f2;
+}
+.instructions {
+    font-size: 12px;
+    border-bottom: 1px solid #cccccc;
+    padding: 10px 0 ;
+}
+.selectShift {
+    padding: 0.5rem 0;
+}
+.selectShift span {
+    font-size: 0.7rem;
+    padding-bottom: 5px;
+}
+.selectShiftItem {
+    width: 100%;
+    overflow-x: auto;
+}
+.selectShiftItem p {
+   padding: 10px 0;
+}
+.selectShiftItem ul {
+    height: 4rem;
+    width: 100%;
+    padding: 0.5rem 0;
+    white-space:nowrap;
+    overflow-y: hidden;
+}
+.selectShiftItem ul li{
+    display: inline-block;
+    height: 3rem;
+    background: #f2f2f2;
+    border: 1px dashed #cccccc;
+    margin-right: 10px;
+    padding: 0 10px;
+}
+.selectShiftItem ul li.active {
+    color: #ffffff;
+    background: #ec5a5a;
+    border: none;
+}
+.selectShiftItem ul li span {
+    display: block;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+.selectShiftItem ul li span:first-child {
+    line-height: 2rem;
+    font-size: 0.7rem;
+}
+.selectShiftNum {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+}
+.selectShiftNum > div {
+    display: flex;
+    align-items: center;
+    padding: 0 0.3rem;
+    height: 1.7rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+.selectShiftNum > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.selectShiftNum > div span {
+    display: inline-block;
+    width: 2.5rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    font-size: 0.5rem;
+    text-align: center;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    margin: 0 0.3rem;
+}
+.reduce {
+    display: inline-block;
+    width: 1rem;
+    height: 0.1rem;
+    background: url("../../images/icon/jian1@2x.png") center no-repeat;
+    background-size: contain;
+}
+.reduce {
+    display: inline-block;
+    width: 1rem;
+    height: 0.1rem;
+    background: url("../../images/icon/jian1@2x.png") center no-repeat;
+    background-size: contain;
+}
+.increase {
+    display: inline-block;
+    width: 0.7rem;
+    height: 0.7rem;
+    background: url("../../images/icon/jia2@2x.png") no-repeat;
+    background-size: contain;
+}
+
+.contact {
+    padding: 0.5rem 0.75rem;
+    background: #ffffff;
+    margin-top: 0.5rem;
+}
+.contact div:first-child {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #cccccc;
+}
+.contact div:last-child {
+    padding-top: 5px;
+}
+.contact div span {
+    padding-left: 0;
+}
+.payFooter {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    background: #ffffff;
+    margin-top: 0.5rem;
+    z-index: 999;
+}
+.payFooter div {
+    width: 50%;
+    text-align: center;
+    padding: 0.5rem;
+}
+.payFooter div:first-child {
+    font-size: 0.7rem;
+    border-top: 1px solid #cccccc;
+}
+
+.payFooter div:first-child span {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #FF6E00;
+}
+.payFooter div:first-child span i {
+    font-weight: bold;
+    font-size: 60%;
+    font-style:normal;
+    color: #FF6E00;
+}
+.payFooter div:last-child {
+    font-size: 0.8rem;
+    color: #ffffff;
+    background: #ec5a5a;
+}
+
+/**** 日期选择 ****/
+.dateMask {
+    height: 11rem;
+    background: #000000;
+    opacity:0.2;
+}
+.selectDate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 2.2rem;
+    overflow: hidden;
+    z-index: 99;
+}
+.dateTop {
+    position: absolute;
+    top: 11rem;
+    left: 0;
+    right: 0;
+    background: #fafafc;
+}
+.dateTitle {
+    height: 1.8rem;
+    line-height: 1.8rem;
+    overflow: hidden;
+}
+.dateTitle span {
+    display: inline-block;
+    width: 60%;
+    font-size: 0.7rem;
+    color: #000000;
+    text-align: center;
+    margin-left: 20%;
+}
+.dateTitle i {
+    display: inline-block;
+    text-align: right;
+    font-size: 0.7rem;
+    padding-right: 16px;
+    width: 18%;
+}
+.dateWeek {
+    display: flex;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    padding-bottom: 1.5rem;
+}
+.dateWeek span {
+    width: 15%;
+    font-size: 0.6rem;
+    text-align: center;
+}
+.dateList {
+    height: 16rem;
+    background: #ffffff;
+    margin-top: 3.2rem;
+    overflow-y: auto;
+}
+.dateListItem:first-child {
+    border-bottom: 10px solid #f5f5f9;
+}
+.dateListItem:last-child {
+    margin-bottom: 3rem;
+}
+.dateMonth {
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    color: #000;
+}
+.dateDays {
+    display: block;
+    border-bottom: 1px solid #eaeaea;
+    overflow: hidden;
+}
+.dateDays li {
+    float: left;
+    height: 2rem;
+    width: 14.2%;
+    font-size: 0.6rem;
+    text-align: center;
+}
+.dateDays li.disable {
+    background: #f7f9fa;
+}
+.dateDays li.active {
+    background: #d9534f;
+    color: #ffffff;
+}
+.dateDays li span:first-child {
+    display: block;
+    height: 1rem;
+    line-height: 1.4rem;
+    font-size: 0.7rem;
+    color: #333333;
+    text-align: center;
+}
+.dateDays li span:last-child {
+    display: block;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 10px;
+    color: #cccccc;
+    text-align: center;
+}
+.dateDays li.active span{
+    color: #ffffff;
+}
+.dateDays li.disable span{
+    color: #bcbdbd;
+}
+.glyphicon-jpy:before {
+    font-size: 8px;
+}
+.offerImg > i > img {
+    width: 1rem;
+    height: 1rem;
+}

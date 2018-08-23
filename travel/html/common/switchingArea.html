@@ -1,0 +1,13 @@
+<div class="switchingArea">
+    <div class="swiper-container switchingCont">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide switchingSlide" ng-repeat="item in areaList | orderBy:'ID'" ng-click="currentArea(item)">
+                <i><img src="{{item.ImgUrl}}"></i>
+                <div>
+                    <b>{{item.Name}}</b>
+                    <div ng-bind-html="item.Remart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="specialLineDetails areaDetalis">
+    <div class="areaDetalisHeader">
+        <img guoyu-src="{{productTitle.ImgUrl}}" onerror='this.src="./images/logo.png"'>
+        <div class="lozd"><img src="./images/icon/loading.gif" alt=""></div>
+    </div>
+    <div class="areaConBox pb0">
+        <div class="areaTitle">
+            <div class="name" ng-bind="productTitle.Name"></div>
+            <div class="areaLabel">
+                <small ng-repeat="lab in productTitle.ThemeName.split(',')">{{lab}}</small>
+            </div>
+        </div>
+        <ul class="listGroup">
+            <li class="listGroup-item flex">
+                <span class="textNowrap">{{ productTitle.AreaName + productTitle.Grade}}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="areaConBox">
+        <div class="areaTab">
+            <span  ng-repeat="tab in bussinessList track by $index" ng-click="scrollSpies($index)"
+                   ng-class="{'active':areaTabIndex==$index}" ng-if="tab.productList.length > 0">{{tab.btName}}</span>
+        </div>
+        <div class="areaContent" id="areaContent">
+            <div class="areaContTab" ng-repeat="tabCont in bussinessList track by $index" id="{{$index}}"
+                 ng-if="tabCont.productList.length > 0">
+                <div class="areaTab-title">
+                    <i><img src="./images/icon/icon-spot-ticket.png" alt=""></i>{{tabCont.btName}}
+                </div>
+                <ul class="listGroup">
+                    <li class="listGroup-item" ng-repeat="item in tabCont.productList track by $index" ng-show="$index < ShowNum">
+                        <div class="col-xs-9">
+                            <div class="textNowrap w98">{{item.uiName +"（"+ item.BeforeDays +"）"}}</div>
+                            <div class="areaLabel">
+                                <small ng-repeat="label in item.ThemeName.split(',')">{{label}}</small>
+                            </div>
+                            <div class="buySpan">
+                                <span>已售{{item.allTicket}}份</span>
+                            </div>
+                        </div>
+                        <div class="bookBtn col-xs-3" ui-sref="scenicAreaTicket({productUiCode:item.uiCode})" ng-click="goTicketList(item.uiCode)">
+                            <b class="price">
+                                <span><small>￥ </small>{{item.minPrice}}</span>
+                                <small> 起</small>
+                            </b>
+                            <button>即刻预定</button>
+                        </div>
+                    </li>
+                </ul>
+                <div class="seeMore" ng-click="OpenMore()" ng-show="tabCont.productList.length > ShowNum" >
+                    查看更多门票 <i class="glyphicon glyphicon-menu-down"></i>
+                </div>
+                <div class="seeMore" ng-click="packUpMore()" ng-show="tabCont.productList.length < ShowNum && tabCont.productList.length > 3" >
+                    收起 <i class="glyphicon glyphicon-menu-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

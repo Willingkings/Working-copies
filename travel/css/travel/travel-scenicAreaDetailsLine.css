@@ -1,0 +1,103 @@
+.boutiqueImg{
+    background: url("../../images/icon/icon-boutique.png") no-repeat center;
+    background-size: 100%;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: 0;
+    top: -2px;
+}
+.areaConTicket{
+
+}
+.areaConTicket .tible{
+    font-size: .8rem;
+    font-weight: 600;
+    line-height: 1.2rem;
+    margin-bottom: .5rem;
+}
+.areaConTicket .tible i{
+    float: left;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: .3rem;
+}
+.areaConTicket .listGroup div > div{
+    margin: .1rem 0;
+}
+.samll-tic{
+    color: #DB645F;
+    font-size: .6rem;
+}
+.areaConTicket .areaLabel small{
+    color: #626566;
+    border: 1px solid #CCC;
+}
+.priceBtn{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    text-align: center;
+    margin-top: -1rem !important;
+}
+.priceBtn span{
+    background-image: linear-gradient( 90deg, #ED7374 10%, #CF5450 100%);
+    border: none;
+    color: white;
+    display: inline-block;
+    min-width: 3rem;
+    padding: .1rem .5rem;
+    font-size: 0.9rem;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 3rem;
+}
+.priceBtn button small{
+    font-size: 70%;
+}
+.areaTicTab{
+    display: flex;
+    justify-content: space-around;
+}
+.areaTicTab span{
+    font-size: .8rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    padding: 0 1rem .3rem;
+}
+.areaTicTab span.active{
+    color: #fa4b58;
+    border-bottom: 2px solid #fa4b58;
+}
+.areaTicContTab{
+    margin: .75rem 0;
+}
+.contentP{
+    padding-bottom: .2rem;
+}
+.contentP p{
+    line-height: 1.2rem;
+    color: #9A9A9A;
+    font-size: .75rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

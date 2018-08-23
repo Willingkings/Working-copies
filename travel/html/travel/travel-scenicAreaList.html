@@ -1,0 +1,81 @@
+<div class="content">
+    <div class="allScenic">
+        <!--条件筛选-->
+        <div class="condition">
+            <ul>
+                <li ng-click="entire($index,[entireShow = !entireShow, myVar = false, Show = false, hide = false])">
+                    {{ entireText }}
+                    <i class="glyphicon glyphicon-triangle-bottom "></i>
+                </li>
+                <i class="verticalBar"></i>
+                <li ng-click="pullDown([entireShow = false, myVar = !myVar, Show = false, hide = false])">{{ pullDownText }}
+                    <i class="glyphicon glyphicon-triangle-bottom "></i>
+                </li>
+                <i class="verticalBar"></i>
+                <!--ng-click="desc=!desc"-->
+                <li ng-click="priceSales([entireShow = false, myVar = false, Show = !Show, hide = false])">排序优先
+                    <i class="glyphicon glyphicon-triangle-bottom "></i>
+                </li>
+                <i class="verticalBar"></i>
+                <li ng-click="screenOn([entireShow = false, myVar = false, Show = false, hide = !hide])">筛选
+                    <i class="glyphicon glyphicon-triangle-bottom "></i>
+                </li>
+            </ul>
+            <!-- 业务下拉框 -->
+            <div class="entire" ng-show="entireShow">
+                <span ng-click="allData([entireShow = false, myVar = false])">全部</span>
+                <span ng-click="entireBtn($index)" ng-repeat="x in BusinessTypeData">{{ x.btName }}</span>
+            </div>
+            <!-- 目的地下拉框 -->
+            <div class="conditionPlate" ng-show="myVar">
+                <ul class="conditionLeft">
+                    <li ng-click="allData([entireShow = false, myVar = false, Show = false, hide = false])">全部</li>
+                    <li ng-click='li_click($index,areaData)' ng-class='{focus: $index==focus}' ng-repeat=" x in areaData">{{ x.Name }}</li>
+                </ul>
+                <!--<ul class="conditionRight">-->
+                    <!--<li ng-click='cityOption($index,areaParticularsData)' ng-repeat="x in areaParticularsData">{{ x.Name }}</li>-->
+                <!--</ul>-->
+            </div>
+            <!-- 价格销量下拉框 -->
+            <div class="priceSales" ng-show="Show">
+                <ul>
+                    <li ng-click="PriceSell($index)" ng-repeat="x in priceArr">{{ x }}</li>
+                </ul>
+            </div>
+            <!-- 主题下拉框 -->
+            <div class="filtratePlate" ng-show="hide" ng-class='{hightOn: hightOn==true}'>
+                <p>主题筛选</p>
+                <div class="filtrateType">
+                    <span ng-click="typeOn($index)" ng-repeat="i in subjectData">{{ i.Name }}</span>
+                </div>
+                <div class="clearAffirm">
+                    <span ng-click="clear($index)">清楚筛选内容</span>
+                    <span ng-click="affirm($index)">完成</span>
+                </div>
+            </div>
+            <p ng-click="ShadowBtn([entireShow = false, myVar = false, Show = false, hide = false])" ng-show="myVar || hide || Show || entireShow"></p>
+        </div>
+    </div>
+
+    <!--景点列表-->
+    <!--<div class="scenicList" ng-init="ThemeIndex = $index" ng-repeat="x in userData | orderBy: 'price': desc" ui-sref="scenicAreaTicket({productUiCode: x.uiCode})">-->
+        <div class="scenicList" ng-repeat="x in userData | filter:myFilter | filter:mySubject | orderBy: 'price': desc" ng-click="skip($index,userData)">
+        <div class="scenicImg">
+            <img guoyu-src="{{ x.ImgUrl }}" alt="" onerror='this.src="./images/logo.png"'>
+            <div class="lozd"><img src="./images/icon/loading.gif" alt=""></div>
+        </div>
+        <div class="scenicText">
+            <h4 class="scenicName">{{ x.Name }}<i>订</i></h4>
+            <p class="grade">{{ x.OrderCount }}已售,{{ x.Grade }}</p>
+            <div>
+                <span ng-repeat="x in ThemeName[ThemeIndex]">{{ x }}</span>
+            </div>
+            <p class="siteName">
+                位于{{ x.AreaName }}
+                <span><i>￥ </i>{{ x.pFXPrice}} <i>起</i></span>
+            </p>
+
+            <p class="textIntroduce" ng-if="userData[ThemeIndex].Remart != '<span>推荐语：</span>'" ng-bind-html="userData[ThemeIndex].Remart"></p>
+        </div>
+    </div>
+</div>

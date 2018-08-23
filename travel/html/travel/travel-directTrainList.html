@@ -1,0 +1,116 @@
+<div class="specialLine">
+    <div class="specialLineMask" ng-if="destina.show || sorting.show || classify.show "
+         ng-click="closeMask()"></div>
+    <div class="lineTabLoading" ng-if="lineTabLoading">
+        <span><img src="./images/icon/loading.gif"></span>
+    </div>
+    <div class="fiexd">
+        <div class="filtrate">
+            <div class="filtrateItem">
+            <span ng-click="[destina.show = !destina.show, sorting.show = false, classify.show = false]">
+                {{ destina.title}}
+                <i class="glyphicon glyphicon-triangle-bottom "></i>
+            </span>
+                <i class="verticalBar"></i>
+                <span ng-click="[sorting.show = !sorting.show, destina.show = false, classify.show = false]">
+                {{ sorting.title}}
+                <i class="glyphicon glyphicon-triangle-bottom "></i>
+            </span>
+                <i class="verticalBar"></i>
+                <span ng-click="[classify.show = !classify.show, sorting.show = false, destina.show = false]">
+                {{ classify.title}}
+                <i class="glyphicon glyphicon-triangle-bottom "></i>
+            </span>
+            </div>
+            <div class="filtrateOption" ng-style="filtrateOptionTop">
+                <div class="filtrateDestination" ng-if="destina.show">
+                    <div class="desRegion">
+                        <span class="glyphicon " ng-repeat="areaItem in desAttract | orderBy: 'areaID'"
+                              ng-class="actionRegion.area == areaItem.id ? 'active': ''" ng-bind="areaItem.areaName" id="{{areaItem.id}}"
+                              ng-click="checkedBou('area', '', areaItem)" ></span>
+                    </div>
+                    <div class="desAttract">
+                        <div ng-repeat="areaItem in desAttract | orderBy: 'areaID'" ng-if="actionRegion.area == areaItem.id">
+                        <span class="glyphicon " ng-repeat="siteItem in areaItem.attractions | orderBy: 'siteID'" ng-bind="siteItem.siteName" id="{{siteItem.id}}"
+                              ng-class="siteItem.id == actionRegion.site  ? 'active': ''"  ng-click="checkedBou('site', siteItem, areaItem)"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filtrateSorting" ng-if="sorting.show">
+                    <ul>
+                        <li ng-click="filtrateList('count', true, 0)" ng-class="{'active': filtrateSelect == 0}">销量最高</li>
+                        <li ng-click="filtrateList('money', false, 1)" ng-class="{'active': filtrateSelect == 1}">价格最低 </li>
+                        <li ng-click="filtrateList('money', true, 2)" ng-class="{'active': filtrateSelect == 2}">价格最高</li>
+                    </ul>
+                </div>
+                <div class="filtrateClassify" ng-if="classify.show">
+                    <span>主题筛选</span>
+                    <ul>
+                        <li ng-repeat="theme in themeList" ng-bind="theme.Name" id="{{theme.ID}}"
+                            ng-class="{'active': themeListParame.includes(theme.ID)}"
+                            ng-click="themeListSelect(theme.ID)"></li>
+                    </ul>
+                    <div>
+                        <span ng-click="clearThemeList()">清空筛选内容</span>
+                        <span ng-click="achieveThemeList()">完成</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-container ticketType">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide ticketTypeItem" ng-class="{'active':ticketTypeAct === 0}" ng-click="ticketTypeAct = 0">套票</div>
+                <div class="swiper-slide ticketTypeItem" ng-class="{'active':ticketTypeAct === 1}" ng-click="ticketTypeAct = 1">直通车</div>
+            </div>
+        </div>
+    </div>
+    <div ng-if="ticketTypeAct === 0" class="specialLineTab" ng-repeat="tpItem in TPlist  | orderBy: filtrate.key : filtrate.order"
+         ui-sref="scenicAreaTicket({productUiCode:tpItem.uiCode})" ng-click="TicketList(tpItem.pKey)">
+        <div class="ticketImg">
+            <img src="{{tpItem.newUILogoURL}}" alt="">
+        </div>
+        <div class="specialLineCont">
+            <div class="lineTitle">{{tpItem.uiName}}</div>
+            <div class="lineCont">
+                <div class="specialLineCost">
+                    <span>
+                        <i>￥ </i>{{tpItem.money}}<i> 起</i>
+                    </span>
+                    <div>
+                        <b>已售: {{tpItem.count}}</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-if="ticketTypeAct === 1" class="specialLineTab" ng-repeat="lineItem in allShuttle | orderBy: filtrate.key : filtrate.order"
+         ui-sref="directTrainDetails({routeId: lineItem.id})" ng-click="lineDetails(lineItem.id)">
+        <div class="ticketImg">
+            <img src="{{lineItem.main_pic}}" alt="">
+        </div>
+        <div class="specialLineCont">
+            <div class="lineTitle">{{lineItem.title}}</div>
+            <div class="lineCont">
+                <ul class="specialLineEnt">
+                    <li>
+                        <i></i>
+                        <span ng-bind="lineItem.start_address"></span>
+                    </li>
+                    <li>
+                        <i></i>
+                        <span ng-bind="lineItem.end_address"></span>
+                        <!--<b>含往返</b>-->
+                    </li>
+                </ul>
+                <div class="specialLineCost">
+                    <span>
+                        <i>￥ </i>{{lineItem.money}}<i> 起</i>
+                    </span>
+                    <div>
+                        <b>已售{{lineItem.count}}</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

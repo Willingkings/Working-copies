@@ -1,0 +1,61 @@
+<div class="searchCont">
+    <div class="searchLoading" ng-if="searchLoading">
+        <span><img src="./images/icon/loading.gif"></span>
+    </div>
+    <div class="fuzzySearch flex">
+        <span>
+            <i class="glyphicon glyphicon-search"></i>
+            <input type="text" placeholder="热门地区 景点" ng-model="searchValue" value="searchValue" ng-change="searchChange()">
+        </span>
+        <a ng-click="goBack()">取消</a>
+    </div>
+    <div class="searchResults" ng-if="!searchFocus" >
+        <div>
+            <p><img src="./images/icon/jindian@2x.png" alt="">相关的景点</p>
+            <ul>
+                <li ng-repeat="item in attractionsList" ng-bind="item.Name " ng-click="goDirectTrainList('site', item)"></li>
+            </ul>
+        </div>
+        <div>
+            <p><img src="./images/icon/jinqu@2x.png" alt="">相关的景区</p>
+            <ul>
+                <li ng-repeat="item in areaList" ng-bind="item.Name" ng-click="goDirectTrainList('area', item)"></li>
+            </ul>
+        </div>
+    </div>
+    <div ng-if="searchFocus" class="searchTopic">
+        <div ng-show="searchType === 'all'">
+            <div class="hotRegion">
+                <span class="hotRegionName">热门地区</span>
+                <ul class="hotRegionItem">
+                    <li ng-repeat="item in areaNameList" ng-click="goDirectTrainList('area', item)">
+                        <span id="{{item.ID}}">{{item.Name}}</span>
+                    </li>
+                </ul>
+            </div>
+            <!--- 地区搜索 --->
+            <div class="popularPress">
+                <span class="popularPressName">热门搜索</span>
+                <ul class="popularPressItem">
+                    <li class="col-xs-4" ng-repeat="item in hotAttractions track by $index"  ng-if="$index < 6"
+                        ng-click="goDirectTrainList('site', item)">
+                        <b>
+                            <img guoyu-src="{{item.ImgUrl}}" onerror='this.src="./images/logo.png"' alt="">
+                            <div class="lozd"><img src="./images/icon/loading.gif" alt=""></div>
+                        </b>
+                        <span ng-bind="item.Name"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 专线搜索 -->
+        <div class="topSearch"  ng-show="searchType === 'area'">
+            <span class="topSearchName">推荐景点</span>
+            <ul class="hotRegionItem">
+                <li ng-repeat="item in hotAttractions" ng-click="goDirectTrainList('site', item)">
+                    <span>{{item.Name}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

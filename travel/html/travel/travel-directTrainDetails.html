@@ -1,0 +1,78 @@
+<div class="specialLineDetails">
+    <div class="detailsHeader">
+        <img guoyu-src="{{trainDetails.main_pic}}" onerror='this.src="./images/logo.png"'>
+        <div class="lozd"><img src="./images/icon/loading.gif" alt=""></div>
+        <div class="headerDetails">
+            <div class="boutiqueImg"></div>
+            <div class="detailsTitle" ng-bind="trainDetails.title"></div>
+            <div class="detailsLab">
+                <span> 精选 <i>&bull;</i></span>
+                <span> 每天发车 <i>&bull;</i></span>
+                <span> 保证出行 <i>&bull;</i></span>
+                <span> 支持退票</span>
+                <div class="detailsPrice">
+                    <span><i>￥ </i>{{trainDetails.money}}<i> 起</i></span>
+                </div>
+            </div>
+            <div class="detailsDes">豪华双层巴士穿梭景区，尊享舒适游览体验</div>
+        </div>
+    </div>
+    <div class="detailsCont">
+        <div class="contTab">
+            <span data-id="0" ng-click="changeTap($event)" ng-class="currentTabs === 0 ? 'active': ''">行程景点</span>
+            <span data-id="1" ng-click="changeTap($event)" ng-class="currentTabs === 1 ? 'active': ''">预订须知</span>
+            <span data-id="2" ng-click="changeTap($event)" ng-class="currentTabs === 2 ? 'active': ''">产品特色</span>
+        </div>
+        <div class="lineService" ng-show="currentTabs === 0">
+            <span class="lineServiceTit">
+                <i><img src="./images/icon/bus.png"></i>
+                观光专线出发
+            </span>
+            <ul class="lineList">
+                <li>
+                    <i></i>
+                    <div>
+                        <span>上车地点: {{trainDetails.start_address}}</span>
+                        <p></p>
+                        <div class="itemImg">
+                            <span>
+                                <img guoyu-src="{{trainDetails.main_pic}}" onerror='this.src="./images/logo.png"' alt="">
+                                <div class="lozd"><img src="./images/icon/loading.gif" alt=""></div>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li  ng-repeat="scenicItem in allShuttleScenic">
+                    <i></i>
+                    <div>
+                        <span>{{scenicItem.Name}}<a ui-sref="scenicAreaDetails({areaDetails:scenicItem.ID})">查看详情</a></span>
+                        <p>{{scenicItem.ThemeName}}</p>
+                        <div class="itemImg">
+                           <span>
+                               <img guoyu-src="{{scenicItem.ImgUrl}}"  onerror='this.src="./images/logo.png"' alt="">
+                               <div class="lozd"><img src="./images/icon/loading.gif" alt=""></div>
+                           </span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i></i>
+                    <div>
+                        <span>下车地点: {{trainDetails.end_address}}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="bookingInform" ng-show="currentTabs === 1"></div>
+        <div id="productFeature" ng-show="currentTabs === 2"></div>
+    </div>
+    <div class="detailsFooter">
+        <div ng-click="callCustomerPhone()">
+            <span>
+                <img src="./images/icon_03.png">
+                <b>客服</b>
+            </span>
+        </div>
+        <span ng-click="trainDetailsParams()">立即购买</span>
+    </div>
+</div>

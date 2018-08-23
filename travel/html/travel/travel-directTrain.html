@@ -1,0 +1,111 @@
+<div class="directCont">
+    <div class="directTitle flex flex-pack-center">
+        <i><img src="./images/icon/icon-directTitle.png" alt=""></i>
+        <span>热门目的地</span>
+    </div>
+    <div class="directLoading" ng-if="directLoading">
+        <span><img src="./images/icon/loading.gif"></span>
+    </div>
+    <ul class="selectLine" >
+        <li ng-repeat="item in selectLine | orderBy: 'ranking'" ng-click="currentSite('line',item)">
+            <div class="lineBack">
+                <img guoyu-src="{{item.imgUrl}}" onerror='this.src="./images/logo.png"'>
+                <div class="lozd"><img src="./images/icon/loading.gif" alt=""></div>
+                <i class="ranking">TOP {{item.ranking}}</i>
+                <span class="destination">{{item.destination}}</span>
+            </div>
+            <div class="information">
+                <div class="lineLabel">
+                    <span ng-repeat="lab in item.label">{{lab}}</span>
+                </div>
+                <div class="linePrice">
+                    <span>
+                        <i>￥ </i>{{item.PresentPrice}} <i>起</i>
+                        <small>{{item.originalPrice}}</small>
+                    </span>
+                    <div>
+                        <b>已售{{item.sold}}</b>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="selectLineTemp" ng-if="false">
+        <li ng-repeat="item in areaListTemp" id="{{item.ID}}" ng-click="currentAreaT(item)">
+            <img guoyu-src="{{item.ImgUrl}}" onerror='this.src="./images/logo.png"' alt="">
+            <div class="lozd"><img src="./images/icon/loading.gif" alt=""></div>
+            <span>{{item.Name}}</span>
+        </li>
+    </ul>
+</div>
+<div class="travelHeadlines flex" ng-if="false">
+    <div class="travelLeft">
+        <img src="./images/icon/icon-travelHeadlines.png" >
+    </div>
+    <div class="travelRight">
+        <div class="newTitle">
+            <span class="newName">你的护照办好了吗？</span>
+            <span class="recommended">推荐</span>
+        </div>
+        <div class="newDescribe">办护照只要跑一次，还有这些好事你不知道!</div>
+    </div>
+</div>
+<div class="recommendSpecial">
+    <div class="moduleTitle">推荐专线</div>
+    <div class="specialLoading" ng-if="specialLoading">
+        <span><img src="./images/icon/loading.gif"></span>
+    </div>
+    <div class="swiper-container  specialContainer">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide specialSlide" ng-repeat="item in recommendedLine track by $index" ui-sref="directTrainDetails({routeId: item.id})"
+                 ng-click="recommendedLineDetails(item.id)">
+                <div class="specialTitle flex">
+                    <div class="specialTitleLeft">
+                        <span>推荐专线</span>
+                        <span>景区穿梭</span>
+                    </div>
+                    <div class="specialTitleRight flex flex-v flex-pack-center">
+                        <span class="specialName">{{item.title}}</span>
+                        <div class="specialSite flex">
+                            <div>
+                                <i class="originPoint"></i>
+                                <span class="specialOrigin">{{item.start_address}}</span>
+                            </div>
+                            <div>
+                                <i class="destinationPoint"></i>
+                                <span class="specialDestination">{{item.end_address}} </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="specialImages">
+                    <img guoyu-src="{{item.main_pic}}" onerror='this.src="./images/logo.png"'>
+                    <div class="lozd"><img src="./images/icon/loading.gif" alt=""></div>
+                </div>
+                <div class="specialDetails">
+                    <div class="specialDescribe ">
+                        <!--<span class="describeTitle">{{item.describeTitle}}</span>-->
+                        <div class="describeStatistics" >
+                            <i class="glyphicon glyphicon-eye-open" ng-if="item.browse"></i>
+                            <span class="describeRanking" ng-if="item.browse">{{item.browse}}</span>
+                            <span>已售 {{item.count}}</span>
+                        </div>
+                    </div>
+                    <div class="specialPrice">
+                        <span class="specialPresent"><i>￥ </i>{{item.money}} <i>起</i></span>
+                        <span class="specialOriginal" ng-if="item.specialOriginal">原价: <i class="glyphicon glyphicon-jpy"></i><b>{{item.specialOriginal}}</b></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<div class="contentBox">
+    <div class="allLine" ng-click="currentSite('all',item)">
+        <b><img src="./images/icon/icon-allLine.png"></b>
+        全部线路
+        <i class="glyphicon glyphicon-triangle-right"></i>
+    </div>
+</div>
