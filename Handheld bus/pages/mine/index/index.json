@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "个人中心",
+  "backgroundColor": "#FFFFFF",
+  "backgroundTextStyle": "light",
+  "onReachBottomDistance": 150
+}

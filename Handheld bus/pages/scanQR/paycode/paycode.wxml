@@ -1,0 +1,38 @@
+<!--pages/scanQR/paycode/paycode.wxml-->
+<view class='mainBody'>
+  <view class='password'>
+    <text>请输入6位数字交易密码</text>
+    <view>
+      <text>{{password.length >="1" ? "●" : " "}}</text>
+      <text>{{password.length >="2" ? "●" : " "}}</text>
+      <text>{{password.length >="3" ? "●" : " "}}</text>
+      <text>{{password.length >="4" ? "●" : " "}}</text>
+      <text>{{password.length >="5" ? "●" : " "}}</text>
+      <text>{{password.length =="6" ? "●" : " "}}</text>
+    </view>
+  </view>
+  <view class='keyboard'>
+    <view></view>
+    <view class='lineList'>
+      <text data-num='1' bindtap='pwdInput'>1</text>
+      <text data-num='2' bindtap='pwdInput'>2</text>
+      <text data-num='3' bindtap='pwdInput'>3</text>
+    </view>
+    <view class='lineList'>
+      <text data-num='4' bindtap='pwdInput'>4</text>
+      <text data-num='5' bindtap='pwdInput'>5</text>
+      <text data-num='6' bindtap='pwdInput'>6</text>
+    </view>
+    <view class='lineList'>
+      <text data-num='7' bindtap='pwdInput'>7</text>
+      <text data-num='8' bindtap='pwdInput'>8</text>
+      <text data-num='9' bindtap='pwdInput'>9</text>
+    </view>
+    <view class='lastLine'>
+      <text></text>
+      <text data-num='0' bindtap='pwdInput'>0</text>
+      <text bindtap='deletePwd'>X</text>
+    </view>
+    
+  </view>
+</view>

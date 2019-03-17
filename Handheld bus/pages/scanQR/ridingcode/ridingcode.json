@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "乘车码",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "onReachBottomDistance": 150
+}

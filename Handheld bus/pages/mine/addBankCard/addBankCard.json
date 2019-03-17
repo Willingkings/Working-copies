@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "中国银联(添加银行卡)",
+  "backgroundColor": "#FFFFFF",
+  "backgroundTextStyle": "light",
+  "onReachBottomDistance": 150
+}

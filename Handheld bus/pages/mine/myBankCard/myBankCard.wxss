@@ -1,0 +1,49 @@
+/* pages/mine/myBankCard/myBankCard.wxss */
+image{
+  width: 100%;
+  height: 100%；
+}
+.mainBody {
+  height: 100%;
+  background: #F3F3F3;
+  padding: 40rpx 30rpx;
+}
+.bankCardItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 240rpx;
+  background: linear-gradient(-50deg,#F02D39,#FE4C54);
+  padding: 20rpx 40rpx; 
+  box-shadow: 0px 0px 13px 0px #FE4C54;
+  border-radius: 10rpx;
+  margin-bottom: 40rpx;
+}
+.bankName {
+  display: flex;
+  font-size: 32rpx;
+  color: #fff;
+}
+.bankName-img1 {
+  height: 42rpx; 
+  width: 42rpx;
+  margin-right: 20rpx;
+}
+.bankNum {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 0.3;
+  color: #fff;
+}
+.addCard {
+  font-size: 36rpx;
+  color: #999999;
+  background: #fff;
+  text-align: center;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  margin: 60rpx 0 40rpx;
+}
+.advertising {
+  height: 320rpx;
+}

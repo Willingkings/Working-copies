@@ -1,0 +1,61 @@
+/* pages/mine/expenseDetail/expenseDetail.wxss */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+image {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+.mainBody {
+  height: 100%;
+  background: #FAFAFA;
+  overflow-y: auto;
+}
+.mainItem {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 150rpx;
+  background: #fff;
+  margin-top: 30rpx;
+  box-sizing: border-box;
+}
+.expense-img {
+  width: 70rpx;
+  height: 70rpx;
+}
+.expense-title , .expense-price {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.expense-title {
+  flex-grow: 0.5;
+}
+.expense-price {
+  align-items: flex-end;
+}
+.expense-title view {
+  font-size: 30rpx;
+  font-family: 500;
+  color: #333;
+}
+.expense-title text {
+  font-size: 24rpx;
+  font-family: 500;
+  color: #999999;
+}
+.expense-price view {
+  font-size: 30rpx;
+  font-family: 500;
+  color: #333;
+}
+.expense-price text {
+  font-size: 24rpx;
+  font-family: 500;
+  color: #333;
+}

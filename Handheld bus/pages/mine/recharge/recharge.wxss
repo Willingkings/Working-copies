@@ -1,0 +1,77 @@
+/* pages/mine/recharge/recharge.wxss */
+page {
+  background: #F4F4F4;
+}
+.mainBody {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+.amount {
+  background: #fff;
+  padding: 0 40rpx;
+}
+.amount text {
+  font-size: 28rpx;
+}
+.amount input {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 36rpx;
+  padding: 10rpx 0;
+}
+.amountNum {
+  padding: 20rpx 0;
+  overflow: hidden;
+}
+.amountNum text{
+  font-size: 28rpx;
+  color: #999;
+  padding: 0 0 20rpx 40rpx;
+}
+.numList {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: #fff;
+}
+.numList text {
+  width: 220rpx;
+  color: #000;
+  text-align: center;
+  padding: 20rpx 10rpx;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+  margin: 20rpx 0;
+  box-sizing: border-box;
+}
+.numList>text.active {
+  color: #fff;
+  background: #09BB07;
+}
+.paymentWay {
+  padding: 20rpx 0;
+}
+.paymentWay>text{
+  font-size: 28rpx;
+  color: #999;
+  padding: 0 0 20rpx 40rpx;
+}
+.wayItem {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  padding: 20rpx;
+}
+.wayItem image ,.wayItem icon {
+  width: 44rpx;
+  height: 44rpx;
+}
+.wayItem text {
+  flex-grow: 0.8;
+  font-size: 28rpx;
+}

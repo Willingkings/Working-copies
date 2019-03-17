@@ -1,0 +1,22 @@
+<!--pages/mine/index/index.wxml-->
+<view id="mineIndexBox">
+  <image class='advertising' src='../../../img/main-advertising.png'></image>
+  <view class="BoxHead">
+    <view class='balance'>
+      <image src='../../../img/main-balance.png'></image>
+      <text>余额 {{balance}}</text>
+      <view bindtap='recharge'>余额充值</view>
+    </view>
+    <view class='expenseDetail' data-type='reCharge' bindtap='expenseDetail'>
+      <image src='../../../img/main-expense.png'></image>
+      <text>充值记录</text>
+      <image class='leftArr' src='../../../img/leftArr.png'></image>
+    </view>
+    <view class='expenseDetail' data-type='expense' bindtap='expenseDetail'>
+      <image src='../../../img/main-expense.png'></image>
+      <text>消费明细</text>
+      <image class='leftArr' src='../../../img/leftArr.png'></image>
+    </view>
+  </view>
+  <view class="BoxBottom"></view>
+</view>

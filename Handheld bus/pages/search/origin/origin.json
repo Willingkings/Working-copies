@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "桂林掌上公交",
+  "backgroundColor": "#FFFFFF",
+  "backgroundTextStyle": "light",
+  "onReachBottomDistance": 150
+}

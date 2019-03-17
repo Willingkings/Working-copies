@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "付款码",
+  "backgroundColor": "#FFFFFF",
+  "backgroundTextStyle": "light",
+  "onReachBottomDistance": 150
+}

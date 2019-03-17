@@ -1,0 +1,56 @@
+<!--pages/scanQR/paymentQR/paymentQR.wxml-->
+<view class='mianBody'>
+  <view class='mainTop'>
+    <text>可在标记有</text>
+    <view><image src='../../../img/yinlian.png'></image> </view>
+    <view><image src='../../../img/Qshanfu.png'></image> </view>
+    <text>的商户使用</text>
+  </view>
+  <view class='mainContent'>
+    <view class='mask-mian'>
+      <view class='logo'><image src='../../../img/guilinogo.png'></image></view>
+      <view> 
+        <view class='mask-title'>请绑定银行卡</view>
+        <view class='mask-describe'>该消费码需要绑定银行卡后进行操作</view>  
+        <view class='mask-describe'>请先绑定银行卡！</view>  
+      </view>
+      <view class='mask-img'><image src='../../../img/undefind_code.png'></image></view>
+      <view class='bound'>去绑定</view>
+    </view>
+    <view class='undefind' wx:if="{{false}}">
+      <view>
+        <image src='../../../img/guilinogo.png'></image>
+        <view>您未开启付款功能</view>
+        <text>开启后向商家出示付款码即可完成快捷支付</text>
+      </view>
+      <text>立即开启</text>
+    </view>
+    <view class='codeShow' wx:if="{{false}}">
+      <view class='codeImg'><image></image></view>
+      <view class='codeText'>
+        <view>二维码<text>16秒</text>刷新一次</view>
+        <text class='refresh'>立即刷新</text>
+      </view>
+    </view>
+    <view class='payment'  wx:if="{{false}}">
+      <view><image></image></view>
+      <text>兴业银行储蓄卡(7717)</text>
+      <view><image></image></view>
+    </view>
+  </view>
+  <view class='paySelect'>
+    <view class='payOption' data-type='paymentcode' bindtap='otherCode'>
+      <image src='../../../img/paymentcode-select.png'></image>
+      <text>付款码</text>
+    </view>
+    <view class='payOption' data-type='ridingcode' bindtap='otherCode'>
+      <image src='../../../img/ridingcode.png'></image>
+      <text>乘车码</text>
+    </view>
+    <view class='payOption' data-type='payercode' bindtap='otherCode'>
+      <image src='../../../img/payercode.png'></image>
+      <text>通付码</text>
+    </view>
+  </view>
+</view>
+

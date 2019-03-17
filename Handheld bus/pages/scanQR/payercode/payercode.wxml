@@ -1,0 +1,46 @@
+<!--pages/scanQR/payercode/payercode.wxml-->
+<view class='mianBody'>
+  <view class='mainContent'>
+    <view class='undefind' wx:if="{{false}}">
+      <view><image src='../../../img/undefind_scan.png'></image></view>
+      <text>刷新</text>
+    </view>
+    <view class='codeShow' wx:if="{{!recharge && !payment}}">
+      <view class='codeImg'><image src='{{codeImg}}'></image></view>
+    </view>
+    <view class='payment' wx:if="{{!recharge && !payment}}">
+      <view>二维码有效期还剩<text> {{countDownNum}}秒 </text></view>
+      <text class='refresh' bindtap='refreshImmediately'>立即刷新</text>
+    </view>
+  </view>
+  <view class='mask-panel' wx:if="{{recharge}}">
+    <!-- <image class='close' src='../../../img/close.png'></image> -->
+    <view class='mask-mian'>
+      <image class='mask-img' src='../../../img//icon/icon_hint.png'></image>
+      <view class='mask-describe'>会员账号余额不足，请在会员中心进行充值</view>
+      <view class='recharge' bindtap='recharge'>马上充值</view>  
+    </view>
+  </view>
+  <view class='mask-panel' wx:if="{{payment}}">
+    <view class='mask-mian'>
+      <image class='mask-img' src='../../../img//icon/icon_hint.png'></image>
+      <view class='mask-describe'>你未开启付款功能。开启后，向商家出示付款码即可完成快速支付。</view>
+      <view class='recharge' bindtap='openPayment' >立即开启</view>  
+    </view>
+  </view>
+  <view class='paySelect'>
+    <view class='payOption' data-type='paymentcode' bindtap='otherCode' wx:if="{{false}}">
+      <image src='../../../img/paymentcode.png'></image>
+      <text>付款码</text>
+    </view>
+    <view class='payOption' data-type='ridingcode' bindtap='otherCode' wx:if="{{false}}">
+      <image src='../../../img/ridingcode.png'></image>
+      <text>乘车码</text>
+    </view>
+    <!-- <view class='payOption' data-type='payercode' bindtap='otherCode'> -->
+    <view class='payOption' data-type='payercode'>
+      <image src='../../../img/payercode-select.png'></image>
+      <text>通付码</text>
+    </view>
+  </view>
+</view>

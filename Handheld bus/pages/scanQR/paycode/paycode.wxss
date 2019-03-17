@@ -1,0 +1,62 @@
+/* pages/scanQR/paycode/paycode.wxss */
+.mainBody {
+  height: 100%;
+  background: #EFEFF5;
+  position: relative;
+}
+.password {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  left: 10%;
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.password view {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  border: 2px solid #BFBFC2;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+}
+.password view text {
+  width: 17%;
+  min-height: 90rpx; 
+  text-align: center;
+  padding: 20rpx 0;
+  border-left: 2px solid #BFBFC2;
+  box-sizing: border-box;
+}
+.password>view>text:first-child {
+  border: none;
+}
+.keyboard {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+}
+.lineList , .lastLine {
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px solid #ECF0F4;
+}
+.lineList text, .lastLine text {
+  width: 34%;
+  text-align: center;
+  padding: 20rpx 0;
+  border-right: 2px solid #ECF0F4;
+  box-sizing: border-box;
+}
+.lineList>text:last-child, .lastLine>text:last-child {
+  border: none;
+}
+.lastLine>text:first-child , .lastLine>text:last-child {
+  background: #ECECEC;
+}

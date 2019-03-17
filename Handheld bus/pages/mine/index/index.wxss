@@ -1,0 +1,42 @@
+/* pages/mine/index/index.wxss */
+page {
+  height: 100%;
+  position: relative;
+}
+#mineIndexBox {
+  padding: 40rpx 20rpx;
+}
+.advertising {
+  width: 100%;
+  height: 310rpx;
+}
+.BoxHead {
+  overflow: hidden;
+}
+.balance , .expenseDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60rpx 40rpx;
+  border-bottom: 1px solid #E0E2E5;
+}
+.balance image , .expenseDetail image {
+  width: 48rpx;
+  height: 42rpx;
+}
+.balance text  {
+  flex-grow: 0.8;
+}
+.balance view  {
+  font-size: 28rpx;
+  color: #fff;
+  background: #EC5B5B;
+  padding: 10rpx 20rpx;
+  border-radius: 8rpx;
+}
+.expenseDetail text  {
+  flex-grow: 0.9;
+}
+.expenseDetail .leftArr {
+  width: 24rpx;
+}

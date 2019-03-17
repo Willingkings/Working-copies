@@ -1,0 +1,104 @@
+<!--index.wxml-->
+<view id="indexBox">
+  <view id="indexTop">
+    <view>
+      <view class="site">桂林
+        <image src="/img/icon/index_jiao.png"></image>
+      </view>
+      <view class="search" bindtap='searchOriginSkip'>
+        <view>
+          <image src="/img/icon/index_shousuo.png"></image>
+        </view>
+        <view>
+          搜索线路、车站、地点
+        </view>
+      </view>
+    </view>
+  </view>
+  <view id="nearby">
+    <view class="nearbyTop">
+      <view>离你最近的站点：{{ recentlySiteName }}</view>
+      <view>
+        <view>
+          <image src="/img/icon/index_ditu.png"></image>
+        </view>
+        <view bindtap='mapBtn'>站点地图</view>
+      </view>
+    </view>
+    <view class="nearbyBottom" bindtap='searchDestinationSkip'>{{ nearbySiteName }}</view>
+  </view>
+  <view id="indexBottom" style="height:{{ ListBoxHeight }}rpx">
+    <scroll-view wx:if="{{ nearbyListData.length != 0 }}" id="ListBox" scroll-y="true">
+      <view class="blank"></view>
+      <view class="ListBox" wx:for="{{ nearbyListData }}" bindtap='LineDetailsSkip' wx:key="{{ nearbyListData }}" data-lineId="{{ item.lineId }}">
+        <view class="ListLeft">
+          <view class="title">
+            <view>{{ item.lineId }}</view>
+            <view>路</view>
+            <view>
+              <view>{{ item.ticketPrice }}</view>
+              <view>元</view>
+            </view>
+          </view>
+          <view class="start station">
+            <view>本站</view>
+            <view>{{ recentlySiteName }}</view>
+          </view>
+          <view class="finish station">
+            <view>开往站</view>
+            <view>{{ item.lastStationName }}</view>
+          </view>
+        </view>
+        <view class="ListRight">
+          <view>
+            <view class="now">
+              <view>
+                <view>{{ speedData[index].speed0== false || speedData[index].speed0 == undefined?"-/-":speedData[index].speed0}}</view>
+                <view wx:if="{{ speedData[index].speed0 != '' || speedData[index].speed0 == undefined}}">{{ second[index] }}</view>
+              </view>
+            </view>
+            <view class="future">{{ speedData[index].speed1== false || speedData[index].speed1 == undefined?"-/-":speedData[index].speed1 }}; {{ speedData[index].speed2==false || speedData[index].speed2 == undefined?"暂无消息":speedData[index].speed2 }}</view>
+          </view>
+        </view>
+      </view>
+      <view class="ListBottom"></view>
+    </scroll-view>
+
+    <view wx:if="{{ nearbyListData.length == 0 }}" class="loading" style="height:{{ ListBoxHeight }}rpx">
+      <image src="/img/icon/loading.gif"></image>
+    </view>
+    <!-- <view class="DataNone">
+      <view>
+        <view></view>
+        <view>对不起，没有搜索到此站点</view>
+      </view>
+    </view> -->
+  </view>
+  <view id="tab">
+    <view>
+      <view>
+        <view>
+          <image src="/img/icon/index_xianlu.png"></image>
+        </view>
+        <view>线路</view>
+      </view>
+    </view>
+    <view bindtap='payerSkip'>
+      <view>
+        <view>
+          <image src="/img/icon/index_shuama.png"></image>
+        </view>
+        <view>刷码上车</view>
+        <view></view>
+      </view>
+    </view>
+    <view bindtap='mineSkip'>
+      <view>
+        <view>
+          <image src="/img/icon/index_wode.png"></image>
+        </view>
+        <view>我的</view>
+      </view>
+    </view>
+  </view>
+</view>

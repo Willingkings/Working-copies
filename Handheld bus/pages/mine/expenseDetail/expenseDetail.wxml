@@ -1,0 +1,18 @@
+<!--pages/mine/expenseDetail/expenseDetail.wxml-->
+<wxs module="dateUtil" src="timeUtil.wxs"></wxs>
+<view class='mainBody'>
+  <view class='mainItem' wx:for = "{{ expenseList }}" wx:key="{{ businessListData }}">
+    <view class='expense-img' wx:if="{{type == 'expense'}}"><image src='../../../img/expenseDetail.png'></image></view>
+    <view class='expense-img' wx:if="{{type == 'reCharge'}}"><image src='../../../img/icon/rechargenew.png'></image></view>
+    <view class='expense-title'>
+      <view>{{type == 'expense' ? '通付码消费记录' : '充值记录'}}</view>
+      <text wx:if="{{type == 'expense'}}">{{dateUtil.dateFormat(item.finishTime)}}</text>
+      <text wx:if="{{type == 'reCharge'}}">{{item.CostTime}}</text>
+    </view>
+    <view class='expense-price'>
+      <view wx:if="{{type == 'expense'}}">￥{{item.payPrice}}</view>
+      <view wx:if="{{type == 'reCharge'}}">￥{{item.CostAmount}}</view>
+      <view>{{type == 'expense' ? '已消费' : '已充值'}}</view>
+    </view>
+  </view>
+</view>

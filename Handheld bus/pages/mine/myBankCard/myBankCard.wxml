@@ -1,0 +1,22 @@
+<!--pages/mine/myBankCard/myBankCard.wxml-->
+<view class='mainBody'>
+  <view class='noCode'></view>
+  <view class='bankCardList'>
+    <view class='bankCardItem'>
+      <view class='bankName'>
+        <image class='bankName-img1' src='../../../img/xinyueyinhang.png'></image>
+        <text>兴业银行储蓄卡</text>
+        <image class='bankName-img1' src='../../../img/xinyueyinhang.png'></image>
+      </view>
+      <view class='bankNum'>
+        <text style='opacity:0.8'>● ● ● ●</text>
+        <text style='opacity:0.8'>● ● ● ●</text>
+        <text style='opacity:0.8'>● ● ● ●</text>
+        <text>7715</text>
+      </view>
+    </view>
+  </view>
+  <view class='addCard'>+添加银行卡</view>
+  <image class='advertising' src='../../../img/advertising.png'></image>
+
+</view>

@@ -1,0 +1,13 @@
+<!--pages/map/map.wxml-->
+<view class='map'>
+  <map 
+    id='rimMap'
+    style="width: 100%; height: 100%;"
+    subkey="GZGBZ-PI3WR-KAAWD-WT3MS-2EULH-56BJK"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    markers="{{markers}}"
+    scale="16"
+    show-location
+  ></map>
+</view>

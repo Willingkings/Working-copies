@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/LineDetails/LineDetails",
+    "pages/payment/result/result",
+    "pages/search/origin/origin",
+    "pages/search/destination/destination",
+    "pages/mine/index/index",
+    "pages/mine/myBankCard/myBankCard",
+    "pages/mine/addBankCard/addBankCard",
+    "pages/mine/expenseDetail/expenseDetail",
+    "pages/scanQR/payercode/payercode",
+    "pages/scanQR/ridingcode/ridingcode",
+    "pages/scanQR/paymentcode/paymentcode",
+    "pages/scanQR/paycode/paycode",
+    "pages/mine/recharge/recharge",
+    "pages/map/map"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

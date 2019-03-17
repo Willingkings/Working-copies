@@ -1,0 +1,45 @@
+<!--pages/ridingcode/ridingcode.wxml-->
+<view class='mianBody'>
+  <view class='mainContent'>
+    <view class='undefind' wx:if="{{false}}">
+      <view><image src='../../../img/undefind_scan.png'></image></view>
+      <text>刷新</text>
+    </view>
+    <view class='codeShow'>
+      <view class='codeImg'><image></image></view>
+      <view class='codeText'>
+        <view>二维码有效期还剩<text> {{countDownNum}}秒 </text></view>
+        <text class='refresh'>立即刷新</text>
+      </view>
+    </view>
+    <view class='payment'>
+      <view><image></image></view>
+      <text>兴业银行储蓄卡(7717)</text>
+      <view><image></image></view>
+    </view>
+  </view>
+  <view class='mask-panel' wx:if="{{false}}">
+    <image class='close' src='../../../img/close.png'></image>
+    <view class='mask-mian'>
+      <view class='mask-title'>获取二维码失败</view>
+      <view class='mask-describe'>用户需满足如下条件之一1、绑定银联信用卡;2、绑定借记卡同时会员余额>=2元 才能申码,通付码可继续享受9折优惠</view>
+      <image class='mask-img' src='../../../img/undefind_code.png'></image>
+      <view class='bound'>去绑定</view>
+      <view class='recharge'>马上充值</view>  
+    </view>
+  </view>
+  <view class='paySelect'>
+    <!-- <view class='payOption' data-type='paymentcode' bindtap='otherCode'>
+      <image src='../../../img/paymentcode.png'></image>
+      <text>付款码</text>
+    </view>
+    <view class='payOption' data-type='ridingcode' bindtap='otherCode'>
+      <image src='../../../img/ridingcode-select.png'></image>
+      <text>乘车码</text>
+    </view> -->
+    <view class='payOption' data-type='payercode' bindtap='otherCode'>
+      <image src='../../../img/payercode.png'></image>
+      <text>通付码</text>
+    </view>
+  </view>
+</view>

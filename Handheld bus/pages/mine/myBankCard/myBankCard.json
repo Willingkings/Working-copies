@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "我的银行卡",
+  "backgroundColor": "#FFFFFF",
+  "backgroundTextStyle": "light",
+  "onReachBottomDistance": 150
+}

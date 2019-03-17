@@ -1,0 +1,18 @@
+
+{
+  // 桂林掌上公交
+  '账号': glcxwxcx4@163.com
+  '密码': glcxwxcx123
+  'AppID(小程序ID)': wxc1ec076ed77d7d06,
+  'AppSecret(小程序密钥)': e069d7ca604a0d13d1c080a9bd91f7a0
+  '腾讯地图key: GZGBZ-PI3WR-KAAWD-WT3MS-2EULH-56BJK
+  '链接二维码': http://wechat.glchuxingwang.com/handheldBus
+}
+
+
+
+
+
+http://tmp.api.ewallet.glchuxingwang.com     ssl.glchuxingwang.com/tmp_api_ewallet
+http://tmp.api.member.glchuxingwang.com      ssl.glchuxingwang.com/tmp_api_member
+http://api.member.glchuxingwang.com          ssl.glchuxingwang.com/api_member

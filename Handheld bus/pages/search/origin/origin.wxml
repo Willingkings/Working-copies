@@ -1,0 +1,65 @@
+<!--pages/search/origin/origin.wxml-->
+<view id="originBox">
+  <view id="indexTop">
+    <view>
+      <view class="site">桂林</view>
+      <view class="search">
+        <view></view>
+        <view>
+          <input bindinput="searchInput" value="{{ searchValue }}" placeholder-style="font-family:PingFang-SC-Medium;color:#AAAAAA;" type="text" value="" style="font-family:PingFang-SC-Medium;color:#333333" focus="true"></input>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view id="hint" wx:if="{{ begin }}">
+    <view class="hintTop">你可以搜索</view>
+    <view class="hintBottom">
+      <view>
+        <view>
+          <image src="/img/icon/origin_xianlu.png"></image>
+        </view>
+        <view>线路</view>
+      </view>
+      <view>
+        <view>
+          <image src="/img/icon/origin_chezhan.png"></image>
+          </view>
+        <view>车站</view>
+      </view>
+      <view>
+        <view>
+          <image src="/img/icon/origin_didian.png"></image>
+          </view>
+        <view>地点</view>
+      </view>
+    </view>
+  </view>
+  <view id="originList" wx:if="{{ SearchListings }}"  style="height:{{ ListBoxHeight }}rpx">
+    <scroll-view id="ListBox" scroll-y="true">
+      <view class="title" wx:if="{{ originListData.line }}">线路</view>
+      <view class="Listpadding" wx:if="{{ originListData.line }}">
+        <view class="List" wx:for="{{ originListData.line }}" bindtap='LineDetailsSkip' wx:key="{{  originListData.line }}"  data-lineId="{{ item.lineId }}" data-lineName="{{ item.lineName }}">
+          <view>
+            <image src="/img/icon/origin_chezhan.png"></image>
+          </view>
+          <view>{{ item.lineName }}</view>
+        </view>
+      </view>
+      <view class="title" wx:if="{{ originListData.lineStation }}">车站</view>
+      <view class="Listpadding" wx:if="{{ originListData.lineStation }}">
+        <view class="List" wx:for="{{ originListData.lineStation }}" bindtap='destinationSkip' data-stationName="{{ item.stationName }}" wx:key="{{ originListData.lineStation }}">
+          <view>
+            <image src="/img/icon/origin_chezhan.png"></image>
+          </view>
+          <view>{{ item.stationName }}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view id="ListDataNull" wx:if="{{ !begin && !SearchListings }}">
+    <view>
+      <image src="/img/icon/origin_cuowu.png"></image>
+    </view>
+    <view>对不起，没有搜索到此站点</view>
+  </view>
+</view>

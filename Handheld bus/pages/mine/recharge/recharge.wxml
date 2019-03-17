@@ -1,0 +1,30 @@
+<!--pages/mine/recharge/recharge.wxml-->
+<view class='mainBody'>
+  <view class='amount'>
+    <text>充值金额(元)</text>
+    <input type="text" placeholder='0.00' value='{{amountNum}}' bindinput='manualIput' auto-focus></input>
+  </view>
+  <view class='amountNum'>
+    <text>选择充值金额</text>
+    <view class='numList'>
+      <text data-num='10' bindtap='selectAmount' class='{{selectAmountNum == "10" ? "active" : ""}}'>10元</text>
+      <text data-num='20' bindtap='selectAmount' class='{{selectAmountNum == "20" ? "active" : ""}}'>20元</text>
+      <text data-num='50' bindtap='selectAmount' class='{{selectAmountNum == "50" ? "active" : ""}}'>50元</text>
+    </view>
+    <view class='numList'>
+      <text data-num='100' bindtap='selectAmount' class='{{selectAmountNum == "100" ? "active" : ""}}'>100元</text>
+      <text data-num='200' bindtap='selectAmount' class='{{selectAmountNum == "200" ? "active" : ""}}'>200元</text>
+      <text data-num='500' bindtap='selectAmount' class='{{selectAmountNum == "500" ? "active" : ""}}'>500元</text>
+    </view>
+  </view>
+  <view class='paymentWay'>
+    <text>支付方式</text>
+    <view class='wayItem'>
+      <image src='../../../img/icon/wxzf.png'></image>
+      <text>微信支付</text>
+      <icon type="success" size="22"></icon>
+    </view>
+  </view>
+  <button style='width: 320rpx;' type="warn" size="default" bindtap='recharge'>确认充值</button>
+</view>
+

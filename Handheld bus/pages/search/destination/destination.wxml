@@ -1,0 +1,66 @@
+<!--pages/search/destination/destination.wxml-->
+<view id="destinationBox">
+  <view id="indexTop">
+    <view>
+      <view wx:if="{{ finishname == '' }}" class="search" bindtap='searchOriginSkip'>
+        <view>
+          输入目的地
+          <!-- <input bindinput="searchInput"  placeholder="输入目的地" placeholder-style="font-family:PingFang-SC-Medium;color:#AAAAAA;" type="text" value="" style="font-family:PingFang-SC-Medium;color:#333333"></input> -->
+        </view>
+      </view>
+      <view wx:if="{{ finishname != '' }}"  class="fixation">
+        <view>
+          <view>目的地站：</view>
+          <view>{{ finishname }}</view>
+        </view>
+        <view bindtap='eliminate'>清除</view>
+      </view>
+    </view>
+  </view>
+  <view id="indexBottom" style="height:{{ ListBoxHeight }}rpx">
+    <scroll-view id="ListBox" scroll-y="true" wx:if="{{ ListData.length != 0 }}">
+      <view class="blank"></view>
+      <view class="ListBox" wx:for="{{ ListData }}" wx:key="{{ ListData }}" bindtap='LineDetailsSkip' bindtap='LineDetailsSkip'   data-lineId="{{ item.lineId }}" data-lineName="{{ item.lineName }}">
+        <view class="ListLeft">
+          <view class="title">
+            <view>{{ item.lineId }}</view>
+            <view>路</view>
+            <view>
+              <view>{{ item.ticketPrice }}</view>
+              <view>元</view>
+            </view>
+          </view>
+          <view class="start station">
+            <view>开往</view>
+            <view>{{ item.lastStationName }}</view>
+          </view>
+          <view class="finish station">
+            <view>下一站</view>
+            <view>{{ item.nextStationName == null?"终点站":item.nextStationName }}</view>
+          </view>
+        </view>
+        <view class="ListRight">
+          <view>
+            <view class="now">
+              <view>
+                <view>{{ speedData[index].speed0== false || speedData[index].speed0 == undefined?"-/-":speedData[index].speed0}}</view>
+                <view wx:if="{{ speedData[index].speed0 != '' || speedData[index].speed0 == undefined}}">{{ second[index] }}</view>
+              </view>
+            </view>
+            <view class="future">{{ speedData[index].speed1== false || speedData[index].speed1 == undefined?"-/-":speedData[index].speed1 }}; {{ speedData[index].speed2==false || speedData[index].speed2 == undefined?"暂无消息":speedData[index].speed2 }}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+
+    <view wx:if="{{ ListData.length == 0 }}" class="loading" style="height:{{ ListBoxHeight }}rpx">
+      <image src="/img/icon/loading.gif"></image>
+    </view>
+    <view class="DataNone" wx:if="{{ ListDataFalse }}">
+      <view>
+        <view></view>
+        <view>对不起，没有搜索到此站点</view>
+      </view>
+    </view>
+  </view>
+</view>

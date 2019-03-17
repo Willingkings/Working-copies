@@ -1,0 +1,88 @@
+<!--pages/LineDetails/LineDetails.wxml-->
+<view id="LineDetailsBox">
+  <view id="details">
+    <view class="detailsTop">
+      <view>{{ siteListData.stations[0].stationName }}</view>
+      <view>
+        <image src="/img/icon/LineDetails_jiantou1.png"></image>
+      </view>
+      <view>{{ siteListData.stations[siteListData.stations.length - 1].stationName }}</view>
+    </view>
+    <view class="detailsBottom">
+      <view>首班 {{ siteListData.startTime }}</view>
+      <view>末班 {{ siteListData.lastTime }}</view>
+      <view>票价：{{ siteListData.ticketPrice }}元</view>
+    </view>
+  </view>
+  <view id="speed">
+    <view class="speedTitle">
+      <view>离<view>{{ siteName }}</view>最近公交车信息</view>
+    </view>
+    <view wx:if="{{ speedData.length != 0  }}" class="speedList"> 
+      <view wx:for="{{ speedData }}" wx:key="{{ speedData }}">
+        <view class="{{ item.site == '即将到站'?'arrive' : ''}}">{{ item.speed }}</view>
+        <view class="{{ item.site == '即将到站'?'arrive' : ''}}">{{ item.site }}/{{ item.luchenglength }}km</view>
+      </view>
+    </view>
+    <view wx:if="{{ speedData.length == 0 }}" class="speedList">
+      <view class="without">
+        <view>暂无信息</view>
+      </view>
+    </view>
+  </view>
+  <view id="BusSite">
+    <scroll-view id="BusSiteList" scroll-x scroll-left="{{ scrollLet }}">
+      <view class="transverse"  style='{{ blueLength }}'>
+        <view class="blueTransverse"></view>
+        <view class="locationSelect" style="left:{{ userSelectleft }}rpx">
+          <image src="/img/icon/LineDetails_dinwei.png"></image>
+        </view>
+        <view wx:for="{{ busLeft }}" wx:key="{{ busLeft }}"  class="busIcon" style="left:{{ item }}rpx">
+          <image src="/img/icon/LineDetails_chezi.png"></image>
+        </view>
+        <view class="busIcon1">
+        </view>
+      </view>
+      <view class="List" style='width: {{ routeLength }}rpx; margin: 0 {{ routemargin }}rpx'>
+        <view wx:for="{{ siteListData.stations }}" id='userSelect' wx:key="{{ siteListData.stations }}" bindtap='userSelect' data-index='{{ index }}' data-stationName='{{ item.stationName }}' class="{{ siteIndex == index + 1?'userSelect Sle':'userSelect' }}">
+          <view>{{ index + 1 }}</view>
+          <view>{{ item.stationName }}</view>
+          <view>
+            <view>
+              <image src="/img/icon/LineDetails_qianjing.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view id="tab">
+    <view bindtap='reversing'>
+      <view>
+        <view>
+          <image src="/img/icon/LineDetails_qiehuan.png"></image>
+        </view>
+        <view>换向</view>
+      </view>
+    </view>
+    <view bindtap='payerSkip'>
+      <view>
+        <view>
+          <image src="/img/icon/index_shuama.png"></image>
+        </view>
+        <view>刷码上车</view>
+      </view>
+    </view>
+    <view bindtap='mineSkip'>
+      <view>
+        <view>
+          <image src="/img/icon/index_wode.png"></image>
+        </view>
+        <view>我的</view>
+      </view>
+    </view>
+    <view class="bj">
+      <image src="/img/icon/LineDetails_beijing.png"></image>
+    </view>
+  </view>
+</view>

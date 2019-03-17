@@ -1,0 +1,293 @@
+/* pages/LineDetails/LineDetails.wxss */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+page {
+  height: 100%;
+  position: relative;
+}
+#LineDetailsBox {
+  width: 100%;
+  height: 100%;
+  background: #FAFAFA;
+}
+/** * * * * * *  信息 * * * * * * * **/
+#details {
+  padding: 23rpx 0 22rpx 0;
+  font-family: PingFang-SC-Medium;
+  background: #FFFFFF;
+}
+#details .detailsTop {
+  display: flex;
+  align-items: center;
+  padding-left: 31rpx;
+  font-size: 36rpx;
+  color: #333333;
+}
+#details .detailsTop > view:nth-of-type(2) {
+  position: relative;
+  width: 13px;
+  height: 8px;
+  margin: 0 27rpx;
+}
+#details .detailsTop > view:nth-of-type(2) > image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#details .detailsBottom {
+  display: flex;
+  margin-top: 26rpx;
+  padding-left: 28rpx;
+  font-size: 24rpx;
+}
+#details .detailsBottom > view:nth-of-type(1) {
+  margin-right: 23rpx;
+}
+#details .detailsBottom > view:nth-of-type(2) {
+  margin-right: 34rpx;
+}
+#details .detailsBottom > view:nth-of-type(1),#details .detailsBottom > view:nth-of-type(2) {
+  color: #5D5D5D;
+}
+#details .detailsBottom > view:nth-of-type(3) {
+  color: #FF5057;
+}
+/** * * * * * *  速度 * * * * * * * **/
+#speed {
+  padding: 25rpx 0 0 21rpx;
+  font-family: PingFang-SC-Medium;
+}
+#speed .speedTitle {
+  display: flex;
+  justify-content: center;
+  padding-top: 18rpx;
+  background: #FFFFFF;
+}
+#speed .speedTitle > view {
+  display: flex;
+  font-size: 28rpx;
+  color: #333333;
+}
+#speed .speedTitle > view > view {
+  padding: 0 13rpx 0 12rpx;
+  color: #FF5057;
+}
+#speed .speedList {
+  display: flex;
+  padding: 20rpx 0 52rpx 0;
+  border-radius: 10rpx;
+  background: #FFFFFF;
+}
+#speed .speedList > view {
+  flex-grow: 1;
+  height: 82rpx;
+  text-align: center;
+  border-right: 1rpx solid rgba(218,218,218,1);
+}
+#speed .speedList > view:nth-of-type(3) {
+  border-right: none;
+}
+#speed .speedList > view > view:nth-of-type(1) {
+  font-size: 38rpx;
+  color: #333333;
+}
+#speed .speedList > view > view:nth-of-type(2) {
+  font-size: 24rpx;
+  color:#8E8E8E;
+}
+#speed .speedList > view > view:nth-of-type(1).arrive {
+  color: #FF5057;
+}
+#speed .speedList > view > view:nth-of-type(2).arrive {
+  color:#FF5057;
+}
+.speedList > .without {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.speedList > .without > view {
+  color: #7E9CF2 !important; 
+}
+/** * * * * * *  线路详情 * * * * * * * **/
+#BusSite {
+
+}
+#BusSiteList {
+
+}
+.transverse {
+  position: relative;
+  height: 88rpx;
+}
+.blueTransverse {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 17rpx;
+  background: #7E9CF2;
+}
+.List {
+  position: relative;
+  display: flex;
+}
+.List > view.userSelect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 60rpx;
+  min-height: 450rpx;
+  margin-right: 90rpx;
+  text-align: center;
+  font-family: PingFang-SC-Medium;
+}
+.List > view.userSelect:nth-last-of-type(1) {
+  margin-right: 0rpx;
+}
+.List > view.userSelect > view:nth-of-type(1) {
+  margin-top: 11rpx;
+  font-size: 24rpx;
+  color: #8E8E8E;
+}
+.List > view.userSelect > view:nth-of-type(2) {
+  margin-top: 21rpx;
+  font-size: 32rpx;
+  white-space: normal;
+    -webkit-writing-mode: vertical-rl;      
+    writing-mode: vertical-rl;
+  color: #333333;
+}
+.List > view.userSelect > view:nth-of-type(3) {
+  position: absolute;
+  top: -16rpx;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 15rpx;
+}
+.List > view.userSelect > view:nth-of-type(3) > view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 16rpx;
+  height: 15rpx;
+}
+.List > view.Sle > view:nth-of-type(3) > view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -4rpx;
+  width: 30rpx;
+  height: 30rpx;
+  background:rgba(216,30,6,1);
+  border-radius: 50%;
+}
+.List > view.userSelect > view:nth-of-type(3) > view > image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16rpx;
+  height: 15rpx;
+}
+.List > view.Sle > view:nth-of-type(3) > view > image {
+  position: relative;
+  width: 16rpx;
+  height: 15rpx;
+}
+/***************** 用户选中样式 *****************/
+.List > view.userSelect.Sle > view:nth-of-type(1) {
+  color: #D81E06;
+}
+.List > view.userSelect.Sle > view:nth-of-type(2) {
+  color: #D81E06;
+}
+.locationSelect {
+  position: absolute;
+  top: 26rpx;
+  width: 31rpx;
+  height: 38rpx;
+  z-index: 20;
+}
+.locationSelect > image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.busIcon {
+  position: absolute;
+  bottom: 20rpx;
+  width: 43rpx;
+  height: 23rpx;
+  z-index: 10;
+}
+.busIcon > image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.busIcon1 {
+  position: absolute;
+  width: 43rpx;
+  overflow: visible;
+}
+/***********************************************/
+#tab {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  padding: 12rpx 0 15rpx;
+}
+#tab > view {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+#tab > view > view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#tab > view > view > view:nth-of-type(1) {
+  position: relative;
+  width: 36rpx;
+  height: 36rpx;
+}
+#tab > view > view > view:nth-of-type(1) > image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#tab > view > view > view:nth-of-type(2) {
+  padding-top: 6rpx;
+  font-family:  PingFang-SC-Medium;
+  font-size: 20rpx;
+  color: #909090;
+}
+#tab > .bj {
+  position: absolute;
+  top: -150rpx;
+  width: 100%;
+  height: 150rpx;
+}
+#tab > .bj > image {
+  width: 100%;
+  height: 100%;
+}
