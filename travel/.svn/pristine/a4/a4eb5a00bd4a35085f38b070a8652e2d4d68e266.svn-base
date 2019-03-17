@@ -1,0 +1,104 @@
+/*价格范围选择*/
+.screen-con{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background-color:#fff;
+    z-index:2;
+}
+.screen-con .price-choice,
+.screen-con .price-in,
+.screen-con .sales-volume{
+    -webkit-flex:1;
+    -webkit-box:1;
+    -moz-flex:1;
+    -ms-flex:1;
+    flex:1;
+    text-align: center;
+    height:3rem;
+    line-height: 3rem;
+}
+.screen-con .price-choice span,
+.screen-con .price-in span,
+.screen-con .sales-volume span {
+    display:inline-block;
+    position:relative;
+    padding-right:.8rem;
+}
+.screen-con .price-choice span:after,
+.screen-con .price-in span:after,
+.screen-con .sales-volume span:after {
+    position:absolute;
+    display:block;
+    content:"";
+    right:0;
+    top:50%;
+    margin-top:-.15rem;
+    width:0;
+    height:0;
+    border-left:.3rem solid transparent;
+    border-right:.3rem solid transparent;
+    border-top:.4rem solid #333;
+}
+.screen-con .cur span{
+    color:#ea6304;
+}
+.screen-con .cur span:after{
+    border-top-color:#ea6304;
+}
+/* .screen-con .price-box-con, */
+.screen-con .choice-box{
+    display:none;
+    position:absolute;
+    top:3rem;
+    left:0;
+    width:100%;
+    background-color:#fff;
+    border-top:.07rem solid #ddd;
+    z-index:2;
+    box-sizing: border-box;
+    border-collapse:collapse;
+    color:#999;
+    padding:0 1rem;
+}
+
+.screen-con .choice-box li{
+    overflow:hidden;
+    line-height:2.5rem;
+    border-top:.07rem solid #ddd;
+    border-collapse:collapse;
+}
+.screen-con .choice-box li:first-child,
+.screen-con .choice-box li.hot-item:first-child {
+    border-top-color:transparent;
+}
+.screen-con .choice-box li i{
+    display:none;
+    float:right;
+    padding-right:1rem;
+}
+.screen-con .choice-box li.cur{
+    color:#ea6304;
+}
+.screen-con .choice-box li a{
+    display:block;
+    color:#666;
+}
+.line-recommend{
+    margin-top:3rem;
+    box-sizing: border-box;
+}
+
+.footer .footer-item .me{
+    background-image:url('../images/me.png');
+}
+.footer .footer-item .home{
+    background-image:url('../images/home-active.png');
+}

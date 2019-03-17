@@ -1,0 +1,64 @@
+.hotel {
+    background: #aaaaaa;
+    height: 100%;
+    position: relative;
+}
+.hotel-search {
+    background: #fff;
+    padding: 0 0.8rem;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 3rem;
+    left: 1rem;
+    right: 1rem;
+}
+.groupBox {
+    padding: 10px 0;
+    overflow: hidden;
+}
+.margin10 {
+    margin: 0.5rem;
+}
+.borderBt {
+    border-bottom: 1px solid #eeeeee;
+}
+.floatL {
+    float: left;
+}
+.floatR {
+    float: right;
+}
+.searchDate {
+    display: flex;
+    justify-content: space-between;
+}
+.searchDate span {
+    font-size: 0.8rem;
+}
+.searchDate i {
+    height: 1rem;
+    color: #fa4b58;
+    font-style: normal;
+    font-size: 0.6rem;
+    border-bottom: 1px solid #fa4b58;
+    padding: 0 0.5rem;
+}
+.searchDate span b{
+    font-size: 70%;
+}
+.keyword {
+    width: 100%;
+    font-size: 0.8rem;
+}
+.searchBtn {
+    display: block;
+    font-size: 0.8rem;
+    text-align: center;
+    background: #fa4b58;
+    color: #ffffff;
+    padding: 8px 0;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}

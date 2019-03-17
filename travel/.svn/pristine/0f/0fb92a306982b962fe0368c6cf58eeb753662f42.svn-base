@@ -1,0 +1,26 @@
+<div class="travel">
+    <div class="travelHeader">
+        <div class="backImg" style="background: url('{{areaDetailImg}}') 0 80% no-repeat; background-size: 100%;">
+            <!--<img guoyu-src="{{areaDetailImg}}" onerror='this.src="./images/logo.png"' alt="">
+            <div class="lozd"><img src="./images/icon/loading.gif" alt=""></div>-->
+        </div>
+        <div class="headerCont">
+            <div class="headerSearch">
+                <span class="searchCity col-xs-2">桂林</span>
+                <span class="search col-xs-8" ui-sref="search({type:'all'})" ng-click="searchType('all')">
+                <i class="glyphicon glyphicon-search"></i>
+                目的地 景点 民宿 游船等
+            </span>
+            </div>
+            <div class="headerRegion flex flex-pack-justify" ng-click="selectedArea(currentRegion)">
+                <span class="regionCity" ng-bind="currentRegion.Name" id="{{currentRegion.ID}}"></span>
+                <i class="glyphicon glyphicon-menu-down"></i>
+            </div>
+        </div>
+    </div>
+    <ul class="headerTab flex">
+        <li ui-sref=".directTrain" class="tabItem" ui-sref-active="active">景区直通车</li>
+        <li ui-sref=".scenicArea" class="tabItem" ui-sref-active="active">发现&nbsp; &bull; &nbsp;旅游</li>
+    </ul>
+    <div ui-view></div>
+</div>

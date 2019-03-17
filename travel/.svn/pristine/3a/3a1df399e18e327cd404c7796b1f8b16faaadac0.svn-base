@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>加载中</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/product_list.css">
+</head>
+
+<body>
+    <section>
+        <!-- 筛选 -->
+        <div class="screen-con">
+            <!-- 价格排序 -->
+            <div class="price-choice" id="price-choice" data-is="0">
+                <span>价格</span>
+            </div>
+            <!-- 价格输入筛选 -->
+            <div class="price-in" id="price-in" data-is="0">
+                <span>区域</span>
+            </div>
+            <!-- 销量 -->
+            <div class="sales-volume" id="sales-volume" data-is="0">
+                <span>分类</span>
+            </div>
+            <!-- 价格选择 -->
+            <ul class="price-choice-box choice-box">
+                <li>价格由低到高 <i>√</i></li>
+                <li>价格由高到低<i>√</i></li>
+            </ul>
+            <!-- 区域选择 -->
+            <ul class="price-box-con choice-box" id="hot-list" data-is="false"></ul>
+            <ul class="choice-box" id="classification"></ul>    
+        </div>
+        <!-- 选路线   推荐 -->
+        <div class="line-recommend">
+            <div class="tab-con">
+                <ul class="tab-list" id="selected-line"></ul>
+                <p class="loading">加载中...</p>
+                <p class="load-img"></p>
+                <p class="no-data"></p>
+                <p class="let-load-img"></p>
+            </div>
+        </div>
+        <script type="text/template" id="hot-spot">
+            <li class="hot-item">
+                <a href="/TicketAPI/APP/travel/product_list.html?bCode={bCode}&name={bName}">{bName}</a>
+            </li>
+        </script>
+    </section>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="js/product_list.js"></script>
+</body>
+
+</html>

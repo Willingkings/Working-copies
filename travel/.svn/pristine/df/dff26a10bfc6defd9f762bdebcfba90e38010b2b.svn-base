@@ -1,0 +1,86 @@
+.ticket-info{
+    padding:1rem 1rem .5rem;
+}
+.ticket-info .ticket-title{
+    margin-bottom:.5rem;
+    font-weight:bold;
+    color:#333;
+}
+.ticket-info .ticket-price{
+    color:#FE6230;
+}
+.items{
+    background-color:#fff;
+    border-top:.07rem solid #ddd;
+    padding:1rem;
+    overflow:hidden;
+    position:relative;
+}
+.items input{
+    font-size:1rem;
+    padding-left:2rem;
+    box-sizing: border-box;
+}
+.items .lf{
+    float:left;
+    color:#333;
+}
+.items .rt{
+    float:right;
+    color:#999;
+}
+.personal-con{
+    margin:1rem 0;
+}
+.personal-con .phone{
+    width:55%;
+}
+.personal-con .send-btn{
+    position:absolute;
+    right:1rem;
+    top:50%;
+    margin-top:-1.3rem;
+    color:#fff;
+    font-size:.825rem;
+    background-color:#ec5a5a;
+    width:5.5rem;
+    height:2.6rem;
+    text-align: center;
+    border-radius:3px;
+    padding-left:0;
+}
+.name-con {
+    margin-bottom:4rem;
+}
+.total-con{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    border-top:.07rem solid #ddd;
+}
+.total-con .total-box{
+    float:left;
+    width:60%;
+    line-height: 48px;
+    background-color:#fff;
+    font-size:1.3rem;
+    text-align: center;
+    color:#333;
+    font-weight:normal;
+    color:#666;
+}
+.total-con .total-box .total{
+    color:#ec5a5a;
+    padding-left:.5rem;
+}
+.total-con .pay-btn{
+    display:block;
+    width:40%;
+    font-size:1.3rem;
+    line-height:48px;
+    float:right;
+    background-color:#ec5a5a;
+    color:#fff;
+    text-align: center;
+}

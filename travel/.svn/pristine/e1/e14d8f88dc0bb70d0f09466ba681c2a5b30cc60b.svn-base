@@ -1,0 +1,370 @@
+.directCont {
+    background: white;
+    padding-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+.directTitle {
+    height: 1.2rem;
+    line-height: 1.2rem;
+}
+.directTitle i {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    align-self: center;
+    margin-right: 0.5rem;
+}
+.directTitle span {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    align-self: center;
+}
+.directLoading {
+    position: absolute;
+    top: 1.8rem;
+    left: 0;
+    right: 0;
+    height: 10rem;
+    background: #ffffff;
+    z-index: 9999;
+}
+.specialLoading {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    height: 10rem;
+    background: #ffffff;
+    z-index: 9999;
+}
+.directLoading span, .specialLoading span {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+}
+/**
+  * * * * * * 精选线路 * * * * * * * * * *
+ **/
+.selectLineTemp {
+    display: flex;
+    min-height: 7.5rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+.selectLineTemp li {
+    width: 49%;
+    padding: 0.25rem 0.3rem;
+    position: relative;
+    height: 6.5rem;
+}
+.selectLineTemp li span {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 1rem;
+    font-size: 0.9rem;
+    color: #fff;
+    text-shadow: 1px 1px 1px #696969;
+}
+
+
+.selectLine {
+    display: flex;
+    min-height: 10rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 0.5rem 0.5rem;
+}
+.selectLine li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 0.25rem 0.4rem;
+}
+.lineBack {
+    position: relative;
+    width: 100%;
+    height: 6rem;
+}
+.ranking {
+    width: 2.5rem;
+    height: 1.2rem;
+    line-height: 1.1rem;
+    color: #fff;
+    font-size: 0.6rem;
+    background: url("../../images/icon/icon-ranking.png") no-repeat center;
+    background-size: 100%;
+    position: absolute;
+    top: 0.05rem;
+    left: -4px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.destination {
+    font-size: 0.7rem;
+    color: #fff;
+    position: absolute;
+    left: 0.25rem;
+    bottom: 0.3rem;
+}
+.information {
+    align-self: flex-start;
+    width: 100%;
+    border: 1px solid #efefef;
+    padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+}
+.lineLabel {
+    margin-bottom: 0.2rem;
+}
+.lineLabel span {
+    font-size: 0.5rem;
+    border: 1px solid #fff;
+    padding: 1px;
+    margin-right: 5px;
+}
+.lineLabel span:nth-of-type(odd) {
+    border-color: #ff4d36;
+    color: #ff4d36;
+}
+.lineLabel span:nth-of-type(even) {
+    border-color: #5db5fc;
+    color: #5db5fc;
+}
+.linePrice {
+    display: flex;
+    justify-content: space-between;
+    height: 1.2rem;
+}
+.linePrice div {
+    line-height: 1.2rem;
+}
+.linePrice span {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #FF6E00;
+}
+.linePrice span i {
+    font-weight: bold;
+    font-size: 60%;
+    font-style:normal;
+    color: #FF6E00;
+}
+.allLine {
+    text-align: center;
+    color: #fd6d65;
+    padding: 0.5rem;
+}
+.allLine b {
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.2rem;
+}
+.allLine i {
+    font-size: 0.6rem;
+}
+/** 广告 **/
+.travelHeadlines {
+    background: white;
+    padding: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+.travelLeft {
+    width: 13%;
+    padding-left: 0;
+    padding-right: 10px;
+    border-right: 1px solid #e6e6e6;
+
+}
+.travelRight {
+    font-size: 0.7rem;
+    height: 1rem;
+    line-height: 1rem;
+    padding-left: 10px;
+    padding-right: 0;
+}
+.recommended {
+    font-size: 12px;
+    color: #ff4056;
+    padding: 2px 3px 1px 3px;
+    border: 1px solid #ff4056;
+    margin-left: 20px;
+}
+.newDescribe {
+    color: #8e8e8e;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    margin-top: 2px;
+}
+/**
+  * * * * * * 推荐专线 * * * * * * * * * *
+ **/
+.recommendSpecial {
+    min-height: 12rem;
+    background: white;
+    padding: 0.75rem;
+    position: relative;
+}
+.moduleTitle {
+    font-size: 0.8rem;
+    padding-left: 10px;
+    border-left: 3px solid #ff4c58;
+}
+.specialContainer {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+.specialSlide {
+    overflow: hidden;
+}
+.specialTitle {
+    overflow: hidden;
+    line-height: 1rem;
+}
+.specialTitleLeft {
+    width: 23%;
+    text-align: center;
+    padding:0 0.3rem;
+    border-right: 1px solid #ccc;
+}
+.specialTitleLeft span:first-child {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+.specialTitleLeft span:last-child {
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: #ff6a70;
+    border-radius: 10px;
+    padding: 0.1rem 0.2rem;
+}
+.specialTitleRight {
+    width: 77%;
+    padding-left: 0.5rem;
+}
+.specialName {
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.specialSite {
+    justify-content: space-around;
+    overflow: hidden;
+}
+.specialSite div{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.specialSite i {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    vertical-align: middle;
+}
+.originPoint {
+    background: #43d8ae;
+}
+.destinationPoint {
+    background: #ff4851;
+}
+.specialSite span {
+    width: 4.5rem;
+    font-size: 0.6rem;
+    color: #959595;
+    text-align: center;
+    overflow: hidden;
+    vertical-align: text-top;
+}
+.specialImages {
+    height: 10rem;
+    margin: 0.25rem 0.5rem;
+}
+.specialDetails {
+    display: flex;
+    padding: 0 0.5rem;
+    overflow: hidden;
+}
+.specialDescribe {
+    width: 76%;
+    overflow: hidden;
+}
+.describeTitle {
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-align: left;
+}
+.describeStatistics {
+    font-size: 0.6rem;
+    color: #999;
+}
+.describeRanking {
+    margin-right: 0.5rem;
+}
+.specialPrice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 24%;
+    padding: 0;
+}
+.specialPrice > span {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #FF6E00;
+}
+.specialPrice > span > i {
+    font-weight: bold;
+    font-size: 60%;
+    font-style:normal;
+    color: #FF6E00;
+}
+.specialOriginal {
+    color: #5e5e5e;
+    font-size: 0.7rem;
+}
+.specialOriginal i {
+    font-size: 0.6rem;
+}
+.specialOriginal b {
+    font-size: 0.7rem;
+    text-decoration: line-through;
+}
+/** 样式覆盖 **/
+
+.swiper-pagination-bullet-active {
+    width: 0.7rem;
+    border-radius: 4px;
+    background: #5d5c62;
+
+}
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    bottom: -5px;
+}
+
+
+
+.contentBox {
+    margin-top: 10px;
+    background: #fff;
+}
+
+
+
+
+
+

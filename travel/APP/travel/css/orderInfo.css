@@ -1,0 +1,103 @@
+html{
+    background-color:#f4f4f4;
+}
+.header{
+    background:url('../images/bg_green.png') no-repeat center;
+    background-size:cover;
+    min-height:5rem;
+    padding:0 1rem 10px;
+    overflow:hidden;
+}
+.header p{
+    color:#fff;
+    line-height:1.8rem;
+}
+.header .order-id{
+    margin-top:.6rem;
+}
+.infos{
+    background-color:#fff;
+    padding:0 1rem;
+    margin-bottom:.8rem;
+}
+.infos li{
+    font-size:.8rem;
+    color:#999;
+    padding:.5rem 0;
+}
+.infos li span{
+    color:#333;
+}
+.infos li span.colors{
+    color:#ff0000;
+}
+.infos  .last{
+    position:relative;
+}
+.infos .refund-btn{
+    display:none;
+    position:absolute;
+    right:0;
+    top:-.5rem;
+    width:4rem;
+    height:2rem;
+    border-radius:3px;
+    background-color:#fa5939;
+    color:#fff;
+}
+
+.ewm-box{
+    display:none;
+    margin-bottom:4rem;
+}
+.ewm{
+    background-color:#fff;
+    padding:0 1rem 1rem;
+    overflow:hidden;
+    /*margin-bottom:4rem;*/
+    margin-bottom:.2rem;
+}
+.ewm p{
+    font-size:1.2rem;
+    width:90%;
+    margin:0 auto;
+    border-bottom:.15rem solid #ec5a5a;
+    padding:.6rem 0 .4rem;
+
+}
+.ewm .ewm-img{
+    width:50%;
+    margin:1rem auto 2rem;
+}
+/*.refund-con{
+    margin-bottom:1rem;
+    background-color:#fff;
+    padding:0 1rem;
+}
+.refund-con .refund-item{
+    padding:.5rem 0;
+    border-bottom:.1rem solid #ddd ;
+}
+.refund-con .refund-item:last-child{
+    border-bottom-color:transparent;
+}
+.refund-con .refund-text{
+    float:left;
+    line-height:2rem;
+    color:#999;
+    font-size:.8rem;
+}
+.refund-con .effective-date{
+    margin-left:1.5rem;
+}
+.refund-con .refund-btn{
+    width:4rem;
+    height:2rem;
+    border-radius:3px;
+    background-color:#fa5939;
+    color:#fff;
+    float:right;
+}*/
+.footer .footer-item .me{
+    background-image:url('../images/me-active.png');
+}

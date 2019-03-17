@@ -1,0 +1,11 @@
+span.start,
+span.end{
+    color:#888;
+    background-image:none;
+    padding-left:0;
+    font-weight:normal;
+}
+
+.colorblack{
+    color:#333;
+}

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单详情</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="css/orderInfo.css">
+</head>
+<body>
+    <section>
+        <div class="header">
+            <p class="order-id">订单号：<span id="order-no">加载..</span></p>
+            <p>产品名称：<span id="order-name">加载..</span></p>
+            <p class="load-img"></p>
+        </div>
+        <div class="infos">
+            <ul>
+                <!-- <li>线路名称：<span id="name"></span></li> -->
+                <li>出行日期：<span id="time"></span></li>
+                <li>产品类型：<span id="type"></span></li>
+                <li>订单状态：<span id="state"></span></li>
+                <li id="Aticket">车票信息：<span id="ticket"></span></li>
+                <li>购买票数：<span id="num"></span><span>张</span></li>
+                <li class="last">金额：<span class="colors" id="money"></span>
+                    <input type="button" value="退款" class="refund-btn" id="refund-btn"/>
+                </li>
+                <li>验证码：<span id="OrderVerifyCode"></span></li>
+            </ul>
+        </div>
+        <!-- 退款/退票 -->
+        <!-- <div class="refund-con">
+            <div class="refund-item clearfix">
+                <span class="refund-text">单次票</span>
+                <input type="button" value="退票" class="refund-btn" id="refund-btn"/>
+            </div>
+            <div class="refund-item clearfix">
+                <span class="refund-text">有效时间</span>
+                <span class="refund-text effective-date" id="effective-date">2017-08-16</span>
+            </div>
+        </div> -->
+        <!-- 车票二维码 -->
+        <div class="ewm" id="ewm">
+            <div id="qupiao-box">
+                <p>取景点票 : <span id="qupiao"></span></p>
+                <div class="ewm-img">
+                    <img src="" alt="" id="img2">
+                </div>
+            </div>
+            <div id="busTickets" class="busTickets" style="display: none;">
+
+            </div>
+            <!--
+            <div id="zipiao-box">
+                <p>车票子二维码:<span id="zipiao"></span></p>
+                <div class="ewm-img">
+                    <img src="" alt="" id="img4">
+                </div>
+            </div>-->
+        </div>
+        
+    </section>
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/md5.js" ></script>
+    <script src="../layer/layer.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="js/order_travel_info.js?v=1.1"></script>
+</body>
+</html>

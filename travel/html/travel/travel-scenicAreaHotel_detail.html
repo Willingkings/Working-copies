@@ -1,0 +1,69 @@
+<div class="specialLineDetails">
+    <div class="detailsHeader">
+        <img guoyu-src="{{productDetail.img}}" onerror='this.src="./images/logo.png"' alt="">
+        <div class="lozd"><img src="./images/icon/loading.gif" alt=""></div>
+        <div class="headerDetails">
+            <div class="boutiqueImg"></div>
+            <div class="detailsTitle" ng-bind="productDetail.title"></div>
+            <div class="detailsLab">
+                <span> 精选 <i>&bull;</i></span>
+                <span> 专用车场 <i>&bull;</i></span>
+                <span> 舒适环境 <i>&bull;</i></span>
+                <span> 空调</span>
+            </div>
+            <div class="detailsDes"></div>
+        </div>
+    </div>
+    <div class="areaConBox mt0 margin10">
+        <p>入离时间</p>
+        <div>
+            <span>入住</span>
+            <span>离店</span>
+        </div>
+        <div class="groupBox searchDate">
+            <span>10月22日 <b>今天</b></span>
+            <i>共1晚</i>
+            <span>10月22日 <b>明天</b></span>
+        </div>
+    </div>
+    <div class="areaConBox">
+        <div class="areaConTicket">
+            <div class="tible">
+                <i><img src="./images/icon/icon-red-ticket.png" alt=""></i>酒店房型
+            </div>
+            <ul class="listGroup">
+                <li class="listGroup-item" ng-repeat="ticket in ticketList track by $index" ng-click="goSpecialPay(ticket)">
+                    <div class="col-xs-9">
+                        <div class="textNowrap w98">{{ticket.title}}</div>
+                        <div>{{"（" + ticket.type + "）"}}</div>
+                        <span class="samll-tic">{{productDetail.beforeDays}}</span>
+                        <div class="areaLabel">
+                            <small>已售 {{ticket.saleCount}}笔</small>
+                            <small ng-if="ticket.pBuyType != 0">{{"剩余 " + (ticket.psNums - ticket.saleCount)}}</small>
+                        </div>
+                    </div>
+                    <div class="priceBtn col-xs-3">
+                        <span><small>￥</small>{{ticket.price}}</span>
+                        <span>门市价 <s>{{ticket.pTicketPrice}}</s></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="areaConBox mb0">
+        <div class="areaTicTab">
+            <span ng-class="{'active':bugFocusIndex == 0}" ng-click="bugTicketFocus(0)">预定须知</span>
+            <span ng-class="{'active':bugFocusIndex == 1}" ng-click="bugTicketFocus(1)">酒店设施</span>
+            <span ng-class="{'active':bugFocusIndex == 2}" ng-click="bugTicketFocus(2)">酒店介绍</span>
+        </div>
+        <div class="areaTicContTab" ng-show="bugFocusIndex == 0">
+            <div ng-bind-html="productDetail.bookingNote"></div>
+        </div>
+        <div class="areaTicContTab" ng-show="bugFocusIndex == 1">
+            <div ng-show="bugFocusIndex == 1" ng-bind-html="productDetail.trafficGuide"></div>
+        </div>
+        <div class="areaTicContTab" ng-show="bugFocusIndex == 2">
+            <div ng-show="bugFocusIndex == 2" ng-bind-html="productDetail.politeNotice"></div>
+        </div>
+    </div>
+</div>

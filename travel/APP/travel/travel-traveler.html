@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>填写资料</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="css/traveler.css">
+ </head>
+ <body>
+     <section>
+         <!-- 票务信息 -->
+         <div class="ticket-con">
+             <div class="ticket-info">
+                 <p class="ticket-title" id="name">阳朔-平乐漓江游船（成人票）</p>
+                 <p class="ticket-price">&yen;<span id="money">90.00</span></p>
+             </div>
+             <p class="items"><span class="lf">出行时间</span><span class="rt" id="date">2017-09-20</span></p>
+             <p class="items"><span class="lf">购票数量</span><span class="rt"><span id="num">2</span>张</span></p>
+         </div>
+         <!-- 票务信息 end-->
+         <!-- 填写个人信息 -->
+         <div class="personal-con">
+             <div class="items">
+                 <span class="lf">手机号</span>
+                 <input type="number" placeholder="请填写手机号码" class="lf phone" />
+                 <input type="button" value="获取验证码" class="rt send-btn" id="send-btn" />
+             </div>
+             <div class="items">
+                 <span class="lf">验证码</span>
+                 <input type="text" placeholder="请填写验证码" class="lf msg-code" />
+             </div>
+         </div>
+         <div class="items name-con">
+             <span class="lf">出行人</span>
+             <input type="text" placeholder="请填写出行人姓名" class="lf name" />
+         </div>
+         <!-- 填写个人信息 end-->
+         <!-- 总价 -->
+         <div class="total-con">
+             <div class="total-box">总额<span class="total">&yen;<span id="total">0.00</span></span></div>
+             <span class="pay-btn" id="pay-btn">立即付款</span>
+         </div>
+     </section>
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../layer/layer.js" ></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script src="js/travel-traveler.js"></script>
+    <script>
+    </script>
+ </body>
+</html>

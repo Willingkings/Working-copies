@@ -1,0 +1,111 @@
+body{background-color:#e8e8e8; }
+a{color:#888888;}
+.body .section{
+
+}
+section.order-item{
+	background-color:#fff;
+	margin:10px 0px;
+	padding:0.5rem;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+section.order-item h4,section.order-item  p{
+	margin: 0px;
+	padding: 0px 5px 5px 5px;
+	float: left;
+	width: calc(100% - 5px);
+}
+section.order-item h4{
+	font-size: 1rem;
+	font-weight:600;
+}
+section.order-item p{
+	font-size: 0.9rem;
+}
+section.order-item h4.order-title{
+	border-bottom:1px solid #e8e8e8;
+}
+
+
+section.order-item h4.order-title span.ticket-money{
+	color:orange;
+	float:right;
+}
+
+section.order-item h4.order-title span.code{
+	float:left;
+	color:#8e8e88;
+}
+section.order-item p.order-status-created{
+	padding:0.8rem 0;
+}
+span.start{
+	color:#000;
+	display:block;
+	font-weight:600;
+	padding-bottom:0.5rem;
+	padding-left:25px;
+ 	background-image:url("/images/icon-start.png");
+ 	background-repeat: no-repeat;
+ 	background-size:15px;
+}
+span.end{
+	color:#000;
+	display:block;
+	font-weight:600;
+	padding-bottom:0.5rem;
+	padding-left:25px;
+ 	background-image:url("/images/icon-end.png");
+ 	background-repeat: no-repeat;
+ 	background-size:15px;
+}
+
+.status{ float:right;}
+.status-paid{
+	color:green;
+}
+.status-wait{
+	color:orange;
+}
+.status-cancel{
+	color:red;
+}
+span.btn-cancel{
+	margin:0px 0.5rem;
+	color:#fff;
+	float:right;
+	border-radius:5px;
+	background-color: red;
+	padding:5px;
+}
+span.btn-refund{
+	margin:0px 0.5rem;
+	color:#fff;
+	float:right;
+	border-radius:5px;
+	background-color: red;
+	padding:5px;
+}
+span.btn-pay{
+	margin:0px 0.5rem;
+	color:#fff;
+	float:right;
+	border-radius:5px;
+	background-color: orange;
+	padding:5px;
+}
+
+#tabs{
+	width: 100%;
+	position: fixed;
+	top: 0px;
+}
+
+#tabs ul.body li{
+	overflow-y: auto;
+	-webkit-overflow-scrolling:touch;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:60%;
+}

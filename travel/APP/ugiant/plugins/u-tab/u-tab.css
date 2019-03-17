@@ -1,0 +1,62 @@
+/*基础框架样式*/
+div.u-tab{
+	position: relative;	
+	font-size: 0rem;
+}
+div.u-tab ul li{
+	padding:0px;
+	margin:0px;
+}
+div.u-tab>ul.nav{
+	position: absolute;	
+	top: 0px;
+	background-color: #fff;
+	width: 100%;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+div.u-tab ul.body{
+	padding-top:3.0rem;
+}
+div.u-tab ul.nav li{
+	display: inline-block;
+	font-size: 1rem;
+	padding: 5px 5px 3px 5px;
+}
+div.u-tab>ul.body>li.section{
+	display: none;
+}
+
+div.u-tab ul.nav li{
+	line-height: 2.5rem;
+	text-align: center;
+	font-weight:600;
+}
+div.u-tab ul.nav li.active{  
+	padding-bottom: 0px;
+	border-bottom: 3px solid #dedede;
+}
+
+div.u-tab ul.body li{
+	padding: 0px;
+}
+
+div.u-tab ul.body li.section.active{
+	display: block;
+	width: calc(100% - 0.2rem);
+}
+
+/*tab主题simple*/
+div.u-tab ul.nav li.active{
+	border-bottom: 3px solid #ec5a5a;
+}
+
+div.u-tab ul.nav li{
+	line-height: 2.5rem;
+}
+
+
+
+
+
+

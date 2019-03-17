@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>出游订单</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../ugiant/plugins/u-tab/u-tab.css">
+    <link rel="stylesheet" href="css/order-bus-record.css">
+    <link rel="stylesheet" href="css/order_travel_list.css">
+</head>
+<body>
+
+    <!-- tab 容器 start-->
+    <div class="u-tab simple" id="tabs">
+        <ul class="nav">
+            <li style="display: inline-block; min-width: 70px" class="item active" data="all">全部</li>
+            <li style="display: inline-block; min-width: 70px" class="item"  data="wait">待付款</li>
+            <li style="display: inline-block; min-width: 70px" class="item"  data="paied">已付款</li>
+            <li style="display: inline-block; min-width: 70px" class="item"  data="cancel">已取消</li>
+        </ul>
+
+        <ul class="body">
+            <li  id="all" class="section active">
+                <div class="page-content"></div>
+            </li>
+            <li id="wait" class="section ">
+                <div class="page-content"></div>
+            </li>
+            <li id="paid" class="section ">
+                <div class="page-content"></div>
+            </li>
+            <li id="cancel"  class="section ">
+                <div class="page-content"></div>
+            </li>
+        </ul>
+        <p class="load-img"></p>
+    </div>
+     <!-- tab 容器 end-->
+
+    <script type="text/template" id="tpl_order_item">
+          <section class="order-item">
+				<a href="order_info.html?orderId={orderId}">
+              		<h4 class="order-title">
+						<span class="code">订单：{code}</span>
+						<span class="ticket-money">金额 {total-money}元</span>
+					</h4>
+                    <p class="order-status-created">
+						<span class="created"><span class="colorblack">订单时间：</span>{created}</span>
+						<span class="status status-{status-css}">{status}</span>
+					</p>
+					<p>
+						<span class="start"><span class="colorblack">名称：</span>{start}</span>
+						<span class="end"><span class="colorblack">产品类型：</span>{end}</span>
+					</p>
+                    <p><span class="colorblack">票数：</span>{nums}</p>
+                    <p><span style="display:{showPay}; color: red; float:left;" >30分钟内未完成支付将自动取消订单</span></p>
+				</a>
+                    <p>
+						<span class="btn-pay " style="display:{showPay}" order-no={orderNo} member-id = {memberId}>去支付</span>
+						<span class="btn-cancel" style="display:{showPay}" orderid={cancelOrderId} pay-status={payStatus}>取消订单</span>
+						<span class="btn-refund" style="display:{refundPay}" orderId={refundOrderId} payStatus={refundPayStatus} orderNum={orderNum} pValidTimeLost={pValidTimeLost} pGetTickets={pGetTickets} pPoundage={pPoundage} pPoundagePercent={pPoundagePercent} status={status}>退款</span>
+					</p>
+                    <div class="clearfix"></div>
+
+            </section>
+    </script>
+
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../layer/layer.js" ></script>
+    <script type="text/javascript" src="../js/md5.js" ></script>
+    <script type="text/javascript" src="../ugiant/plugins/u-tab/u-tab.js"></script>
+    <script src="js/order_travel_list.js?v=1.1"></script>
+</body>
+</html>

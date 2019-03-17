@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>出游</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <section>
+        <!-- 搜索 -->
+        <div class="search-modal" id="search-modal">
+            <form action="" onsubmit="return false;">
+                <div class="search-con">
+                    <input type="search" placeholder="关键字搜索" class="search-in" id="search-in">
+                </div>
+                <span id="cancel">取消</span>
+            </form>
+            <!-- 热搜词 -->
+             <div class="modal-con" id="modal-con-hot">
+                <p>热搜词</p>
+                <ul class="modal-list" id="hot-spot-list">
+                    <script type="text/template" id="tpl_hot_word">
+                        <li class="modal-item">
+                            <a href="product_list.html?uiName={SearchName}">{SearchName}</a>
+                        </li>
+                    </script>
+                </ul>
+            </div> 
+            <!-- 搜索历史记录 -->
+             <!--<div class="modal-con">
+                <p>搜索历史记录</p>
+                <ul class="modal-list">
+                    <script type="text/template" id="tpl_historical_record">
+                        <li class="modal-item">
+                            <a href="javascript:void(0);">桂林</a>
+                        </li>
+                    </script>
+                </ul>
+            </div>--> 
+        </div>
+        <div class="search-box">
+            <div class="search-con" id="search-con">
+                <input type="text" placeholder="关键字搜索" class="search-in" readonly="readonly">
+            </div>
+        </div>
+
+        <!-- 图片标签 -->
+        <div class="tab-img">
+            <ul class="tab-list" id="img-nav">
+                <script type="text/template" id="template_tab_img">
+                    <li class="tab-item">
+                        <a href="product_list.html?bCode={bCode}&name={bName}">
+                            <div class="icons hot">
+                                <img src="{DomianNameImgPath}" alt="">
+                            </div>
+                            <span class="tab-text">{bName}</span>
+                        </a>
+                    </li>
+                </script>
+                <li class="tab-item">
+                    <a href="http://tmp.api.competition.glchuxingwang.com/WXAPI/APP/competition/CompetitionRegistration.html">
+                        <div class="icons hot">
+                            <img src="./images/icon_1.png" alt="">
+                        </div>
+                        <span class="tab-text">赛事活动</span>
+                    </a>
+                </li>
+            </ul>
+            <p class="load-img"></p>
+        </div>
+
+        <!-- 热门地点 -->
+        <div class="hot-spot">
+            <p class="hot-title">热门地点</p>
+            <ul class="hot-list" id="hot-list">
+                <script type="text/template" id="hot-spot">
+                    <li class="hot-item">
+                        <a href="product_list.html?DestinationID={ID}&name={DestinationName}">
+                            <img src="./images/guiLin{pID}.png">
+                            {DestinationName}
+                        </a>
+                    </li>
+                </script>
+            </ul>
+        </div>
+
+        <!-- 选路线   推荐 -->
+        <div class="line-recommend">
+            <div class="line-recommend-tab" id="line-tab-list">
+                <script type="text/template" id="line-recommend-tab">
+                    <div class="tab-box" data-code="{bCode}">
+                        <span class="tab-item">{APPShowName}</span>
+                    </div>
+                </script>
+            </div>
+            <div class="tab-con">
+                <ul class="tab-list" id="selected-line"></ul>
+                <p class="let-load-img"></p>
+                <p class="no-data-text"></p>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="js/index.js?v=1.0"></script>
+</body>
+
+</html>
