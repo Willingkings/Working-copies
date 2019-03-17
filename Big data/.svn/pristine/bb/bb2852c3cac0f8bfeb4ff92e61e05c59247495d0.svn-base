@@ -1,0 +1,606 @@
+body {
+    background: url("../images/bodyBg.png") no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 0.2rem;
+}
+.red{
+    color:#D53D4A;
+}
+.green{
+    color:#15BD50;
+}
+.yellow{
+    color:#F9CD50;
+}
+
+.content {
+
+}
+.item-left {
+    float: left;
+    width: 25%;
+}
+.cur-time {
+    font-size: 0.3rem;
+    padding: 0.3rem 0 0.3rem 0.1rem;
+}
+.item-left_title {
+    font-size: 0.3rem;
+    text-align: center;
+    color: #0eeeed;
+}
+.item-left_benefits, .item-left_income, .item-left_user, .item-right_traffic,
+.item-right_parking, .item-right_present, .item-middle_map, .item-middle_tickets {
+    display: inline-block;
+    width:100%;
+    position:relative;
+}
+.item-left_bg, .item-right_bg{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+    z-index: 9;
+}
+.item-middle_bg {
+    position:absolute;
+    left: 0.15rem;
+    right: 0.15rem;
+    top:0;
+    bottom: 0;
+    z-index: 9;
+}
+.item-middle {
+    float: left;
+    width: 50%;
+}
+.item-middle_title {
+    display: inline-block;
+    width:80%;
+    margin-left: 10%;
+    position:relative;
+}
+.map {
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+.accounted {
+    float: right;
+    width: 40%;
+    height: 100%;
+    padding: 4% 4% 1% 0;
+}
+.accounted>div {
+    height: 33%;
+    position: relative;
+}
+.accounted_title {
+    display: block;
+    font-size: 0.12rem;
+    color: #0eefeb;
+    background: #1c3247;
+    padding: 0.05rem;
+}
+.diagram {
+    height: 100%;
+}
+.combined {
+    position: absolute;
+    bottom: 0.1rem;
+    right: 0.35rem;
+}
+.combined span {
+    color: #ffd500;
+    font-size: 0.20rem;
+    font-style: normal;
+}
+.combined span i {
+    color: #ffd500;
+    font-size: 70%;
+    font-style: normal;
+}
+
+
+
+
+.item_content{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+    z-index: 99
+}
+.item-right {
+    float: left;
+    width: 25%;
+}
+.item-right .date{
+    font-size: 0.2rem;
+    padding: 0.6rem 0 0.75rem;
+}
+
+/*
+
+.header-con{
+    display: flex;
+    justify-content: space-between;
+    height:0.75rem;
+    line-height:0.75rem;
+    margin-top:0.2rem;
+}
+.header-con div.cur-time{
+    width: 20%;
+}
+.header-con div.date{
+    width: 20%;
+}
+.header-con .cur-time{
+    font-size:0.16rem;
+    padding-left:0.3rem;
+}
+.content{
+    box-sizing: border-box;
+    padding:0 15px;
+    height:calc(100% - 86px);
+}
+.main {
+    !*border:1px solid #ddd;*!
+    height: 100%;
+}
+.main .item{
+    height:100%;
+}
+!*左边板块*!
+.item .assets-operation-con{
+    background: url("../images/numBooder.png") no-repeat;
+    background-size: cover;
+}
+.item .assets-body{
+    margin:0;
+    padding:10px 0;
+}
+.item .assets-item{
+    margin:5px 0;
+}
+.item .assets-item .title{
+    font-size:18px;
+    color:#75A0CC;
+}
+.item .assets-item .values{
+    font-size:28px;
+}
+.item .user-trends-con{
+    margin-top:15px;
+}
+!*中间板块*!
+.item-middle{
+    margin-top:48px;
+}
+.item .server-top{
+    position:relative;
+    padding-top:10px;
+    background: url("../images/mapBg.png") no-repeat;
+    background-size: contain;
+}
+.item .server-top .border-bg{
+    position:absolute;
+    display:block;
+    width:20px;
+    height:20px;
+    border:3px solid #10E3E3;
+}
+.item .server-top .left-top{
+    border-right:0;
+    border-bottom:0;
+    left:0;
+    top:0;
+}
+.item .server-top .left-bottom{
+    border-right:0;
+    border-top:0;
+    left:0;
+    bottom:0;
+}
+.item .server-top .right-bottom{
+    border-left:0;
+    border-top:0;
+    right:0;
+    bottom:0;
+}
+.item .server-top .right-top{
+    border-left:0;
+    border-bottom:0;
+    right:0;
+    top:0;
+}
+.item .server-top .title{
+    color:#10E3E3;
+    text-align: center;
+    font-size:16px;
+}
+.item .real-time-data p{
+    background-color:#1B305B;
+    font-size:18px;
+    color:#F0CA07;
+    height:48px;
+    line-height:48px;
+    margin:10px 0;
+    padding:0 15px;
+}
+.item .real-time-data span{
+    float:right;
+    font-size:26px;
+}
+.item .sharing-rate-con{
+    margin-top:30px;
+}
+.item .server-bottom{
+    margin-top:20px;
+    margin-left:0;
+    margin-right:0;
+    box-sizing: border-box;
+}
+.item .map-con{
+    position:relative;
+}
+.item #map{
+    height:450px;
+    margin-top:18px;
+}
+.item .server-data{
+    position:absolute;
+    right:0;
+    top:50%;
+    margin-top:-159px;
+    z-index:9999;
+    width:30%;
+    text-align: center;
+    height:318px;
+
+}
+.item .data-box{
+    margin:30px 0;
+}
+.item .data-box{
+    border:1px solid #10E3E3;
+    border-radius:5px;
+    padding-bottom:10px;
+    box-sizing: border-box;
+}
+.item .d-title{
+    position:relative;
+    padding:0 8px;
+    font-size:14px;
+    top:-10px;
+    background-color:#2A5275;
+    text-shadow: 0 0 0.2rem #10E3E3,-0 -0 0.2rem #10E3E3;
+}
+.item .d-data{
+    font-size:24px;
+}
+.item .title-box{
+    position:relative;
+}
+.item .moudle-title{
+    font-size:20px;
+    color:#10E3E3;
+    text-align: center;
+    height:48px;
+    line-height:48px;
+}
+!*右边板块*!
+.item  .title-box .tip{
+    position:absolute;
+    right:0;
+    bottom:12px;
+    color:#fff;
+}
+.item .box .title{
+    padding:0 15px;
+    font-size:14px;
+    height:32px;
+    line-height:32px;
+    color:#10E3E3;
+    background-color:#1C3247;
+}
+.item .box .total-con{
+    position:absolute;
+    right:15px;
+    top:35px;
+}
+.item .box .total-con span{
+    padding-left:5px;
+    font-size:20px;
+}
+.item .vehicle-con{
+    margin:15px 0;
+}
+
+.item .data-server-con{
+    text-align: center;
+}
+.item .data-server-list{
+    margin-bottom:10px;
+}
+.item .data-server-con .title{
+    background-color:#1B305B;
+    color:#10E3E3;
+    font-size:18px;
+    height:38px;
+    line-height:38px;
+    margin-bottom:10px;
+}
+.item .data-server-con .values{
+    font-size:32px;
+    color:#F9CD50;
+}
+*/
+
+/**                                          H                                                 **/
+/**             数字模块                **/
+
+.numBorder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0.3rem 0.2rem;
+    font-size: 0.25rem;
+    z-index: 100;
+}
+.numBorder > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10%;
+}
+.numBorder > div > div {
+
+}
+.numBorder > div > div > p {
+    color: #85A3C8;
+}
+.numBorder > div > div > .parent {
+    display: flex;
+    padding: 0;
+
+    overflow: hidden;
+}
+.numBorder .parent > li {
+    position: relative;
+    width: .27rem;
+    height: 0.35rem;
+    text-align: center;
+    margin-right: 0.03rem;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.numBorderTop .parent > li {
+    background-image: url("../images/numRed.png");
+}
+.numBorderBorrom .parent > li {
+    background-image: url("../images/numBlue.png");
+}
+.numBorderTop .numBorderMoney {
+    position: relative;
+}
+.numBorderTop .numBorderMoney > ul::after {
+    position: absolute;
+    top: -0.02rem;
+    left: -0.25rem;
+    display: block;
+    width: .27rem;
+    height: .4rem;
+    background-image: url(../images/￥@2x.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+}
+.numBorderTop .numBorderMoney > li:nth-last-of-type(4) {
+    margin-left: 0.15rem;
+}
+.numBorderTop .numBorderMoney > li:nth-last-of-type(5) {
+    position: relative;
+}
+.numBorderTop .numBorderMoney > li:nth-last-of-type(5)::after {
+    position: absolute;
+    top: 0;
+    right: -0.12rem;
+    content: ",";
+}
+.numBorder .parent > li > ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: .25rem;
+    padding: 0;
+}
+.numBorder .parent > li > ul > li {
+    width: .27rem;
+    height: 0.35rem;
+    line-height: 0.35rem;
+}
+.donghua {
+    transform: translateY(-1rem);
+    transition: all 2s linear;
+}
+/**                                          H                                                 **/
+/**             柱形模板                **/
+.cylindricalityBoy {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: .1rem .2rem;
+}
+.cylindricalityBoy > p {
+    color: #27E4DE;
+    font-size: .2rem;
+}
+.cylindricalityBoy > p {
+    font-weight: bold;
+    font-size: .2rem;
+    color: #27E4DE;
+}
+.cylindricalityBoyTitele {
+    display: flex;
+    padding-left: .3rem;
+    position: absolute;
+    z-index: 100;
+    top: 20%;
+}
+.cylindricalityBoyTitele > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: .6rem;
+    height: .6rem;
+    margin-right: .2rem;
+}
+.cylindricalityBoyTitele > div > img {
+    position: absolute;
+    height: 100%;
+}
+.cylindricalityBoyTitele > div > p {
+    position: absolute;
+    margin: 0;
+    font-size: 0.1rem;
+}
+.cylindricalityBoyTitele > div > span {
+    position: absolute;
+    display: block;
+    font-size: 0.1rem;
+    bottom: -0.3rem;
+    white-space: nowrap;
+}
+.Titele1 .cylindricalityBoyTitele > div > span {
+    color: #1F77A0;
+}
+.Titele2 .cylindricalityBoyTitele > div > span {
+    color: #FB4B60;
+}
+.Titele3 .cylindricalityBoyTitele > div > span {
+    color: #2EB596;
+}
+.Titele4 .cylindricalityBoyTitele > div > span {
+    color: #fff;
+}
+#container,#container1,#container2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+/**                                          H                                                 **/
+/**             景区                **/
+.scenicAreaBox {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: .2rem 0;
+}
+.scenicAreaBox > div {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+.scenicAreaBox > div > p {
+    padding-left: 1rem;
+    font-size: .3rem;
+    color: #27E4DE;
+}
+.scenicAreaBox > div > div {
+    position: absolute;
+    display: flex;
+    margin-left: 18%;
+    margin-top: 13%;
+    z-index: 100;
+}
+.scenicAreaBox > div > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: .6rem;
+    height: .6rem;
+    margin-right: .2rem;
+}
+.scenicAreaBox  div > img {
+    position: absolute;
+    left:0;
+    right:0;
+    width: 100%;;
+    height: 100%;
+
+}
+.scenicAreaBox > div > div  div > p {
+    position: absolute;
+    margin: 0;
+    font-size: 0.1rem;
+
+}
+.scenicAreaBox  div > span {
+    position: absolute;
+    display: block;
+    font-size: 0.1rem;
+    bottom: -0.3rem;
+    white-space: nowrap;
+
+}
+#container3,#container4 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 99;
+}
+/**                                          变身                                                **/
+
+#transfiguration{
+    position: absolute;
+    left: 0;
+    top: -0.3rem;
+    right: 0;
+    margin: 0 auto;
+    /* right: 0; */
+    width: 2.6rem;
+    height: 2.2rem;
+    z-index: 500;
+}
+#transfiguration img{
+    display: block;
+    widows: 100%;
+    height: 100%;
+}
+
+/**                                           *****                                                  **/
+
+
+/**                                          *****                                               **/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

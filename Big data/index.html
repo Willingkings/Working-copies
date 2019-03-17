@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>桂林出行网大数据</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/record.css">
+</head>
+<body>
+    <div class="content">
+        <div class="item-left">
+            <div class="cur-time" id="curTime"></div>
+            <div class="item-left_title mb10">运营效益</div>
+            <div class="item-left_benefits mb10">
+                <div class="left_dummy"></div>
+                <div class="item-left_bg"><img src="images/numBorder.png" ></div>
+                <div class="item_content p10"></div>
+                <!--添加数字滚动模块-->
+                <div class="numBorder">
+                    <div  class="numBorderTop">
+                        <div>
+                            <p>总收益（<span id="numBorderMoney"></span>元）</p>
+                            <ul class="numBorderMoney parent"></ul>
+                        </div>
+                        <div class="numBorderBorrom">
+                            <p>访问量（<span id="numBorderVisitTimes"></span>次）</p>
+                            <ul class="numBorderVisitTimes parent"></ul>
+                        </div>
+                        <div>
+                            <p>用户数（<span id="numBorderUserNumber"></span>个）</p>
+                            <ul class="numBorderUserNumber parent"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-left_income mb10">
+                <div class="left_dummy"></div>
+                <div class="item-left_bg"><img src="images/lineBor.png" ></div>
+                <div class="item_content p10">
+                    <div class="diagram" id="income"></div>
+                </div>
+            </div>
+            <div class="item-left_user">
+                <div class="left_dummy"></div>
+                <div class="item-left_bg"><img src="images/pieBor.png" ></div>
+                <div class="item_content p10">
+                    <div class="diagram" id="user"></div>
+                </div>
+            </div>
+        </div>
+        <div class="item-middle">
+            <div class="item-middle_title">
+                <div class='dummy'></div>
+                <div class='item_content'><img src="images/title.png"></div>
+            </div>
+            <div class="item-middle_map">
+                <div class="middle_dummy"></div>
+                <div class="item-middle_bg"><img src="images/mapBg.png" ></div>
+                <div class="item_content p10">
+                    <div class="map" id="map"></div>
+                    <div class="accounted">
+                        <div class="business">
+                            <span class="accounted_title" id="btnStart">业务占比</span>
+                            <div class="diagram" id="business"></div>
+                            <!--<span class="combined">合计：<span><i>￥</i>35312</span></span>-->
+                        </div>
+                        <div class="district">
+                            <span class="accounted_title">区域占比</span>
+                            <div class="diagram" id="district"></div>
+                            <!--<span class="combined">合计：<span><i>￥</i>35312</span></span>-->
+                        </div>
+                        <div class="channel">
+                            <span class="accounted_title">渠道占比</span>
+                            <div class="diagram" id="channel"></div>
+                            <!--<span class="combined">合计：<span><i>￥</i>35312</span></span>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-middle_tickets">
+                <div class="middle_dummy"></div>
+                <div class="item-middle_bg"><img src="images/border.png" ></div>
+                <div class="item_content p10">
+                    <div class="scenicAreaBox">
+                        <div>
+                            <div class="Titele3 differentiate">
+                                <div>
+                                    <img  src="./images/NewScenic1.png"  ImgSrc="./images/SceniclH1.png" alt="">
+                                    <span><span id="Titele31"></span>万人</span>
+                                </div>
+                                <div>
+                                    <img src="./images/NewScenic2.png"  ImgSrc="./images/SceniclH2.png" alt="">
+                                    <span><span id="Titele32"></span>万单</span>
+                                </div>
+                                <div>
+                                    <img src="./images/NewScenic3.png"  ImgSrc="./images/SceniclH3.png" alt="">
+                                    <span><span id="Titele33"></span>万元</span>
+                                </div>
+                                <div>
+                                    <img src="./images/NewScenic4.png"  ImgSrc="./images/SceniclH4.png" alt="">
+                                    <span><span id="Titele34"></span>个</span>
+                                </div>
+                            </div>
+                            <div id="container3" ></div>
+                        </div>
+                        <div>
+                            <div class="Titele4 differentiate" >
+                                <div>
+                                    <img src="./images/NewScenic1.png"  ImgSrc="./images/SceniclH1.png" alt="">
+                                    <span><span id="Titele41"></span>万人</span>
+                                </div>
+                                <div>
+                                    <img src="./images/NewScenic2.png"  ImgSrc="./images/SceniclH2.png" alt="">
+                                    <span><span id="Titele42"></span>万单</span>
+                                </div>
+                                <div>
+                                    <img src="./images/NewScenic3.png"  ImgSrc="./images/SceniclH3.png" alt="">
+                                    <span><span id="Titele43"></span>万元</span>
+                                </div>
+                                <div>
+                                    <img src="./images/NewScenic4.png"  ImgSrc="./images/SceniclH4.png" alt="">
+                                    <span><span id="Titele44"></span>个</span>
+                                </div>
+                            </div>
+                            <div id="container4" ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item-right">
+            <div class="date">
+                <div>技术支持：桂林市鼎耀信息科技有限公司</div>
+                <div>2017年12月8日至今</div>
+            </div>
+            <div class="item-right_traffic mb10">
+                <div class="right_dummy"></div>
+                <div class="item-right_bg"><img src="images/border.png" ></div>
+                <div class="item_content p10">
+                    <div class="cylindricalityBoy">
+                        <div class="cylindricalityBoyTitele Titele differentiate">
+                            <div value="0">
+                                <img  src="./images/bus1.png" ImgSrc="./images/Xbus1.png" alt="">
+                                <span></span>
+                            </div>
+                            <div>
+                                <img src="./images/bus2.png" ImgSrc="./images/Xbus2.png" alt="">
+                                <span></span>
+                            </div>
+                            <div>
+                                <img src="./images/bus3.png" ImgSrc="./images/Xbus3.png" alt="">
+                                <span></span>
+                            </div>
+                            <div>
+                                <img src="./images/bus4.png" ImgSrc="./images/Xbus4.png" alt="">
+                                <span></span>
+                            </div>
+                            <div>
+                                <img src="./images/bus5.png" ImgSrc="./images/Xbus5.png" alt="">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div id="container" ></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item-right_parking mb10">
+                <div class="right_dummy"></div>
+                <div class="item-right_bg"><img src="images/lineBor.png" ></div>
+                <div class="item_content p10">
+                    <div class="cylindricalityBoy">
+                        <div class="cylindricalityBoyTitele Titele1 differentiate">
+                            <div>
+                                <img src="./images/park1.png" ImgSrc="./images/parkH1.png" alt="">
+                                <span>50万人</span>
+                            </div>
+                            <div>
+                                <img src="./images/park2.png" ImgSrc="./images/parkH2.png" alt="">
+                                <span>200000单</span>
+                            </div>
+                            <div>
+                                <img src="./images/park3.png" ImgSrc="./images/parkH3.png" alt="">
+                                <span>300万元</span>
+                            </div>
+                            <div>
+                                <img src="./images/park4.png" ImgSrc="./images/parkH4.png" alt="">
+                                <span>20000个</span>
+                            </div>
+                        </div>
+                        <div id="container1" ></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-right_present">
+                <div class="right_dummy"></div>
+                <div class="item-right_bg"><img src="images/pieBor.png" ></div>
+                <div class="item_content p10">
+                    <div class="cylindricalityBoy">
+                        <div class="cylindricalityBoyTitele Titele2 differentiate">
+                            <div>
+                                <img src="./images/Transported1.png" ImgSrc="./images/TransportedH1.png" alt="">
+                                <span></span>
+                            </div>
+                            <div>
+                                <img src="./images/Transported2.png" ImgSrc="./images/TransportedH2.png" alt="">
+                                <span></span>
+                            </div>
+                            <div>
+                                <img src="./images/Transported3.png" ImgSrc="./images/TransportedH3.png" alt="">
+                                <span></span>
+                            </div>
+                            <div>
+                                <img src="./images/Transported4.png" ImgSrc="./images/TransportedH4.png" alt="">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div id="container2" ></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/echarts.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

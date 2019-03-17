@@ -1,0 +1,73 @@
+@media screen and (width: 1920px) {
+    html { font-size: 100px;}
+}
+@media screen and (min-width: 1024px) {
+    html {font-size: 53.33333333px !important; }
+}
+@media screen and (min-width: 1366px) {
+    html {font-size: 71.14583333px !important;}
+}
+@media screen and (min-width: 1280px) {
+    html { font-size: 66.66666667px !important;}
+}
+@media screen and (min-width: 1440px) {
+    html {  font-size: 75px !important;}
+    .left_dummy, .right_dummy, .middle_dummy {
+        padding-top: 70%;
+    }
+    .item-middle_tickets .middle_dummy {
+        padding-top: 40%;
+    }
+    .item-middle_title .dummy{
+        margin-top: 16%;
+    }
+}
+@media screen and (min-width: 1600px) {
+    html { font-size: 83.33333333px !important}
+}
+@media screen and (min-width: 1920px) {
+    html {font-size: 100px !important;}
+    .left_dummy, .right_dummy, .middle_dummy {
+        padding-top: 60%;
+    }
+    .item-middle_tickets .middle_dummy {
+        padding-top: 35%;
+    }
+    .item-middle_title .dummy{
+        margin-top: 16%;
+    }
+}
+html,body{
+    height: 100%;
+    padding:0;
+    margin:0;
+    overflow: hidden;
+}
+ul li,ol li{
+    list-style: none;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+.p10 {
+    padding: 0.1rem;
+}
+.mb10 {
+    margin-bottom: 0.1rem;
+}
+
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix:after{clear:both;}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
