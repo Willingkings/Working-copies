@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网约公交</title>
+</head>
+<body>
+
+
+<script>
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return decodeURI(r[2]);
+        return null;
+    }
+    var lineCode = GetQueryString("lineCode");
+    if (lineCode != null && lineCode.length !== 0) {
+        var redirectUri = encodeURI("http://wechat.payment.glchuxingwang.com/wechatpay/productDetails");
+        window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx873af39ea1f882ed&redirect_uri="+ redirectUri +"&response_type=code&scope=snsapi_base&state="+ lineCode +"#wechat_redirect";
+    }else {
+        var redirectUri = encodeURI("http://wechat.payment.glchuxingwang.com/wechatpay/productList");
+        window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx873af39ea1f882ed&redirect_uri="+ redirectUri +"&response_type=code&scope=snsapi_base#wechat_redirect";
+    }
+
+
+</script>
+</body>
+</html>

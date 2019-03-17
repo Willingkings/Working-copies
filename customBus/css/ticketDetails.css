@@ -1,0 +1,144 @@
+.securityCode {
+    padding: 0.5rem 5rem;
+    position: relative;
+}
+.securityCode > span {
+    display: block;
+    text-align: center;
+}
+.securityCode > div span:first-child {
+    float: left;
+    padding: 2px 5px;
+}
+.securityCode > div span:last-child {
+    float: right;
+    color: #ffffff;
+    background: #5dc74d;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+.securityCodeImg {
+    width: 8rem;
+    height: 8rem;
+    background: #e4e4e4;
+    border-radius: 3px;
+    padding: 5px 0;
+    margin: 0.5rem 0;
+}
+.divider {
+    width: 100%;
+    border-top: 2px dashed #e4e4e4;
+    position: relative;
+}
+.divider:before {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background: #f4f4f4;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.5rem;
+    left: -0.5rem;
+}
+.divider::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background: #f4f4f4;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+}
+.lineDetails {
+    padding: 1rem;
+}
+.lineDetails li {
+    padding: 5px 0;
+}
+.lineDetails li span:first-child {
+    margin-right: 1rem;
+}
+.halvingLine {
+    padding: 0 1rem;
+    overflow: hidden;
+}
+.halvingLine span {
+    display: block;
+    border-top: 2px dashed #e4e4e4;
+}
+.wayLine {
+    padding: 0.5rem 1rem;
+}
+.wayLine p {
+    font-size: 0.8rem;
+    text-align: center
+}
+.lineStation {
+    padding: 0.5rem 0;
+    overflow: hidden;
+}
+.lineStation li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 0.5rem;
+}
+.lineStation li:before {
+    position: absolute;
+    content: '';
+    top: 0.75rem;
+    left: 0.55rem;
+    height: 90%;
+    border-left: 4px solid #f8f2f2;
+    z-index: 66;
+}
+.lineStation li:last-child:before {
+    display: none;
+}
+.lineStation li i {
+    position: absolute;
+    top: 0;
+    left: 0.2rem;
+    width: 16px;
+    height: 16px;
+    background: url("../image/station.png") no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    z-index: 99;
+}
+.lineStation li:first-child i {
+    position: absolute;
+    top: 0;
+    left: 0.1rem;
+    width: 20px;
+    height: 20px;
+    background: url("../image/startStation.png") no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    z-index: 99;
+}
+.lineStation li:last-child i {
+    position: absolute;
+    top: 0;
+    left: 0.1rem;
+    width: 20px;
+    height: 20px;
+    background: url("../image/endStation.png") no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    z-index: 99;
+}
+.TiS {
+    display: none;
+}
+.TiS1 {
+    display: block;
+    color: red;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,324 @@
+body {
+    height: 100%;
+    padding-top: 10px;
+}
+#loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ddd;
+    opacity: 0.5;
+    z-index: 100;
+}
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto auto;
+    width: 3rem;
+    height: 3rem;
+    z-index: 200;
+}
+.icon {
+    width: 1rem;
+    height: 1rem;
+    box-sizing: border-box;
+    padding: 2px;
+    margin-left: 5px;
+}
+.title {
+    display: block;
+    line-height: 1.4rem;
+    font-size: 0.9rem;
+}
+.departure b {
+    vertical-align: top;
+}
+.showTime span {
+    display: inline-block;
+    color: #000;
+    position: relative;
+}
+/*.showTime span::before {
+    content: '';
+    position: absolute;
+    top: 0.1rem;
+    right: 5px;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #000000;
+    transform: rotate(-45deg)
+}*/
+.layui-laydate-hint{
+    display: none;
+}
+.showTime ul {
+    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 76px;
+    margin: 0 auto;
+    width: 94%;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    background: #fff;
+    z-index: 200;
+}
+.showTime ul li{
+    color: #000;
+    padding: 10px 10px;
+    border-bottom: 1px solid #ddd
+}
+.showTime ul li.active{
+    background: #ff5258;
+    color: #ffffff;
+}
+.showTime ul li.disabled{
+    color: #ccc;
+}
+.center , .last {
+    border-top: 1px solid #dddddd;
+}
+.center div:last-child span.price {
+    font-size: 0.8rem;
+}
+.productImg {
+    float: left;
+    width: 4rem;
+    height: 4rem;
+}
+.lineStationBtn {
+    float: right;
+    padding-left: 1rem;
+    position: relative;
+}
+.lineStationBtn i {
+    display: inline-block;
+    width: 12px;
+    height: 10px;
+    margin-right: 5px;
+}
+.lineStation {
+    overflow: hidden;
+}
+.lineStation li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 0.5rem;
+}
+.lineStation li:before {
+    position: absolute;
+    content: '';
+    top: 0.75rem;
+    left: 0.55rem;
+    height: 90%;
+    border-left: 4px solid #f8f2f2;
+    z-index: 66;
+}
+.lineStation li:last-child:before {
+    display: none;
+}
+.lineStation li i {
+    position: absolute;
+    top: 0;
+    left: 0.2rem;
+    width: 16px;
+    height: 16px;
+    background: url("../image/station.png") no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    z-index: 99;
+}
+.lineStation li:first-child i {
+    position: absolute;
+    top: 0;
+    left: 0.1rem;
+    width: 20px;
+    height: 20px;
+    background: url("../image/startStation.png") no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    z-index: 99;
+}
+.lineStation li:last-child i {
+    position: absolute;
+    top: 0;
+    left: 0.1rem;
+    width: 20px;
+    height: 20px;
+    background: url("../image/endStation.png") no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    z-index: 99;
+}
+.userPhone, .userName{
+    height: 1rem;
+    line-height: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.userPhone span, .userName span {
+    float: left;
+    margin-right: 10px;
+    min-width: 40px;
+}
+.userPhone input, .userName input{
+    float: left;
+    font-size: 0.8rem;
+    width: 6rem;
+    /*padding-top: 0.1rem;*/
+}
+.userPhone i, .userName i {
+    display: inline-block;
+    color: #848484;
+    position: absolute;
+    right: 0.7rem;
+    z-index: 1;
+}
+.submitBut {
+    font-size: 1rem;
+    color: #FFFFFF;
+    background: #ff5258;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+/**** 验证码 ****/
+.securityCode {
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 99;
+}
+.securityCodeCont {
+    position: absolute;
+    top: 30%;
+    left: 1rem;
+    right: 1rem;
+    height: 24%;
+    background: #ffffff;
+    opacity: 1;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.securityCodeCont div {
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+.import input {
+    width: 49%;
+    height: 1.3rem;
+    font-size: 0.8rem;
+    border: 1px solid #ccc;
+}
+.import span {
+    display: inline-block;
+    height: 1rem;
+    line-height: 1rem;
+    color: #333;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+}
+.securityCodeCont div:last-child {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+.securityCodeCont div:last-child span {
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.securityCodeCont div:last-child span:first-child {
+    color: #fff;
+    background: #5cb85c;
+    border: 1px solid #4cae4c;
+    margin-right: 10px;
+}
+.securityCodeCont div:last-child span:last-child {
+    color: #333;
+    border: 1px solid #ccc;
+}
+.layui-this > .laydate-day-mark {
+    line-height: 15px;
+}
+
+/*                  HC                */
+#showBox {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: #ddd;
+    z-index: 100;
+}
+#cancelBtn {
+    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 27px;
+    padding: 7px 0;
+    margin: 0 auto;
+    width: 94%;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    background: #fff;
+    z-index: 200;
+}
+.btnNone {
+    color: #d2d2d2;
+}
+.Choice {
+    background: red;
+    color: #fff;
+}
+#rili{
+
+}
+#weixuan {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 40%;
+    height: 5%;
+    background: #ddd;
+    border-radius: 5%;
+    text-align: center;
+    z-index: 200;
+}
+#weixuan1 {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 40%;
+    height: 5%;
+    background: #ddd;
+    border-radius: 5%;
+    text-align: center;
+    z-index: 200;
+}
+

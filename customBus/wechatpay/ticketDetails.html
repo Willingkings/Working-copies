@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>订单详情</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/ticketDetails.css">
+</head>
+<body>
+    <div class="mainBody">
+        <div class="mainBox securityCode">
+            <span class="licensePlate" id="licensePlate">刷新倒计时(20s)</span>
+            <span class="securityCodeImg">
+                <img id="securityCodeImg">
+            </span>
+            <div>
+                <span>刷码上车</span>
+                <span id="securityCodeStatus">--</span>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <ul class="mainBox lineDetails">
+            <li id="TiS" class="TiS">
+                <span>尚未到开车时间</span>
+            </li>
+            <li>
+                <span>线路名称</span>
+                <span id="title">--</span>
+            </li>
+            <li>
+                <span>有效日期</span>
+                <span id="date">--</span>
+            </li>
+            <li>
+                <span>车票价格</span>
+                <span id="price">--元</span>
+            </li>
+            <li>
+                <span>订单状态</span>
+                <span id="status">--</span>
+            </li>
+            <li>
+                <span>订单编号</span>
+                <span id="flowNo">--</span>
+            </li>
+        </ul>
+        <div class="halvingLine"><span></span></div>
+        <div class="mainBox wayLine">
+            <p>途经线路</p>
+            <ul class="lineStation" id="lineStation">
+
+            </ul>
+        </div>
+    </div>
+
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/md5.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/ticketDetails.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+.maskLayer {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 9;
+}
+.maskLayer img {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -0.5rem;
+}
+#advertising {
+    width: 100%;
+    height: 6rem;
+    background: #f4f4f4;
+}
+#advertising > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#list {
+    padding: 0.5rem;
+}
+#list > .listBox {
+    border: 1px solid #DDDDDD;
+    border-radius: 0.2rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 1px 1px 10px #C5C5C5;
+}
+#list > .listBox > .listTop {
+    padding: 0.5rem;
+    border-bottom: 1px solid #DDDDDD;
+}
+.listTop > i {
+    display: inline-block;
+    padding: 0.1rem;
+    border: 1px solid #DC5661;
+    border-radius: 0.2rem;
+    font-style: normal;
+    background: #F7D2D8;
+    color: #DC5661;
+}
+.listTop > span {
+    margin-left: 0.5rem;
+    color: #6E6E6E;
+}
+
+#list > .listBox > .listBottom {
+    position: relative;
+    padding: 0.8rem;
+}
+.listBottom > div {
+    display: flex;
+    align-items: center;
+}
+.listBottom > div:nth-last-of-type(1) {
+    margin-top: 0.7rem;
+}
+.listBottom > div > i {
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.2rem;
+    border-radius: 50%;
+}
+.listBottom > div:nth-of-type(1) > i {
+    border: 2px solid #44F044;
+}
+.listBottom > div:nth-of-type(2) > i {
+    position: relative;
+    border: 2px solid #EC4E4E;
+}
+.listBottom > div:nth-of-type(2) > i::after{
+    position: absolute;
+    top: -0.9rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0.2rem;
+    height: 0.82rem;
+    background: #FBF1F5;
+    content: "";
+}
+.listBottom > div > span {
+    margin-left: 0.4rem;
+    color: #000;
+}
+.listBottom > a {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+    bottom: 0;
+    margin: auto 0;
+    width: 2.9rem;
+    height: 0.7rem;
+    padding: 0.3rem 0;
+    border-radius: 1rem;
+    text-align: center;
+    line-height: 0.7rem;
+    background: #EE585B;
+    color: #ffffff;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #ffffff;
+    text-align: center;
+    font-size: 0.7rem;
+    padding: 10px;
+    box-shadow: 1px 1px 10px #C5C5C5;
+    box-sizing: border-box;
+}
+
+
+/*弹窗*/
+.PopUpBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+}
+.PopUp {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #fff;
+    width: 13rem;
+    padding: 1.5rem;
+    border-radius: .2rem;
+}
+.PopUp > p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+}
+.PopUp > span {
+    display: block;
+    margin-bottom: 1.3rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+.PopUp > div {
+    display: flex;
+    justify-content: space-between;
+}
+.PopUp > div > a {
+    width: 4.3rem;
+    padding: .6rem .9rem;
+    border-radius: 0.1rem;
+    font-size: .8rem;
+    text-align: center;
+    background: #ddd;
+}
+.PopUp > div > a:nth-child(1) {
+}
+.PopUp > div > a:nth-child(2) {
+    background: red;
+    color: #fff;
+
+}

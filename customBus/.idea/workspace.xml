@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ea30a369-c953-431d-86dc-ab8dd632a0ee" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1765699632">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="4" />
+          <entry key="js" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="4" />
+          <entry key="JavaScript" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="21" />
+          <entry key="js" value="158" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="21" />
+          <entry key="JavaScript" value="158" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+    </session>
+    <session id="1514297103">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="5" />
+          <entry key="js" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="5" />
+          <entry key="JavaScript" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="19" />
+          <entry key="js" value="51" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="19" />
+          <entry key="JavaScript" value="51" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/productDetails.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="521" column="21" selection-start-line="521" selection-start-column="21" selection-end-line="521" selection-end-column="21" />
+              <folding>
+                <element signature="e#73#196#0" />
+                <element signature="e#248#391#0" />
+                <element signature="e#587#636#0" />
+                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wechatpay/productDetails.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="78" column="17" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
+              <folding>
+                <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wechatpay/orderPay.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="186" column="168" selection-start-line="186" selection-start-column="163" selection-end-line="186" selection-end-column="168" />
+              <folding>
+                <element signature="e#3768#5778#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/ticketDetails.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+              <folding>
+                <element signature="e#135#507#0" />
+                <element signature="e#167#347#0" />
+                <element signature="e#352#497#0" />
+                <element signature="e#2014#2987#0" />
+                <element signature="e#2035#2976#0" />
+                <element signature="e#2220#2309#0" />
+                <element signature="e#2355#2962#0" />
+                <element signature="e#2514#2887#0" />
+                <element signature="e#2584#2716#0" />
+                <element signature="e#2721#2865#0" />
+                <element signature="e#3044#6571#0" />
+                <element signature="e#3093#6560#0" />
+                <element signature="e#3408#3536#0" />
+                <element signature="e#3582#6546#0" />
+                <element signature="e#4151#4257#0" />
+                <element signature="e#4285#5214#0" />
+                <element signature="e#4506#4661#0" />
+                <element signature="e#4709#5073#0" />
+                <element signature="e#4826#5047#0" />
+                <element signature="e#4910#5017#0" />
+                <element signature="e#5115#5192#0" />
+                <element signature="e#5258#6528#0" />
+                <element signature="e#5529#5712#0" />
+                <element signature="e#5737#6394#0" />
+                <element signature="e#5787#5880#0" />
+                <element signature="e#5909#6002#0" />
+                <element signature="e#6031#6125#0" />
+                <element signature="e#6154#6246#0" />
+                <element signature="e#6275#6368#0" />
+                <element signature="e#6660#7025#0" />
+                <element signature="e#6855#7011#0" />
+                <element signature="e#6900#6992#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/productList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="106" column="17" selection-start-line="101" selection-start-column="12" selection-end-line="106" selection-end-column="17" />
+              <folding>
+                <element signature="e#884#2126#0" />
+                <element signature="e#2180#3680#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>endStation</find>
+      <find>NexstartStation</find>
+      <find>startStation</find>
+      <find>saveLoginInfo</find>
+      <find>time</find>
+      <find>type: 8,</find>
+      <find>phone</find>
+      <find>submitBut</find>
+      <find>productDetails.state.flag</find>
+      <find>productDetails</find>
+      <find>flag</find>
+      <find>sendCodeMessages</find>
+      <find>codeTime</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/lib/3des.js" />
+        <option value="$PROJECT_DIR$/wechatpay/productList.html" />
+        <option value="$PROJECT_DIR$/js/productList.js" />
+        <option value="$PROJECT_DIR$/wechatpay/productDetails.html" />
+        <option value="$PROJECT_DIR$/js/productDetails.js" />
+        <option value="$PROJECT_DIR$/js/viewTicket.js" />
+        <option value="$PROJECT_DIR$/wechatpay/productList.html" />
+        <option value="$PROJECT_DIR$/js/productList.js" />
+        <option value="$PROJECT_DIR$/js/productDetails.js" />
+        <option value="$PROJECT_DIR$/js/global.js" />
+        <option value="$PROJECT_DIR$/wechatpay/productList.html" />
+        <option value="$PROJECT_DIR$/js/productList.js" />
+        <option value="$PROJECT_DIR$/js/productDetails.js" />
+        <option value="$PROJECT_DIR$/wechatpay/orderPay.html" />
+        <option value="$PROJECT_DIR$/js/productDetails.js" />
+        <option value="$PROJECT_DIR$/wechatpay/orderPay.html" />
+        <option value="$PROJECT_DIR$/js/ticketDetails.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="customBus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customBus" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customBus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customBus" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customBus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customBus" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customBus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customBus" type="462c0819:PsiDirectoryNode" />
+              <item name="wechatpay" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542880791000" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ea30a369-c953-431d-86dc-ab8dd632a0ee" name="Default Changelist" comment="" />
+      <created>1542350541982</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542350541982</updated>
+      <workItem from="1542350543400" duration="12349000" />
+      <workItem from="1542377297895" duration="1429000" />
+      <workItem from="1542596424376" duration="16085000" />
+      <workItem from="1542766561496" duration="1189000" />
+      <workItem from="1542870635872" duration="4956000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="36008000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13539445" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/viewTicket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="67" column="32" lean-forward="true" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechatpay/viewTicket.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="36" column="40" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/productDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="521" column="21" selection-start-line="521" selection-start-column="21" selection-end-line="521" selection-end-column="21" />
+          <folding>
+            <element signature="e#73#196#0" />
+            <element signature="e#248#391#0" />
+            <element signature="e#587#636#0" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechatpay/productDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="78" column="17" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/3des.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1353">
+          <caret line="227" column="47" selection-start-line="227" selection-start-column="47" selection-end-line="227" selection-end-column="47" />
+          <folding>
+            <element signature="n#!!block;n#des#0" />
+            <element signature="n#!!block;n#des_createKeys#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechatpay/productList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/productList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="106" column="17" selection-start-line="101" selection-start-column="12" selection-end-line="106" selection-end-column="17" />
+          <folding>
+            <element signature="e#884#2126#0" />
+            <element signature="e#2180#3680#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding>
+            <element signature="e#389#609#0" />
+            <element signature="e#619#651#0" />
+            <element signature="e#687#1446#0" />
+            <element signature="e#1301#1370#0" />
+            <element signature="e#1375#1436#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechatpay/ticketDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-297" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ticketDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+          <folding>
+            <element signature="e#135#507#0" />
+            <element signature="e#167#347#0" />
+            <element signature="e#352#497#0" />
+            <element signature="e#2014#2987#0" />
+            <element signature="e#2035#2976#0" />
+            <element signature="e#2220#2309#0" />
+            <element signature="e#2355#2962#0" />
+            <element signature="e#2514#2887#0" />
+            <element signature="e#2584#2716#0" />
+            <element signature="e#2721#2865#0" />
+            <element signature="e#3044#6571#0" />
+            <element signature="e#3093#6560#0" />
+            <element signature="e#3408#3536#0" />
+            <element signature="e#3582#6546#0" />
+            <element signature="e#4151#4257#0" />
+            <element signature="e#4285#5214#0" />
+            <element signature="e#4506#4661#0" />
+            <element signature="e#4709#5073#0" />
+            <element signature="e#4826#5047#0" />
+            <element signature="e#4910#5017#0" />
+            <element signature="e#5115#5192#0" />
+            <element signature="e#5258#6528#0" />
+            <element signature="e#5529#5712#0" />
+            <element signature="e#5737#6394#0" />
+            <element signature="e#5787#5880#0" />
+            <element signature="e#5909#6002#0" />
+            <element signature="e#6031#6125#0" />
+            <element signature="e#6154#6246#0" />
+            <element signature="e#6275#6368#0" />
+            <element signature="e#6660#7025#0" />
+            <element signature="e#6855#7011#0" />
+            <element signature="e#6900#6992#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechatpay/orderPay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="186" column="168" selection-start-line="186" selection-start-column="163" selection-end-line="186" selection-end-column="168" />
+          <folding>
+            <element signature="e#3768#5778#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

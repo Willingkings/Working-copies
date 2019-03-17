@@ -1,0 +1,118 @@
+.layui-tab-brief.red>.layui-tab-title .layui-this{
+    color: #FE4A54;
+}
+.layui-tab-brief.red>.layui-tab-title .layui-this:after{
+    border-bottom:2px solid #FE4A54;
+}
+.ticketBg{
+    margin-top: 0;
+    width:100%;
+}
+.ticketBg > ul {
+    background: white;
+    padding-top: 0.5rem;
+    justify-content: space-around;
+}
+.cheaedBox{
+    padding: .75rem;
+    justify-content: space-between;
+    background: url("../image/semicircular.png") no-repeat;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+}
+.addressCon{
+    margin: 0 0.5rem;
+}
+.addressCon .title{
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 200px;
+}
+.addressCon .lineList{
+    padding:.5rem 0 .25rem;
+}
+.addressCon .lineList li{
+    display: flex;
+    align-items: center;
+}
+.addressCon .lineList li:nth-last-of-type(1){
+    margin-top: .8rem;
+}
+.addressCon .lineList li > i{
+    width: .4rem;
+    height: .4rem;
+    border: 2px solid #49BC71;
+    border-radius: 50%;
+}
+.addressCon .lineList li:nth-of-type(2) > i {
+    position: relative;
+    border: 2px solid #DD5754;
+}
+.addressCon .lineList li:nth-of-type(2) > i:after {
+    position: absolute;
+    top: -1.15rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: .2rem;
+    height: .9rem;
+    background: #F9F2F3;
+    content: '';
+}
+.addressCon .lineList li:last-child i{
+    border: 2px solid #DD5754;
+}
+.addressCon .lineList li > div {
+    margin-left: .4rem;
+    color: #313131;
+}
+.addressCon .lineList li > div span {
+    margin-left: .2rem;
+    color: #898989;
+}
+.addressCon .ordertime{
+    color: #aaa;
+    font-size: 12px;
+    padding-bottom: .2rem;
+}
+.dataCon{
+    display: grid;
+    align-items: flex-start;
+    text-align: center;
+    background: url("../image/dottedLine.png") no-repeat;
+    padding-left: .5rem;
+}
+.dataCon .text{
+    font-size: .8rem;
+    display: inline-block;
+    padding: 0 .2rem .1rem;
+    color: #6A6A6A;
+}
+.dataCon.green .text{
+    border-bottom: 3px solid #5CC64D;
+}
+.dataCon.gray .text{
+    border-bottom: 3px solid #dddddd;
+}
+.dataCon.red .text{
+    border-bottom: 3px solid #FE4A54;
+}
+.dataCon .time{
+    margin-top: 1rem;
+}
+.dataCon .button span{
+    display: inline-block;
+    margin-top: .8rem;
+    padding: .1rem .4rem;
+    border-radius: .2rem;
+    color: white;
+}
+.dataCon.green .button span{
+    background: #5CC64D;
+}
+.dataCon.gray .button span{
+    background: #bbbbbb;
+}
+.dataCon.red .button span{
+    background: #FE4A54;
+}

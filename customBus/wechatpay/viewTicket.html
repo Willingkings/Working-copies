@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>我的车票</title>
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/viewTicket.css">
+</head>
+<body>
+    <div class="layui-tab layui-tab-brief ticketBg red">
+        <ul class="layui-tab-title flex">
+            <li class="layui-this">未验票</li>
+            <li>已验票</li>
+            <li>已过期</li>
+        </ul>
+        <div class="layui-tab-content" id="tabContent">
+            <div class="layui-tab-item layui-show" id="notRecount">
+                <div class="cheaedBox flex">
+                    <div class="addressCon">
+                        <div class="title">桂林北站 - 桂林理工大学</div>
+                        <ul class="lineList">
+                            <li>
+                                <i></i>
+                                <div>桂林北站 <span>18：30发车</span></div>
+                            </li>
+                            <li>
+                                <i></i>
+                                <div>桂林理工大学（七星）</div>
+                            </li>
+                        </ul>
+                        <p class="ordertime">下单时间：2018-10-10 15:54:01</p>
+                    </div>
+                    <div class="dataCon green">
+                        <div class="text">有效日期</div>
+                        <div class="time">2018-10-10</div>
+                        <div class="button">
+                            <span>未验票</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cheaedBox flex">
+                    <div class="addressCon">
+                        <div class="title">桂林北站 - 桂林理工大学</div>
+                        <ul class="lineList">
+                            <li>
+                                <i></i>
+                                <div>桂林北站 <span>18：30发车</span></div>
+                            </li>
+                            <li>
+                                <i></i>
+                                <div>桂林理工大学（七星）</div>
+                            </li>
+                        </ul>
+                        <p class="ordertime">下单时间：2018-10-10 15:54:01</p>
+                    </div>
+                    <div class="dataCon green">
+                        <div class="text">有效日期</div>
+                        <div class="time">2018-10-10</div>
+                        <div class="button">
+                            <span>未验票</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-tab-item" id="haveRecount">
+                <div class="cheaedBox flex">
+                    <div class="addressCon">
+                        <div class="title">桂林北站 - 桂林理工大学</div>
+                        <ul class="lineList">
+                            <li>
+                                <i></i>
+                                <div>桂林北站 <span>18：30发车</span></div>
+                            </li>
+                            <li>
+                                <i></i>
+                                <div>桂林理工大学（七星）</div>
+                            </li>
+                        </ul>
+                        <p class="ordertime">下单时间：2018-10-10 15:54:01</p>
+                    </div>
+                    <div class="dataCon gray">
+                        <p class="text">有效日期</p>
+                        <div class="time">2018-10-10</div>
+                        <div class="button green">
+                            <span>未验票</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-tab-item" id="expired">
+                <div class="cheaedBox flex">
+                    <div class="addressCon">
+                        <div class="title">桂林北站 - 桂林理工大学</div>
+                        <ul class="lineList">
+                            <li>
+                                <i></i>
+                                <div>桂林北站 <span>18：30发车</span></div>
+                            </li>
+                            <li>
+                                <i></i>
+                                <div>桂林理工大学（七星）</div>
+                            </li>
+                        </ul>
+                        <p class="ordertime">下单时间：2018-10-10 15:54:01</p>
+                    </div>
+                    <div class="dataCon red">
+                        <p class="text">失效日期</p>
+                        <div class="time">2018-10-10</div>
+                        <div class="button green">
+                            <span>已过期</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/layui/layui.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/viewTicket.js"></script>
+<script>
+    layui.use('element', function () {
+        var viewTicketTab = layui.element;
+    })
+</script>
+</body>
+</html>
