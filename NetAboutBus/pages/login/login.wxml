@@ -1,0 +1,23 @@
+<!--pages/login/login.wxml-->
+<!-- 登录总模块 -->
+<view id="loginBox">
+  <image src="../../img/icon/login.png"></image>
+  <view class="write">
+    <view class="phone">
+      <view>手机号</view>
+      <input bindinput='inputPhone' value="{{ phoneValue }}" type="number" maxlength="13" placeholder="填写手机号码"/>
+      <view class="deletePhone" bindtap="delPhone">
+        <view>X</view>
+      </view>
+    </view>
+    <view class="code">
+      <view>验证码</view>
+      <input bindinput='inputCode' value="{{ codeValue }}" type="number" maxlength="6" placeholder="输入验证码" style="width: 8rem" />
+      <button class="codeBtn" disabled='{{ disabledCode }}' bindtap="gainCode">{{ codeText }}</button>
+    </view>
+  </view>
+  <view class="hint">温馨提示：未注册桂林出行网账号的手机号，登录时将自动注册，改手机号可用于登录桂林出行网APP</view>
+  <view bindtap="submit" class="loginBtn">
+    <view>登录</view>
+  </view>
+</view>

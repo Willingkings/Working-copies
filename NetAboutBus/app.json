@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/search/lineList/lineList",
+    "pages/search/lineDetails/lineDetails",
+    "pages/specialLine/business/business",
+    "pages/specialLine/highSpeedRail/highSpeedRail",
+    "pages/specialLine/festival/festival",
+    "pages/specialLine/direct/direct",
+    "pages/check-in/orderList/orderList",
+    "pages/check-in/orderContent/useTicket/useTicket",
+    "pages/check-in/orderContent/unusedTicket/ticketService/TicketDetails/TicketDetails",
+    "pages/check-in/orderContent/unusedTicket/QR_code/QR_code",
+    "pages/check-in/orderContent/unusedTicket/ticketService/ToGuide/ToGuide",
+    "pages/check-in/orderContent/refundTicket/refundTicket",
+    "pages/mine/index/index",
+    "pages/mine/CustomDetails/CustomDetails",
+    "pages/mine/changePassword/changePassword",
+    "pages/mine/personalData/personalData",
+    "pages/mine/wallet/wallet",
+    "pages/mine/myBus/myBus",
+    "pages/mine/myOrder/myOrder",
+    "pages/mine/myCustomization/myCustomization",
+    "pages/common/map/map",
+    "pages/common/calendar/calendar",
+    "pages/common/friendsShare/friendsShare",
+    "pages/common/evaluation/evaluation",
+    "pages/common/submitOrders/submitOrders",
+    "pages/common/payResults/payResults",
+    "pages/mine/myBusDetalis/myBusDetalis"
+  ],
+  "usingComponents": {
+    "result-win": "/pages/component/result-win/result-win",
+    "tab-bar": "/pages/component/tab-bar/tab-bar"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

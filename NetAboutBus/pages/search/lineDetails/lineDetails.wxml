@@ -1,0 +1,101 @@
+ <!--pages/search/lineDetails/lineDetails.wxml-->
+<view class='mainheader'>
+  <view class='site'>
+    <text>{{stationInfo[0].name}}</text>
+    <image src='../../../img/icon/bus-details.png'></image>
+    <text>{{stationInfo[stationInfo.length-1].name}}</text>
+  </view>
+  <view class='time'>
+    <view>{{selectedTime}}<text wx:if="{{lineListIndex == 1}}">还差10人开通</text></view>
+    <view><text>￥</text>{{ticketPrice}}<text wx:if="{{false}}"> ~ 10</text></view>
+  </view>
+</view>
+<view class='map'>
+  <map
+      id="myMap"
+      style="width: 100%; height: 100%;"
+      subkey="FGGBZ-R4AK5-TGGIR-QXVYH-VPG7J-3SBU7"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{markers}}"
+      bindmarkertap="markertap"
+      covers="{{covers}}"
+      polyline="{{polyline}}"
+      scale= "10"
+      show-location
+    ></map>
+</view>
+
+<cover-view class='viaPoint'>
+  <cover-view class='viaPoint-title'>途径路线</cover-view>
+  <cover-view class='viaPoint-list'>
+    <block wx:for="{{stationInfo}}" wx:key="{{index}}">
+      <cover-view class='viaPoint-item' wx:if="{{index==0}}">
+        <cover-view class='viaPoint-item_name'>
+          <cover-view class='viaPoint-item_line'></cover-view>  
+          <cover-image class='viaPoint-item_img' src='../../../img/icon/origin.png'></cover-image>
+          <cover-view> {{item.name}}</cover-view>        
+        </cover-view> 
+        <cover-view class='viaPoint-item_time' wx:if="{{ item.planArriveTime != null }}">{{item.planArriveTime}}</cover-view>
+      </cover-view>
+      <cover-view class='viaPoint-item' wx:if="{{index!=0 && index!=stationInfo.length-1 && imgShow == 1}}">
+        <cover-view class='viaPoint-item_name'>
+          <cover-view class='viaPoint-item_line'></cover-view>  
+          <cover-view wx:if="{{index!=0 && index!=stationInfo.length-1}}" class='viaPoint-item_point'></cover-view>
+          <cover-view> {{item.name}}</cover-view>        
+        </cover-view> 
+        <cover-view class='viaPoint-item_time' wx:if="{{ item.planArriveTime != null }}">约{{item.planArriveTime}}</cover-view>
+      </cover-view>
+      <cover-view class='viaPoint-item' wx:if="{{index==stationInfo.length-1}}">
+        <cover-view class='viaPoint-item_name'>
+          <cover-view class='viaPoint-item_line'></cover-view>  
+          <cover-image  class='viaPoint-item_img' src='../../../img/icon/terminus.png'></cover-image>
+          <cover-view> {{item.name}}</cover-view>        
+        </cover-view> 
+        <cover-view class='viaPoint-item_time' wx:if="{{ item.planArriveTime != null }}">约{{item.planArriveTime}}</cover-view>
+      </cover-view>
+    </block>
+  </cover-view>
+  <cover-view class='viaPoint-img'>
+    <cover-image wx:if="{{imgShow == 0}}" data-id='1' bindtap="selectImg"  src='../../../img/icon/viaPoint-down.png'></cover-image>
+    <cover-image wx:if="{{imgShow == 1}}" data-id='0' bindtap="selectImg" src='../../../img/icon/viaPoint-up.png' ></cover-image>
+  </cover-view>
+</cover-view>
+<cover-view class='mianFooter' wx:if="{{lineListIndex == 0}}">
+  <cover-view class='mianFooter-time' data-id="1" bindtap='timeQuantum' >
+    <cover-image src='../../../img/icon/time.png'></cover-image>
+    <cover-view>乘车时段({{selectedTime}})</cover-view>
+  </cover-view>
+  <cover-view class='mianFooter-date' bindtap='selectedDate'>
+    <cover-image src='../../../img/icon/date.png' ></cover-image>
+    <cover-view>乘车日期</cover-view>
+  </cover-view>
+</cover-view>
+<cover-view class='apply' bindtap="confirmApply" wx:if="{{lineListIndex == 1}}">我要报名</cover-view>
+<!-- 时间弹出层 -->
+<cover-view class='maskLayer' wx:if="{{timeWindows == 1}}" >
+  <cover-view class='timeQuantum'>
+  <cover-view class='timeQuantum-title'>选择乘车时段</cover-view>
+    <cover-view class='time-list'>
+      <block wx:for="{{timeList}}" wx:key="{{index}}">
+        <cover-view data-id="0" data-select="{{item}}"  bindtap='timeQuantum' class='{{selectedTime == item?"time-item active":"time-item" }}'>{{item}}</cover-view>
+      </block>
+    </cover-view>
+  </cover-view>
+</cover-view>
+
+<!-- 结果弹窗 -->
+<cover-view class='applySuccess' wx:if="{{applySuccess == 1}}">
+  <cover-view class='mainItem'>
+    <cover-image class='closeResultWin' bindtap='closeResultWin' src='../../../img/icon/close.png' ></cover-image>
+    <cover-image class='itemTitle' src='../../../img/background/apply-title.png'></cover-image>
+    <cover-view class='itemLink'><cover-view>请到</cover-view><cover-view>我的班车</cover-view><cover-view>查看开通状态</cover-view></cover-view>
+    <cover-view class='itemBg'>
+      <cover-image src='../../../img/background/apply-bg.png'></cover-image>
+    </cover-view>
+    <cover-view class='invite' wx:if="{{false}}">
+      <cover-view>邀请好友报名<button data-id="shareBtn" open-type="share">邀请好友报名</button></cover-view>
+      <cover-view>邀请更多朋友报名，加快线路开通</cover-view>
+    </cover-view>
+  </cover-view>
+</cover-view>

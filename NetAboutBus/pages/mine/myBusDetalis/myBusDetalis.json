@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "我的班车 - 班车详情",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "onReachBottomDistance": 150
+}

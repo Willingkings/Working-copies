@@ -1,0 +1,204 @@
+/* pages/mine/CustomDetails/CustomDetails.wxss */
+#TicketDetailsBox {
+  position: relative;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  font-size: 0.9rem;
+  background: #FAFAFA;
+  color: #333333;
+}
+/* 基础信息 */
+#TicketDetailsBox > .basicInformation {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  font-weight: bold;
+  box-shadow: 0px 0px 0.1rem 0px rgba(27,27,27,0.2);
+  border-radius: 1rem;
+  background:#FFFFFF;
+}
+#TicketDetailsBox > .basicInformation > .informationTitle {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  font-family: PingFang-SC-Regular;
+}
+.informationTitle > view:nth-of-type(2) {
+  width: 3.4rem;
+  height: 1rem;
+  margin: 0 0.4rem;
+}
+.informationTitle > view:nth-of-type(1),.informationTitle > view:nth-of-type(3) {
+  min-width: 4rem;
+}
+.informationTitle > view:nth-of-type(2) > image {
+  width: 100%;
+  height: 100%;
+}
+#TicketDetailsBox > .basicInformation > .informationList {
+  width: 100%;
+  font-family: PingFang-SC-Bold;
+  color: #46474C;
+}
+#TicketDetailsBox > .basicInformation > .informationList > view {
+  display: flex;
+  margin-bottom: 0.7rem;
+  font-size: 0.7rem;
+}
+.informationList > view > view:nth-of-type(1) {
+  width: 33%;
+}
+/* 多站线路 */
+.circuit {
+  position: relative;
+  width: 100%;
+  height: 45%;
+}
+.circuit > .circuitTitle {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 0;
+  font-family:PingFang-SC-Regular;
+}
+.circuit > .circuitTitle > view {
+  position: relative;
+  font-weight: bold; 
+}
+.circuit > .circuitTitle > view::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  left: -2rem;
+  width: 1rem;
+  height: 0.054rem;
+  background: rgba(230,230,230,1); 
+  content: "";
+}
+.circuit > .circuitTitle > view::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: -2rem;
+  width: 1rem;
+  height: 0.054rem;
+  background: rgba(230,230,230,1); 
+  content: "";
+}
+.circuit > .circuitList {
+}
+.circuit > .circuitList > view {
+  position: relative;
+  display: flex;
+  justify-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  font-family:PingFang-SC-Bold;
+}
+.circuit > .circuitList > view.CloseUp {
+  display: none;
+}
+.circuit > .circuitList > view > view:nth-of-type(1) {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-right: 3%;
+}
+.circuit > .circuitList > view > view:nth-of-type(1) > image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.circuit > .circuitList > view > view:nth-of-type(1)::after {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  bottom: -1rem;
+  width: 20%;
+  height: 2rem;
+  background: rgba(249,242,243,1);
+  content: "";
+}
+.circuit > .circuitList > view:nth-last-of-type(1) > view::after {
+  background: #FAFAFA;
+}
+.circuit > .circuitList > view:nth-last-of-type(1) > view {
+  font-weight: bold;
+}
+.circuit > .circuitList > view:nth-of-type(1) > view {
+  font-weight: bold;
+}
+.circle {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  border: 0.08rem solid #49BC71;
+  font-family: PingFang-SC-Bold;
+  background: #FFFFFF;
+  z-index: 100;
+}
+.CloseOpen {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #FE4A54
+}
+.CloseOpen > image {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  background: red;
+}
+.refundTicketBtn {
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  font-family: PingFang-SC-Bold;
+}
+.refundTicketBtn > view:nth-of-type(1) {
+  padding: 0.8rem 3rem;
+  border-radius: 5rem;
+  letter-spacing: 0.3rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  background: rgba(254,74,84,1);
+  color: #FFFFFF;
+}
+.refundTicketBtn > view:nth-of-type(2) {
+  font-size: 0.7rem;
+  color: #FE4A54;
+}
+.path > view:nth-of-type(2) {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  width: 2rem;
+  height: 1rem;
+}
+.path > view:nth-of-type(2) image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

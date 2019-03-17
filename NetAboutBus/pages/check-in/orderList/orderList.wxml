@@ -1,0 +1,135 @@
+<!--pages/check-in/orderList/orderList.wxml-->
+<!-- 验票总模块 -->
+<view id="orderListBox">
+  <!-- 验票类型选择模块 -->
+  <view class="seleTicketType">
+    <view bindtap="TicketTypeSele" class="{{ TicketTypeIndex == 0?'sele':'' }}" data-TicketTypeIndex="0">未支付</view>
+    <view bindtap="TicketTypeSele" class="{{ TicketTypeIndex == 1?'sele':'' }}" data-TicketTypeIndex="1">未使用</view>
+    <view bindtap="TicketTypeSele" class="{{ TicketTypeIndex == 2?'sele':'' }}" data-TicketTypeIndex="2">已使用</view>
+    <view bindtap="TicketTypeSele" class="{{ TicketTypeIndex == 3?'sele':'' }}" data-TicketTypeIndex="3">已退票</view>
+  </view>
+  <scroll-view id="ListBox" scroll-y="true">
+    <!-- 未支付列表模块 -->
+    <view id="nonPayment" class="ListBox" hidden="{{ TicketTypeIndex == 0?flase:true }}" wx:for="{{ nonPayment }}" wx:key="{{ nonPayment }}">
+      <view bindtap="nonPayment" data-lineCode="{{ item.lineCode }}" data-lineName="{{ item.lineName }}" data-date="{{ item.runTimeStr }}" data-runTime="{{ item.runTime }}" data-flowNo="{{ item.flowNo }}" data-startStation="{{ item.startStation }}">
+        <view class="ListLeft">
+          <view>{{ item.lineName }}</view>
+          <view>
+            <view>
+              <view></view>
+            </view>
+            <view>
+              <view>{{ item.startStation }}</view>
+              <view>{{ item.runTime }}发车</view>
+              <view>{{ item.endStation }}</view>
+            </view>
+          </view>
+          <view>下单时间: {{ item.occurtime }}</view>
+        </view>
+        <view class="ListRight">
+          <view class="time">
+            <view>使用日期</view>
+            <view class="nonPayment"></view>
+            <view>{{ item.runTimeStr }}</view>
+            <view class="nonPayment">未支付</view>
+          </view>
+          <view></view>
+        </view>
+      </view>  
+    </view>
+    <!-- 未使用列表模块 -->
+    <view id="unused" class="ListBox" hidden="{{ TicketTypeIndex == 1?flase:true }}" wx:for="{{ unused }}" wx:key="{{ unused }}">
+      <view bindtap="unusedSkip" data-orderNo="{{ item.flowNo }}" data-lineName="{{ item.lineName }}" data-lineCode="{{ item.lineCode }}">
+        <view class="ListLeft">
+          <view>{{ item.lineName }}</view>
+          <view>
+            <view>
+              <view></view>
+            </view>
+            <view>
+              <view>{{ item.startStation }}</view>
+              <view>{{ item.runTime }}发车</view>
+              <view>{{ item.endStation }}</view>
+            </view>
+          </view>
+          <view>下单时间: {{ item.occurtime }}</view>
+        </view>
+        <view class="ListRight">
+          <view class="time">
+            <view>使用日期</view>
+            <view class="unused"></view>
+            <view>{{ item.runTimeStr }}</view>
+            <view class="unused">未使用</view>
+          </view>
+          <view></view>
+        </view>
+      </view>
+    </view>
+    <!-- 已使用列表模块 -->
+    <view id="employ" class="ListBox" hidden="{{ TicketTypeIndex == 2?flase:true }}" wx:for="{{ employ }}" wx:key="{{ employ }}">
+      <view bindtap="useSkip" data-orderNo="{{ item.flowNo }}">
+        <view class="ListLeft">
+          <view>{{ item.lineName }}</view>
+          <view>
+            <view>
+              <view></view>
+            </view>
+            <view>
+              <view>{{ item.startStation }}</view>
+              <view>{{ item.runTime }}发车</view>
+              <view>{{ item.endStation }}</view>
+            </view>
+          </view>
+          <view>下单时间: {{ item.occurtime }}</view>
+        </view>
+        <view class="ListRight">
+          <view class="time">
+            <view>失效日期</view>
+            <view class="employ"></view>
+            <view>{{ item.runTimeStr }}</view>
+            <view class="employ">已使用</view>
+          </view>
+          <view></view>
+        </view>
+      </view>
+    </view>
+    <!-- 已退票列表模块 -->
+    <view id="refund" class="ListBox" hidden="{{ TicketTypeIndex == 3?flase:true }}" wx:for="{{ refund }}" wx:key="{{ refund }}">
+      <view bindtap="refundSkip" data-orderNo="{{ item.flowNo }}" data-lineName="{{ item.lineName }}">
+        <view class="ListLeft">
+          <view>{{ item.lineName }}</view>
+          <view>
+            <view>
+              <view></view>
+            </view>
+            <view>
+              <view>{{ item.startStation }}</view>
+              <view>{{ item.runTime }}发车</view>
+              <view>{{ item.endStation }}</view>
+            </view>
+          </view>
+          <view>下单时间: {{ item.occurtime }}</view>
+        </view>
+        <view class="ListRight">
+          <view class="time">
+            <view>失效日期</view>
+            <view class="refund"></view>
+            <view>{{ item.runTimeStr }}</view>
+            <view class="refund">已退票</view>
+          </view>
+          <view></view>
+        </view>
+      </view>  
+    </view>
+    <view wx:if="{{ empty }}" class="empty">
+      <view>
+        <image src="/img/background/empty.png"></image>
+        <view>这里什么都没有</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class='tabBar'>
+  <tab-bar category="checkIn"></tab-bar>
+</view>
+

@@ -1,0 +1,117 @@
+<!--pages/mine/myOrder/myOrder.wxml-->
+<view id="myOrderBox">
+  <view class="myOrderList">
+    <view bindtap="TypeSele" class="{{ TypeIndex == 0?'sele':'' }}" data-TypeIndex="0">进行中</view>
+    <view bindtap="TypeSele" class="{{ TypeIndex == 1?'sele':'' }}" data-TypeIndex="1">本月订单</view>
+    <view bindtap="TypeSele" class="{{ TypeIndex == 2?'sele':'' }}" data-TypeIndex="2">上月订单</view>
+    <view bindtap="TypeSele" class="{{ TypeIndex == 3?'sele':'' }}" data-TypeIndex="3">历史订单</view>
+  </view>
+  <view  hidden="{{ TypeIndex == 0?flase:true }}" class="myOrderContent">
+    <view>
+      <view>
+        <view>
+          <view>线路名称</view>
+          <view>桂林大学-桂林北站</view>
+        </view>
+        <view>
+          <view>订单时间</view>
+          <view>2018-10-17 09:49:39</view>
+        </view>
+        <view>
+          <view>订单编号</view>
+          <view>20141017094939</view>
+        </view>
+      </view>
+      <view>
+        <view>¥</view>
+        <view>4.5</view>
+      </view>
+    </view>
+    <view>
+      <view>
+        <view>
+          <view>线路名称</view>
+          <view>桂林大学-桂林北站</view>
+        </view>
+        <view>
+          <view>订单时间</view>
+          <view>2018-10-17 09:49:39</view>
+        </view>
+        <view>
+          <view>订单编号</view>
+          <view>20141017094939</view>
+        </view>
+      </view>
+      <view>
+        <view>¥</view>
+        <view>4.5</view>
+      </view>
+    </view>
+  </view>
+  <view  hidden="{{ TypeIndex == 1?flase:true }}" class="myOrderContent" wx:for="{{ thisMonthData }}" wx:key="{{ thisMonthData }}">
+    <view>
+      <view>
+        <view>
+          <view>线路名称</view>
+          <view>{{ item.lineName }}</view>
+        </view>
+        <view>
+          <view>订单时间</view>
+          <view>{{ item.runTimeStr }}</view>
+        </view>
+        <view>
+          <view>订单编号</view>
+          <view>{{ item.flowNo }}</view>
+        </view>
+      </view>
+      <view>
+        <view>¥</view>
+        <view>{{ item.orderPrice }}</view>
+      </view>
+    </view>
+  </view>
+  <view  hidden="{{ TypeIndex == 2?flase:true }}" class="myOrderContent" wx:for="{{ lastMonthData }}" wx:key="{{ lastMonthData }}">
+    <view>
+      <view>
+        <view>
+          <view>线路名称</view>
+          <view>{{ item.lineName }}</view>
+        </view>
+        <view>
+          <view>订单时间</view>
+          <view>{{ item.runTimeStr }}</view>
+        </view>
+        <view>
+          <view>订单编号</view>
+          <view>{{ item.flowNo }}</view>
+        </view>
+      </view>
+      <view>
+        <view>¥</view>
+        <view>{{ item.orderPrice }}</view>
+      </view>
+    </view>
+  </view>
+  <view  hidden="{{ TypeIndex == 3?flase:true }}" class="myOrderContent" wx:for="{{ historyData }}" wx:key="{{ historyData }}">
+    <view>
+      <view>
+        <view>
+          <view>线路名称</view>
+          <view>{{ item.lineName }}</view>
+        </view>
+        <view>
+          <view>订单时间</view>
+          <view>{{ item.runTimeStr }}</view>
+        </view>
+        <view>
+          <view>订单编号</view>
+          <view>{{ item.flowNo }}</view>
+        </view>
+      </view>
+      <view>
+        <view>¥</view>
+        <view>{{ item.orderPrice }}</view>
+      </view>
+    </view>
+  </view>
+</view>

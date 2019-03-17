@@ -1,0 +1,76 @@
+<!--分享好友-->
+<!--pages/common/friendsShare/friendsShare.wxml-->
+<view class='friendsShare'>
+  <view class='map'>
+    <map
+      id="myMap"
+      style="width: 100%; height: 100%;"
+      show-location
+    ></map>
+  </view>
+  <cover-view class='lineCont'>
+    <cover-view class='details'>
+      <cover-view class='friendInfo'>
+        
+        脱缰的猫 
+        <cover-view>邀请你一起报名同行</cover-view>  
+      </cover-view>
+      <cover-view class='title'>桂林北站-桂林理工大学（七星）</cover-view>
+      <cover-view class='lineList'>
+        <cover-view class='viaPoint'>
+          <cover-view class='viaPoint-item'>
+            <cover-view class='viaPoint-item_name'>
+              <cover-view class='viaPoint-item_line'></cover-view>
+              <cover-image class='viaPoint-item_img' src='../../../img/icon/origin.png'></cover-image>
+
+              <cover-view>桂林北站 (9:30)</cover-view>
+            </cover-view> 
+          </cover-view>
+          <cover-view class='viaPoint-item' wx:if="{{imgShow == 1}}">
+            <cover-view class='viaPoint-item_name'>
+              <cover-view class='viaPoint-item_line'></cover-view>
+              <cover-view class='viaPoint-item_point'></cover-view>
+              <cover-view>桂林西</cover-view>
+            </cover-view>
+          </cover-view>
+          <cover-view class='viaPoint-item' wx:if="{{imgShow == 1}}">
+            <cover-view class='viaPoint-item_name'>
+              <cover-view class='viaPoint-item_line'></cover-view>
+              <cover-view class='viaPoint-item_point'></cover-view>
+              <cover-view>开创大道</cover-view>
+            </cover-view>
+          </cover-view>
+          <cover-view class='viaPoint-item' wx:if="{{imgShow == 1}}">
+            <cover-view class='viaPoint-item_name'>
+              <cover-view class='viaPoint-item_line'></cover-view>
+              <cover-view class='viaPoint-item_point'></cover-view>
+              <cover-view> 广汕一路</cover-view>
+            </cover-view>
+          </cover-view>
+          <cover-view class='viaPoint-item'>
+            <cover-view class='viaPoint-item_name'>
+              <cover-view class='viaPoint-item_line'></cover-view>
+              <cover-image class='viaPoint-item_img' src='../../../img/icon/terminus.png'></cover-image>
+              <cover-view>桂林理工大学（七星）</cover-view>
+            </cover-view>
+          </cover-view>
+        </cover-view>
+        <cover-view data-id='1' bindtap='lineListClose' class='lineList-close' wx:if="{{imgShow == 0}}">
+          <cover-image  src='../../../img/icon/lineList-close_d.png'></cover-image>
+          <cover-view>展开路线</cover-view>
+        </cover-view>
+        <cover-view data-id='0' bindtap='lineListClose' class='lineList-close' wx:if="{{imgShow == 1}}">
+          <cover-image  src='../../../img/icon/lineList-close_u.png'></cover-image>
+          <cover-view>关闭路线</cover-view>
+        </cover-view>
+      </cover-view>
+      <!-- 进度条待定 -->
+      <cover-view class='schedule'></cover-view>
+      <cover-view class='instructions'>
+        <cover-view>招募时间：2018-07-05 至 2018-08-05</cover-view>
+        <cover-view>10人/20座</cover-view>
+      </cover-view>
+    </cover-view>
+    <cover-view bindtap='submitOrders' class='apply'>报名同行</cover-view>
+  </cover-view>
+</view>

@@ -1,0 +1,95 @@
+/* pages/mine/index/index.wxss */
+#userIndex {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #FAFAFA;
+}
+/* 用户信息 */
+#userIndex > .userMessage {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: #FE4A54;
+}
+#userIndex > .userMessage > .userImg {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#userIndex > .userMessage > .userImg > open-data {
+  width: 100%;
+  height: 100%;
+}
+#userIndex > .userMessage > .userName {
+  display: flex;
+  align-items: center;
+  width: 72%;
+  padding-left: 5%;
+  font-size: 0.9rem;
+  color: #FFFFFF
+}
+#userIndex > .userMessage > .userName > view {
+  display: flex;
+  align-items: center;
+}
+#userIndex > .userMessage > .userName > view > view:nth-of-type(2) {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.8rem;
+}
+#userIndex > .userMessage > .userName > view > view:nth-of-type(2) > image {
+  width: 100%;
+  height: 100%;
+}
+/* 功能模块 */
+.functionBox {
+
+}
+.functionBox > view {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  margin-top: 0.3rem;
+  background: #FFFFFF;
+}
+.functionBox > view.Mar {
+  margin-top: 0.6rem;
+}
+.functionBox > view > view:nth-of-type(1) {
+  width: 1rem;
+  height: 1rem;
+}
+.functionBox > view > view:nth-of-type(1) > image {
+  width: 100%;
+  height: 100%;
+}
+.functionBox > view > view:nth-of-type(2)  {
+  margin-left: 0.6rem;
+  font-size: 0.9rem;
+}
+.functionBox > view > view:nth-of-type(3)  {
+  display: flex;
+  align-items:center;
+  position: absolute;
+  right: 10%;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  color: #FE4A54;
+}
+.functionBox > view > view:nth-of-type(3) > view {
+
+}
+.tabBar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #FFFFFF;
+}

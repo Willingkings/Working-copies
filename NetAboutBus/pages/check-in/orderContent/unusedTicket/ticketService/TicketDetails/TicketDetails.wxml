@@ -1,0 +1,93 @@
+<!--pages/check-in/orderContent/unusedTicket/ticketService/TicketDetails/TicketDetails.wxml-->
+<!-- 班车详情总模块 -->
+<view id="TicketDetailsBox">
+  <!-- 基础信息 -->
+  <view class="basicInformation">
+    <view class="informationTitle">
+      <view>{{ courseData[0].name }}</view>
+      <view>
+        <image src="/img/icon/TicketDetails_bus.png"></image>
+      </view>
+      <view>{{ courseData[courseData.length - 1].name }}</view>
+    </view>
+    <view class="informationList">
+      <view>
+        <view>上车地点</view>
+        <view>{{ particularsData.startStation }}</view>
+      </view>
+      <view>
+        <view>下车地点</view>
+        <view>{{ particularsData.endStation }}</view>
+      </view>
+      <view>
+        <view>票价</view>
+        <view>{{ particularsData.orderPrice }}元</view>
+      </view>
+      <view>
+        <view>有效时间</view>
+        <view>{{ particularsData.runTimeStr }}</view>
+      </view>
+      <view>
+        <view>发车时间</view>
+        <view>{{ particularsData.runTime }}</view>
+      </view>
+      <view>
+        <view>订单编号</view>
+        <view>{{ particularsData.flowNo }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 多站线路 -->
+  <view class="circuit"> 
+    <!-- 多站线路标题 -->
+    <view class="circuitTitle">
+      <view class="title">多站线路</view>
+      <view class="Btn" bindtap='OpeningClosing'  wx:if='{{ courseData.length != 2 }}'>
+        <image src="{{ open == true?'/img/icon/lineList-close_d.png':'/img/icon/lineList-close_u.png' }}"></image>
+        关闭展开
+      </view>
+    </view>
+    <!-- 多站线路列表 -->
+    <view class="circuitList">
+      <view>
+        <view class="begin">
+          <view>
+            <image src="/img/icon/origin.png"></image>
+          </view>
+          <view>{{ courseData[0].name }}</view>
+        </view>
+        <view class="course" wx:for="{{ courseData }}"  hidden='{{ !open }}' wx:if="{{ courseData.length != 2 && index != 0 &&index != courseData.length - 1 }}" wx:key="{{ courseData }}">
+          <view>
+            <view>
+              <view></view>
+            </view>
+          </view>
+          <view>{{ item.name }}</view>
+        </view>
+        <view class="terminus">
+          <view>
+            <image src="/img/icon/terminus.png"></image>
+          </view>
+          <view>{{ courseData[courseData.length - 1].name }}</view>
+        </view>
+        <view class="vertical"></view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view bindtap='applyFor' class="refundTicketBtn" wx:if="{{ used == 0 }}">
+  <view>我要退票</view>
+</view>
+<view id="popUpBox" wx:if="{{ reimbursement }}">
+  <view></view>
+  <view>
+    <image src="/img/icon/TicketDetails-tuipiao.png"></image>
+    <view>你正在申请一张退票</view>
+    <view>
+      <view bindtap='cancel'>取消</view>   
+      <view bindtap='refundSucceed'>确认</view>
+    </view>
+  </view>
+</view>

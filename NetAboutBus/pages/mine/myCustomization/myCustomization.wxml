@@ -1,0 +1,43 @@
+<!--pages/mine/myCustomization/myCustomization.wxml-->
+<view id="myCustomizationBox">
+  <view class="keyBox">
+    <view bindtap="TypeSele" class="{{ TypeIndex == 1?'opt':'' }}" data-TypeIndex="1">已采纳</view>
+    <view bindtap="TypeSele" class="{{ TypeIndex == 2?'opt':'' }}" data-TypeIndex="2">未采纳</view>
+  </view>
+  <view>
+    <view>
+      <!-- 我的定制即已采纳列表总容器 -->
+      <view class="directList">
+        <view wx:for="{{ myCustomizationData }}" bindtap='detailsSkip' wx:key="{{ myCustomizationData }}" hidden='{{ TypeIndex != item.isAccept }}' data-passengerAdviceId = "{{ item.passengerAdviceId }}">
+          <!-- 列表内容 -->
+          <view class="content">
+            <view class="circle top">
+              <view>{{ item.startTime }}出发</view>
+              <view></view>
+              <view>{{ item.homeAddress }}</view>
+            </view>
+            <view class="middle">
+              <view class="whippletree"></view>
+              <view class="contentRight">
+                <view>{{ item.isAccept == 1?"已采纳":"未采纳" }}</view>
+                <view>详情</view>
+                <!-- <view wx:if="{{false}}">已报名人数20人</view> -->
+              </view>
+            </view>
+            <view class="circle bottom">
+              <view>{{ item.endTime }}往返</view>
+              <view></view>
+              <view>{{ item.workAddress }}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+    <view wx:if="{{ empty == 1 }}" class="empty">
+    <view>
+      <image src="/img/background/empty.png"></image>
+      <view>这里什么都没有</view>
+    </view>
+  </view>
+</view>

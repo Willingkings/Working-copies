@@ -1,0 +1,16 @@
+<!--pages/component/tab-bar/tab-bar.wxml-->
+<view class='tabBar'>  
+  <view class='{{category == "line" ? "line active" : "line"}}' data-type='line' bindtap="selsectTab">
+    <image src='../../../img/icon/line.png'></image>
+    <text>线路</text>
+  </view>
+  <view class='{{category == "checkIn" ? "checkIn active" : "checkIn"}}' data-type='checkIn' bindtap="selsectTab">
+    <image src='../../../img/icon/order.png'></image>
+    <text>验票</text>
+  </view>
+  <view class="circle"></view>
+  <view class='{{category == "mine" ? "mine active" : "mine"}}' data-type='mine' bindtap="selsectTab">
+    <image src='../../../img/icon/main.png'></image>
+    <text>我的</text>
+  </view>
+</view>

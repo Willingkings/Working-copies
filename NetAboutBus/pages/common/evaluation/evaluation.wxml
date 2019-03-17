@@ -1,0 +1,74 @@
+<!--评价-->
+<view class='mian'>
+  <view class='mainTop'>
+    <view class='title'>{{ particularsData.endStation }}</view>
+    <view class='orderStatus'>
+      <text>订单状态</text>
+      <text>已使用</text>
+    </view>
+    <view class='orderNo'>
+      <text>订单编号</text>
+      <text>{{ particularsData.flowNo }}</text>
+    </view>
+  </view>
+  <view class='evaluate'>
+    <view class='price'>{{ particularsData.realPrice }}<text>元</text></view>
+    <view class='starLevel'>
+      <block wx:for="{{one_2}}" wx:key="index">
+        <image class='starItem' catchtap='in_xin' id='{{index+1}}' data-in='use_sc2' src='../../../img/icon/star-a.png'></image>
+      </block>
+      <block wx:for="{{two_2}}" wx:key="index">
+        <image class='starItem' catchtap='in_xin' id='{{index+1}}' data-in='use_sc' src='../../../img/icon/star-b.png'></image>
+      </block>
+    </view>
+    <view class='evaluateLg'>
+      <text wx:if="{{one_2 == 1}}">非常不满意，各方面都很差</text>
+      <text wx:if="{{one_2 == 2}}">不满意，比较差</text>
+      <text wx:if="{{one_2 == 3}}">一般，还需改善</text>
+      <text wx:if="{{one_2 == 4}}">比较满意，仍可改善</text>
+      <text wx:if="{{one_2 == 5}}">非常满意，无可挑剔</text>
+    </view>
+    <view class='advice'>
+      <textarea hidden='{{ pop_up == 1 }}' placeholder="请填写您对本次服务的想法或建议" class='advice-cont' value='{{ concent }}'   bindblur='bindTextAreaBlur'></textarea>
+      <view hidden='{{ pop_up == 0 }}'></view>
+    </view>
+    <view class='submint' bindtap='submint'>提交</view>
+  </view>
+  <view class='lineList'>
+    <view class='subtitle'>途经线路</view>
+    <view class='listCont'>
+      <view class='site'>
+        <view>{{ courseData[0].name }}<text>{{ particularsData.runTime }}发车</text></view>
+        <view>{{ courseData[courseData.length - 1].name }}</view>
+      </view>
+      <view bindtap='particulars' class='viewDetails'>
+        <image src='../../../img/icon/viewDetails.png'></image>
+        <text>查看详情</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="circuitPopUp" hidden='{{ pop_up == 0 }}'>
+  <view class="shade" bindtap='close'></view>
+  <view class="circuitBox">
+    <view>
+      <view>线路详情</view>
+      <view bindtap='close'>X</view>
+    </view>
+    <view>
+      <view class="circuitList">
+        <view wx:for="{{ courseData }}" wx:key="{{ courseData }}">
+          <view>
+            <image wx:if="{{ index == 0 }}" src="/img/icon/origin.png"></image>
+            <image wx:if="{{ index == courseData.length - 1 }}" src="/img/icon/terminus.png"></image>
+            <view wx:if="{{ index != courseData.length - 1 && index != 0 }}"></view>
+            <view wx:if="{{ index != courseData.length - 1 }}" class="VerticalBar"></view>
+          </view>
+          <view>
+            <view>{{ item.name }}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

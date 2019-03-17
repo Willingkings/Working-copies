@@ -1,0 +1,77 @@
+<!--pages/check-in/orderContent/unusedTicket/ticketService/ToGuide/ToGuide.wxml-->
+<!-- 乘车指引总模块 -->
+<view id="ToGuideBox">
+  <!-- 指引信息 -->
+  <view class="ToGuideMessage">
+    <view>
+      <view>线路名称</view>
+      <view>{{ ToGuideData.lineName }}</view>
+    </view>
+    <view>
+      <view>有效时间</view>
+      <view>{{ ToGuideData.runTimeStr }}</view>
+    </view>
+    <view>
+      <view>发车时间</view>
+      <view>{{ ToGuideData.runTime }}</view>
+    </view>
+    <view>
+      <view>上车时间</view>
+      <view>{{ ToGuideData.runTime }}</view>
+    </view>
+    <view>
+      <view>上车地点</view>
+      <view>{{ ToGuideData.startStation }}</view>
+    </view>
+  </view>
+  <!-- 实时线路 -->
+  <view class="circuit">
+    <scroll-view
+    id="circuitList"
+    scroll-x>
+      <view class="{{index != 0 && index != pathData.length - 1 ?'site middle':'site'}}" wx:for="{{ pathData }}" wx:key="{{ pathData }}">
+        <view class="{{ index == pathIndex? 'location':''}}" style="width: {{SingleStation}}rem;">
+          <view></view>
+          <view wx:if="{{ index== pathIndex }}">
+            <image src="/img/icon/ToGuide-coordinate.png"></image>
+          </view>
+        </view>
+        <!-- 开始站 -->
+        <view wx:if="{{ index == 0 }}">
+          {{ item.name }}︵<view class="time">{{ ToGuideData.runTime }}</view>︶
+        </view>
+        <!-- 中间站 -->
+        <view wx:if="{{ index != 0 && index != pathData.length - 1 }}">
+          {{ item.name }}
+        </view>
+        <!-- 重点站 -->
+        <view wx:if="{{ index == pathData.length - 1 }}">
+          {{ item.name }}
+        </view>
+      </view>
+      <view class="busBox" style="width: {{ BusJourney }}">
+        <view style="left: 0;">
+          <!-- <image src="/img/icon/Toguide-bus.png"></image> -->
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="navigationBtn">
+    <view bindtap='navigationBtn'>导航到上车位置</view>
+  </view>
+</view>
+
+
+<view class='{{ openMap == true?"map open":"map" }}'>
+  <map
+      id="myMap"
+      style="width: 100%; height: 100%;"
+      subkey="FGGBZ-R4AK5-TGGIR-QXVYH-VPG7J-3SBU7"
+      latitude="{{ latitude }}"
+      longitude="{{ longitude }}"
+      markers="{{markers}}"
+      polyline="{{ polyline }}"
+      scale= "16"
+      show-location
+    ></map>
+</view>

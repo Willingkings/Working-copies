@@ -1,0 +1,77 @@
+<!--下单-->
+<!--pages/common/submitOrders/submitOrders.wxml-->
+<view class='submitOrders'>
+  <view class='title'>{{title}}</view>
+  <view class='mainBox siteInfor'>
+    <view class='siteItem'>
+      <view><text>{{origin}}</text></view>
+      <view><text>{{terminus}}</text></view>
+    </view>
+    <view class='siteTime'>
+      <view wx:if="{{planArriveTime}}">预计到站时间：{{planArriveTime}}</view>
+      <view><text>￥</text>{{stepPrice}}</view>
+    </view>
+  </view>
+  <view class='mainBox ridingDate'>
+    <text>乘车日期</text>
+    <view wx:if="{{selectedDate.length>1}}" bindtap='reselectDate'>
+      <image src='../../../img/icon/submitOrders-ridingDate.png'></image>
+      {{selectedDate[0]}} ~ {{selectedDate[selectedDate.length -1]}}
+    </view>
+    <view wx:if="{{selectedDate.length == 1}}" bindtap='reselectDate'>
+      <image src='../../../img/icon/submitOrders-ridingDate.png'></image>
+      {{selectedDate[0]}}
+    </view>
+  </view>
+  <view class='mainBox ridingDays'>
+    <text>乘车天数</text>
+    <view>{{selectedDate.length}}天</view>
+  </view>
+  <view class='mainBox ridingSite'>
+    <text>上车地点</text>
+    <view>
+    <image src='../../../img/icon/submitOrders-ridingSite.png'></image>
+      {{selectSite}}
+    </view>
+  </view>
+  <view class='mainBox ridingTime'>
+    <text>乘车时间</text>
+    <view>
+      {{runTime}}
+    </view>
+  </view>
+  <view class='mainBox trainStaff'>
+    <text>乘车人员</text>
+    <view>
+      <input type='text' data-type='userName' value='{{userName}}' bindinput="manualIput" placeholder='请输入乘车人姓名'></input>
+    </view>
+  </view>
+  <view class='mainBox phoneNum'>
+    <text>手机号码</text>
+    <view>
+      <input type='number' data-type='userPhone' value='{{userPhone}}' bindinput="manualIput" placeholder='请输入乘车人员手机号码'></input>
+    </view>
+  </view>
+  <view class='mainBox total'>
+    <text>合计</text>
+    <view>
+      ￥{{stepPrice * selectedDate.length}}
+    </view>
+  </view>
+  <view class='mainBox instructions'>
+    <view>订购须知</view>
+    <view class='instructions-price' wx:if="{{false}}">
+      <text>折扣: 9.5折</text>
+      <view>现价</view>
+      <view><text>¥</text>42.00</view>
+    </view>
+  </view>
+  <view class='mainFooter' bindtap='submitOrders' wx:if="{{inOrder == '1'}}">
+    <view><text>应付: ¥ </text>{{stepPrice * selectedDate.length}}</view>
+    <view>提交订单</view>
+  </view>
+  <view class='mainFooter' bindtap='payOrders' wx:if="{{inOrder == '0'}}">
+    <view><text>应付: ¥ </text>{{stepPrice * selectedDate.length}}</view>
+    <view>支付订单</view>
+  </view>
+</view>

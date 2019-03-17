@@ -1,0 +1,29 @@
+<!--pages/mine/wallet/wallet.wxml-->
+<view id="walletBox">
+  <view>
+    <view class="balanceBox">
+      <view>
+        <view>余额 （元）</view>
+        <view>
+          <view>¥</view>
+          <view>2.98</view>
+        </view>
+      </view>
+      <view>
+        <view>
+          <image src="/img/icon/walley-zhangdan.png"></image>
+          <view>账单</view>
+        </view>
+      </view>
+    </view>
+    <view class="crosswise"></view>
+    <!-- <view class="present">
+      <view>赠送余额</view>
+      <view>
+        <view>¥</view>
+        <view>99</view>
+      </view>
+    </view> -->
+  </view>
+  <view class="recharge">会员充值</view>
+</view>

@@ -1,0 +1,5 @@
+/**app.wxss**/
+page {
+  position: relative;
+  height: 100%;
+}

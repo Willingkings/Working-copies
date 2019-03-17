@@ -1,0 +1,80 @@
+<!--pages/mine/CustomDetails/CustomDetails.wxml-->
+<!-- 班车详情总模块 -->
+<view id="TicketDetailsBox">
+  <!-- 基础信息 -->
+  <view class="basicInformation">
+    <view class="informationTitle">
+      <view>{{ CustomDetauilsData.homeAddress }}</view>
+      <view>
+        <image src="/img/icon/TicketDetails_bus.png"></image>
+      </view>
+      <view>{{ CustomDetauilsData.workAddress }}</view>
+    </view>
+    <view class="informationList">
+      <view>
+        <view>上车地点</view>
+        <view>{{ CustomDetauilsData.homeAddress }}</view>
+      </view>
+      <view>
+        <view>下车地点</view>
+        <view>{{ CustomDetauilsData.workAddress }}</view>
+      </view>
+      <view>
+        <view>出发时间</view>
+        <view>{{ CustomDetauilsData.startTime }}</view>
+      </view>
+      <view>
+        <view>返程时间</view>
+        <view>{{ CustomDetauilsData.endTime }}</view>
+      </view>
+      <view>
+        <view>审核状态</view>
+        <view>{{ CustomDetauilsData.source == 1?"未采纳":"已采纳" }}</view>
+      </view>
+      <view>
+        <view>审核状态</view>
+        <view></view>
+      </view>
+    </view>
+  </view>
+  <!-- 多站线路 -->
+  <view class="circuit"> 
+    <!-- 多站线路标题 -->
+    <view class="circuitTitle">
+      <view>多站线路</view>
+    </view>
+    <!-- 多站线路列表 -->
+    <view class="circuitList">
+      <view>
+        <view>
+          <image src="/img/icon/origin.png"></image>
+        </view>
+        <view>{{ CustomDetauilsData.homeAddress }}</view>
+        <!-- 多站线路展开关闭-->
+        <!-- <view class="CloseOpen" bindtap="CloseOpen">
+          <image src=''></image>
+          <view>关闭展开</view>
+        </view> -->
+      </view>
+      <view class="path">
+        <view>
+          <view class="circle"></view>
+        </view>
+        <view>
+          <image src="/img/icon/zhida.png"></image>
+        </view>
+      </view>
+      <view>
+        <view>
+          <image src="/img/icon/terminus.png"></image>
+        </view>
+        <view>{{ CustomDetauilsData.workAddress }}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <view bindtap='invite' class="refundTicketBtn">
+  <view>邀请好友同行</view>
+  <view>邀请更多朋友报名，加快线路开通</view>
+</view> -->

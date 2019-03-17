@@ -1,0 +1,26 @@
+<!--pages/common/map/map.wxml-->
+
+<view class='main'>
+  <view class='target'>
+    <icon type='search' size="36rpx"></icon>
+    <input bindinput='bindReplaceInput' type='text' placeholder='输入地址搜索' ></input>
+  </view>
+  <view class='{{ inputPos == -1 ? "map" : "disabled" }}'>
+    <map 
+      id='rimMap'
+      style="width: 100%; height: 15rem;"
+      subkey="FGGBZ-R4AK5-TGGIR-QXVYH-VPG7J-3SBU7"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      show-location
+    ></map>
+  </view>
+  <view class='{{ inputPos != -1 ? "rimListSearch" : "rimList" }}'>
+    <block wx:for="{{rimList}}" wx:key="index">
+      <view class='rimItem' data-title="{{item.title}}" data-lat="{{item.location.lat}}" data-lng="{{item.location.lng}}" bindtap='selectThis'>
+        <view>{{item.title}}</view>
+        <text>{{item.address}}</text>
+      </view>
+    </block>
+  </view>
+</view>

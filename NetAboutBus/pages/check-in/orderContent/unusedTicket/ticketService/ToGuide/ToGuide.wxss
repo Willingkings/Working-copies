@@ -1,0 +1,162 @@
+/* pages/check-in/orderContent/unusedTicket/ticketService/ToGuide/ToGuide.wxss */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+#ToGuideBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 0.9rem;
+  font-family: PingFang-SC-Bold;
+  background: #FAFAFA;
+}
+.ToGuideMessage {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem 0 1rem 1rem;
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+  color:rgba(70,71,76,1);
+}
+.ToGuideMessage > view {
+  margin-bottom:0.4rem;
+}
+.ToGuideMessage > view > view:nth-of-type(1) {
+  display: inline-block;
+  width: 25%;
+  vertical-align: text-top;
+}
+.ToGuideMessage > view > view:nth-of-type(2) {
+  display: inline-block;
+  width: 75%;
+  vertical-align: text-top;
+}
+.circuit {
+  height: 55%;
+}
+#circuitList {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;  
+}
+.site {
+  display: inline-block;
+  vertical-align: top;
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+  padding-top: 15%;
+  color: #333333;
+}
+.site.middle {
+  font-family:PingFang-SC-Medium;
+  font-weight: inherit;
+  color: #313131;
+}
+.site > view:nth-of-type(1) {
+  position: relative;
+  height: 0.5rem;
+}
+.site > view:nth-of-type(1) > view:nth-of-type(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #979797;
+  z-index: 20;
+}
+.site > view.location {
+  position: relative;
+}
+.site > view.location:nth-of-type(1) > view:nth-of-type(1){
+  background: #FF5F5F;
+}
+.site > view.location:nth-of-type(1) > view:nth-of-type(2){
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: -2.5rem;
+  width: 1.6rem;
+  height: 2rem;
+}
+.site > view.location:nth-of-type(1) > view:nth-of-type(2) > image {
+  width: 100%;
+  height: 100%;
+}
+.site > view:nth-of-type(2) {
+  width: 1rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  white-space: normal;
+}
+.site > view:nth-of-type(2) > view.time {
+  transform: rotate(90deg);
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+.site > view:nth-of-type(2) > view {
+  width: 1rem;
+  white-space: normal;
+}
+.busBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.5rem;
+  background:rgba(234,234,234,1);
+  margin-top: 15%;
+}
+.busBox > view {
+  position:absolute;
+  top: -1.5rem;
+  width: 3rem;
+  height: 1rem;
+}
+.busBox > view > image {
+  width: 100%;
+  height: 100%;
+}
+.navigationBtn {
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.navigationBtn > view {
+  padding:0.9rem 2rem;
+  border-radius:2rem;
+  font-family:PingFang-SC-Bold;
+  font-weight:bold;
+  background: rgba(254,74,84,1);
+  color: rgba(255,255,255,1);
+}
+
+
+
+
+
+
+
+.map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.map.open {
+  height: 100%
+}
+.viaPoint {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+

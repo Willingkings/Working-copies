@@ -1,0 +1,105 @@
+<!--pages/specialLine/business/business.wxml-->
+<!-- 商务班车 -->
+<view id="businessBox">
+  <!-- 商务班车目录模块 -->
+  <view class="keyBox">
+    <view bindtap="keyBoxSele" class="{{ keyBoxIndex == 0?'opt':'' }}" data-keyBoxIndex="0">热线预定</view>
+    <view bindtap="keyBoxSele" class="{{ keyBoxIndex == 1?'opt':'' }}" data-keyBoxIndex="1">即将开通</view>
+  </view>
+  <!-- 商务班车列表模块 -->
+  <view class="businessList">
+    <view hidden="{{ keyBoxIndex == 0?flase:true }}">
+      <!-- 商务班车热点预订列表总容器 -->
+      <view class="directList">
+        <view wx:for="{{ businessListData }}" wx:key="{{ businessListData }}" bindtap="hotApply" data-lineCode="{{ item.lineCode }}" data-lineName="{{ item.lineName }}" data-Price="{{ item.ticketPrice }}" data-lineType="{{ item.lineType }}" >
+          <!-- 列表标题 -->
+          <view class="title">{{ item.lineName }}</view>
+          <!-- 列表内容 -->
+          <view class="content">
+            <!-- 车站模块 -->
+            <view class="station">
+              <view class="begin">
+                <view>
+                  <image src="/img/icon/origin.png"></image>
+                </view>
+                <view>{{ item.startStationName }}</view>
+                <view>{{ item.planruntimestr }}发车</view>
+              </view>
+              <view class="middle">
+                <view>
+                  <view></view>
+                  <view>
+                    <view>
+                      <image src="{{ item.isManyStation == 0?'/img/icon/zhida.png':'/img/icon/duozhan.png' }}"></image>                
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="finish">
+                <view>
+                  <image src="/img/icon/terminus.png"></image>
+                </view>
+                <view>{{ item.endStationName }}</view>
+              </view>
+            </view>
+            <!-- 金额模块 -->
+            <view class="money"> 
+              <view>
+                <view>¥</view>
+                <view>{{ item.ticketPrice }}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view hidden="{{ keyBoxIndex == 1?flase:true }}"  wx:key="{{ businessListData }}">
+      <!-- 商务班车即将开通列表总容器 -->
+      <view class="directList">
+        <view wx:for="{{ NotBusinessListData }}" wx:key="{{ NotBusinessListData }}" bindtap="openApply" data-lineCode="{{ item.lineCode }}" data-lineName="{{ item.lineName }}" data-Price="{{ item.ticketPrice }}" data-lineType="{{ item.lineType }}" >
+          <!-- 列表标题 -->
+          <view class="title">
+            <view>
+              <image src="../../../img/icon/type1.png"></image>
+            </view>
+            <view>{{ item.lineName }}</view>    
+          </view>
+          <!-- 列表内容 -->
+          <view class="content">
+            <!-- 车站模块 -->
+            <view class="station">
+              <view class="begin begin2">
+                <view class="about"></view>
+                <view>{{ item.startStationName }}</view>
+                <view>{{ item.planruntimestr }}发车</view>
+              </view>
+              <view class="middle">
+                <view></view>
+              </view>
+              <view class="finish">
+                <view class="about"></view>
+                <view>{{ item.endStationName }}</view>
+              </view>
+            </view>
+            <!-- 金额模块 -->
+            <view class="money money1"> 
+              <view>
+                <view class="applyText">报名</view>
+              </view>
+            </view>
+          </view>
+          <view class="time">
+            <view>招募时间：{{ item.recruitStartDate }} 至 {{ item.recruitEndDate }}</view>
+            <view>{{ item.customerNum }}人已报名/{{ item.seatNum }}座</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{ empty }}" class="empty">
+    <view>
+      <image src="/img/background/empty.png"></image>
+      <view>这里什么都没有</view>
+    </view>
+  </view>
+</view>

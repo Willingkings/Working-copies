@@ -1,0 +1,39 @@
+<!--pages/check-in/orderContent/unusedTicket/QR_code/QR_code.wxml-->
+<!-- 扫码上车总模块 -->
+<view id="QR_codeBox">
+  <!-- 扫码信息模块 -->
+  <view class="messageBox">
+    <view class="title" wx:if="{{ QrCode == 1 }}">
+      <view>{{ messageData.busBrandNo == null?"正在为你安排班车":messageData.busBrandNo }}</view>
+    </view>
+    <view>
+      <view class="QRcode"  wx:if="{{ QrCode == 1 }}">
+        <image src="{{ QrImg }}"></image>
+      </view>
+      <view class="QRcode1"  wx:if="{{ QrCode == 0 }}">
+        <image src="/img/background/QR_code-banche.png"></image>
+      </view>
+      <view class="QRcode1text" wx:if="{{ QrCode == 0 }}">正在安排班车</view>
+    </view>
+    <view class="empty"></view>
+    <view class="text">
+      <view>
+        <view>线路名称</view>
+        <view>{{ messageData.lineName }}</view>
+      </view>
+      <view>
+        <view>订单状态</view>
+        <view>{{ messageData.state == 2?"未验票":"已验票" }}</view>
+      </view>
+      <view>
+        <view>有效日期</view>
+        <view class="time">{{ messageData.runTimeStr }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 功能模块 -->
+  <view class="function">
+    <view bindtap="detailsSkip" class="{{ QrCode == 0 ? 'NotTo':''}}">车票详情</view>
+    <view bindtap="ToGuide"  wx:if="{{ QrCode == 1 }}">乘车指引</view>
+  </view>
+</view>

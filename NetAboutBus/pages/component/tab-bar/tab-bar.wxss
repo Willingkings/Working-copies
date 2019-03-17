@@ -1,0 +1,46 @@
+/* pages/component/tab-bar/tab-bar.wxss */
+.tabBar {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  box-sizing:border-box;
+  padding: 16rpx 14%;
+}
+.line , .checkIn, .mine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.checkIn {
+  position: absolute;
+  top: 0.5px;
+  left: 50%; 
+  margin-left: -1.5rem;
+  width: 3rem;
+  height: 100%;  
+  background:#fff;
+  z-index: 10;
+}
+.line image , .checkIn image, .mine image {
+  width: 36rpx;
+  height: 36rpx;
+}
+.line text , .checkIn text, .mine text {
+  font-size: 28rpx;
+}
+.active {
+  color: #FE4A54;
+}
+.circle {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top:-0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  z-index: 5;
+  background:#FFF;
+}

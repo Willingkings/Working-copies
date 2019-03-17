@@ -1,0 +1,127 @@
+/* pages/common/payResults/payResults.wxss */
+.payResults ,.pay , .refund {
+  height: 100%;
+}
+.pay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 55%;
+}
+.title {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.title image {
+  width: 1.375rem;
+  height: 1.25rem;
+  margin-right: 0.5rem
+}
+.title text {
+  color: #333333;
+  font-size: 0.875rem;
+  font-weight:bold;
+}
+.Title_img {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-grow: 1;
+}
+.Title_img image {
+  width: 1.375rem;
+  height: 1.25rem;
+  margin-right: 0.5rem
+}
+.Title_img text {
+  color: #333333;
+  font-size: 0.875rem;
+  font-weight:bold;
+}
+.results text.results_text {
+  color: #FE4A54;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.price>text {
+  font-size: 0.75rem;
+  color: #A7A9AD;
+}
+.price-num {
+  line-height: 2.5rem;
+  font-size: 1.25rem;
+  color: #FE4A54;
+}
+.price-num text {
+  font-size: 70%;
+}
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 0.5;
+}
+.results text {
+  font-size: 0.7rem;
+  color: #333333
+}
+.myTicket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myTicket image {
+  width: 1.75rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+.myTicket text {
+  font-size: 0.875rem;
+  font-weight:bold;
+  color: #333333;
+}
+.invitation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+}
+.invitation button {
+  font-size: 0.875rem;
+  font-weight:bold;
+  background: #FE4A54;
+  color: #fff;
+  padding: 0 1.5rem;
+  border-radius: 2rem;
+  margin-bottom: 0.75rem;
+}
+.invitation text:last-child {
+  font-size:0.75rem;
+  color:rgba(254,74,84,1);
+}
+.refund {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.refund .results {
+  font-size: 0.75rem;
+  color: #FE4A54;
+}
+.refund .invitation text:first-child {
+  padding:10px 3rem;
+  margin-bottom:1rem;
+  border-radius:1rem;
+  background:#FE4A54;
+  color:#FFFFFF;
+}
+.refund .invitation text:last-child {
+  color: #333333;
+}

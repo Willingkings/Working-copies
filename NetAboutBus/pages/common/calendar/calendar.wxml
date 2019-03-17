@@ -1,0 +1,58 @@
+<!--日历-->
+<!--pages/common/calendar/calendar.wxml-->
+<view class='calendar'>
+  <view class='title-month'>
+    <image class='lastMonth' data-num='-1' wx:if="{{monthFlag > 0}}" bindtap='nextMonth' src='../../../img/icon/dateNext.png'></image>
+    <text>{{selectedTime}}</text>
+    <image class='nextMonth' data-num='1' bindtap='nextMonth' src='../../../img/icon/dateNext.png'></image>
+  </view>
+  <view class='title-weeks'>
+    <text>日</text>
+    <text>一</text>
+    <text>二</text>
+    <text>三</text>
+    <text>四</text>
+    <text>五</text>
+    <text>六</text>
+  </view>
+  <view class='content-date'>
+    <block wx:for="{{dayLists}}" wx:key="index">
+      <view class='week-list'>
+        <block wx:for="{{item}}" wx:key="{{index}}">
+          <view class='{{item.day && item.selected  ? "week-item active" : "week-item" }}' data-type="item" data-aData="{{item}}"  data-num='2' bindtap='selectDate'>
+            <view class='week-item_day' wx:if="{{item.day}}" >{{item.day}}</view>
+            <view class='week-item_ticket' wx:if="{{item.day && item.disable}}" >{{item.moreTicket == 0 ? '无票' : item.moreTicket + '张' }}</view>
+          </view>
+        </block>
+      </view>
+    </block>
+  </view> 
+  <view class='shortcuts'>
+    <block wx:for="{{btnList}}" wx:key="{{index}}">
+      <view class='{{selectedTimeType == item.type && item.select ? item.type + " active" : item.type}}' data-select="{{item.select}}" 
+            bindtap='selectDate' data-type='{{item.type}}' data-num='{{item.num}}' data-index='{{index}}'>
+        {{item.name}}
+        <image src='../../../img/icon/shortcuts-active.png'></image>  
+      </view>
+    </block>
+    <!-- <view class='{{selectedTimeType == "thisWeek" ? "thisWeek active" : "thisWeek"}}' data-select="false" bindtap='selectDate' data-type='thisWeek' data-num='0'>
+      本周
+      <image src='../../../img/icon/shortcuts-active.png'></image>  
+    </view>
+    <view class='{{selectedTimeType == "nextWeek" ? "nextWeek active" : "nextWeek"}}'  data-select="false" bindtap='selectDate' data-type='nextWeek' data-num='0'>
+      下周
+      <image src='../../../img/icon/shortcuts-active.png'></image>  
+    </view> -->
+  </view>
+  <!-- <view class='shortcuts'>
+    <view class='{{selectedTimeType == "thisMonth" ? "thisMonth active" : "thisMonth"}}' bindtap='selectDate' data-type='thisMonth' data-num='0'>
+      本月
+      <image src='../../../img/icon/shortcuts-active.png'></image>  
+    </view>
+    <view class='{{selectedTimeType == "nextMonth" ? "nextMonth active" : "nextMonth"}}'  data-select="false" bindtap='selectDate' data-type='nextMonth' data-num='1'>
+      下月
+      <image src='../../../img/icon/shortcuts-active.png'></image>  
+    </view>
+  </view> -->
+  <view class='buyTicket' bindtap='buyTicket'>确认购票</view>
+</view>

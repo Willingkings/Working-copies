@@ -1,0 +1,67 @@
+/* pages/component/resultWin/resultWin.wxss */
+.mainCont {
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  bottom: 3rem;
+  left: 2rem;
+  background: #fff;
+  border-radius: 16px;
+}
+.closeResultWin {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1rem;
+  text-align: center;
+}
+.mainItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 1rem;
+  overflow: hidden;
+}
+.itemTitle {
+  width: 8rem;
+  height: 2rem;
+  margin-bottom: 0.625rem;
+}
+.itemLink {
+  display: flex;
+  color: #A7A9AD;
+  font-size: 0.865rem;
+}
+.itemLink cover-view:nth-child(2) {
+  color: #FE4A54;
+}
+.itemBg {
+  position: absolute;
+  top: 6rem;
+  right: 1.5rem;
+  bottom: 5rem;
+  left: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.invite {
+  position: absolute;
+  bottom: 1.5rem;
+}
+.invite cover-view:first-child {
+  text-align: center;
+  color: #ffffff;
+  background: #FE4A54;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 2rem;
+  margin-bottom: 0.625rem;
+}
+.invite cover-view:last-child {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #FE4A54;
+}

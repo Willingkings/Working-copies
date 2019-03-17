@@ -1,0 +1,146 @@
+/* pages/common/submitOrders/submitOrders.wxss */
+.submitOrders {
+  height: 100%;
+  background: #FAFAFA;
+  position: relative;
+}
+.title {
+  background: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color:#313131;
+  padding: 5px 1rem  10px;
+  border-bottom: 1px solid #CCCCCC;
+}
+.mainBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  font-size: 0.865rem;
+  color:#333333;
+  padding: 0.625rem 1rem;
+}
+.mainBox text {
+  font-weight: 500;
+}
+.ridingDate , .ridingTime , .trainStaff , .phoneNum {
+  border-bottom: 1px solid #CCCCCC;
+}
+.siteInfor , .total{
+  margin-bottom: 1rem;
+}
+.ridingSite {
+  margin: 1rem 0;  
+}
+.siteItem view {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.siteItem view::after {
+  position: absolute;
+  content: "";
+  top: 0.3rem;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border: 2px solid #6CBB78;
+  border-radius: 100%;
+  z-index: 9;
+}
+.siteItem view:first-child {
+  padding-bottom: 0.865rem;
+}
+.siteItem view:first-child::before {
+  position: absolute;
+  content: "";
+  top: 0.3rem;
+  height: 100%;
+  left: 5px;
+  border-left: 4px solid #F9F2F3;
+}
+.siteItem view:last-child::after {
+  border-color: #DD5754;
+}
+.siteTime {
+  text-align: right;
+}
+.siteTime view:first-child {
+  color: #808080;
+}
+.siteTime view:last-child {
+  line-height: 1.5rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #FE4A54;
+  margin-top: 0.75rem;
+}
+.siteTime view:last-child text {
+  font-weight: 400;
+  font-size: 70%;
+}
+.ridingDate view , .ridingSite view {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #FE4A54;
+}
+.ridingDate view image {
+  width: 2rem;
+  height: 1.75rem;
+}
+.ridingDays view {
+  color: #FE4A54;
+}
+.ridingSite view image {
+  width: 1rem;
+  height: 1.25rem; 
+  margin-right:5px;
+}
+.trainStaff view input , .phoneNum view input {
+  text-align: right;
+}
+.instructions-price {
+  display: flex;
+}
+.instructions-price text {
+  font-weight: 400;
+  color: #FE4A54;
+}
+.instructions-price view {
+  padding-left: 10px;
+}
+.instructions-price view:last-child {
+  font-size: 0.865rem;
+  color: #FE4A54;
+}
+.instructions-price view:last-child text {
+  font-size: 80%;
+}
+.mainFooter {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  background: #ffffff;
+}
+.mainFooter view {
+  width: 50%;
+  text-align: center;
+  padding: 1rem;
+}
+.mainFooter view:first-child {
+  color: #FE4A54;
+  font-size: 1.25rem;
+}
+.mainFooter view:first-child text {
+  font-size: 80%;
+}
+.mainFooter view:last-child {
+  background: #FE4A54;
+  color: #ffffff;
+  font-size: 1.25rem;
+}

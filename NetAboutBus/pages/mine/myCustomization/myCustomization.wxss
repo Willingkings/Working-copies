@@ -1,0 +1,151 @@
+/* pages/mine/myCustomization/myCustomization.wxss */
+#myCustomizationBox {
+  width: 100%;
+  height: 100%;
+  background: #FAFAFA;
+  font-size: 0.875rem;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:#333333;
+  position: relative
+}
+/* 商务班车目录模块 */
+#myCustomizationBox > .keyBox {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 2rem 3.5rem .5rem;
+  font-size: 0.8rem;
+}
+#myCustomizationBox > .keyBox > .opt {
+  position: relative;
+  color: #FE4A54;
+}
+#myCustomizationBox > .keyBox > .opt::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -0.5rem;
+  width: 99%;
+  height: 0.156rem;
+  border-radius: 20%;
+  background: #FE4A54;
+  content: "";
+}
+.directList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.directList > view {
+  width: 92%;
+  border-radius: 7%;
+  margin-top: 1rem;
+  background: #FFFFFF;
+  vertical-align: top
+}
+.directList .content {
+  padding: 0.7rem;
+}
+.circle {
+  display: flex;
+}
+.circle > view:nth-of-type(1) {
+  width: 4.5rem;
+}
+.circle > view:nth-of-type(2) {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin-right:0.3rem;
+}
+.circle > view:nth-of-type(3) {
+  /* width: 7rem; */
+  width: 51%;
+}
+.circle.top {
+  align-items: flex-end;
+}
+.circle.top > view:nth-of-type(1) {
+  color: #313131;
+}
+.circle.top > view:nth-of-type(2) {
+  border: 0.1rem solid  #49BC71;
+}
+.circle.bottom {
+  align-items: flex-start;
+}
+.circle.bottom > view:nth-of-type(1) {
+  color: #898989;
+}
+.circle.bottom > view:nth-of-type(2) {
+  border: 0.1rem solid  #DD5754;
+}
+.middle {
+  position: relative;
+  height: 1rem;
+}
+.middle > view.whippletree {
+  position: absolute;
+  top: 0;
+  left: 4.84rem;
+  width: 0.1rem;
+  height: 100%;
+  background: #F9F2F3;
+}
+.middle > view.contentRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: -1.4rem;
+  right: 0;
+}
+.middle > view.contentRight > view:nth-of-type(1) {
+  font-size: 0.7rem;
+  color: #FE4A54;
+}
+.middle > view.contentRight > view:nth-of-type(2) {
+  padding: 0.1rem 1rem;
+  border-radius: 1rem;
+  background: #FE4A54;
+  color: #FFFFFF;
+  margin: 0.4rem 0;
+}
+.middle > view.contentRight > view:nth-of-type(3) {
+  font-size: 0.6rem;
+  color: #BBBBBB;
+}
+/* 数据为空模块 */
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70%;
+}
+.empty > view >  image{
+  width: 8rem;
+  height: 8rem;
+}
+.empty > view >  view{
+  text-align:center;
+  color: #ddd;
+}
+.content > .money > view > view:nth-of-type(1).applyText {
+  padding:0.2rem 1.3rem;
+  border-radius:1rem;
+  background:#FE4A54;
+  color:#FFFFFF;
+}
+.directList .content > .money1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  border: none;
+  color: #FE5760;
+}

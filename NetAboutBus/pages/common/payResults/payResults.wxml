@@ -1,0 +1,45 @@
+<!--支付结果-->
+<!--pages/common/payResults/payResults.wxml-->
+<view class='payResults'>
+  <!-- 支付结果 -->
+  <view class='pay' wx:if="{{results == 0}}">
+    <view class='title'>
+      <image src='../../../img/icon/pay-success.png'></image>
+      <text>支付成功</text>
+    </view>
+    <view class='price'>
+      <text>本次支付总额</text>
+      <view class='price-num'><text>￥</text>{{realPrice}}</view>
+    </view>
+    <view class='results'>
+      <text>出票成功，已放入  [我的车票]  中</text>
+      <view class='myTicket' bindtap='myTicket'>
+        <image src='../../../img/icon/myTicket.png'></image>
+        <text>我的车票</text>
+      </view>
+    </view>
+    <!-- <view class='invitation'>
+      <!-- <text bindtap='friendsShare'>邀请好友同行</text>
+      <button data-id="shareBtn" open-type="share">邀请好友同行</button>
+      <text>邀请更多朋友报名，加快线路开通</text>
+    </view> -->
+  </view>
+  <!-- 退款结果 -->
+  <view class='refund' wx:if="{{results == 1}}">
+    <view class='Title_img'>
+      <text>申请成功</text>
+    </view>
+    <view class='price'>
+      <text>本次退款总额</text>
+      <view class='price-num'><text>￥</text>{{realPrice}}</view>
+    </view>
+    <view class='results'>
+      <text class="results_text">请关注【我的钱包】的变化</text>
+    </view>
+    <view class='invitation'>
+      <text bindtap='closePage'>关闭</text>
+      <text>欢迎您再次预定</text>
+    </view>
+  </view>
+</view>
+

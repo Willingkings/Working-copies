@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#FF3737",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "定制巴士",
+  "backgroundColor": "#FFFFFF",
+  "backgroundTextStyle": "light",
+  "onReachBottomDistance": 150
+}

@@ -1,0 +1,90 @@
+/* pages/check-in/orderContent/useTicket/useTicket.wxss */
+#useTicketBox {
+  box-sizing: border-box;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  font-size: 0.9rem;
+  background: #FAFAFA;
+}
+#useTicketBox > .messageBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+  background: #FFFFFF;
+}
+#useTicketBox > .messageBox > .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 1rem 1rem 0 0;
+  font-size: 1rem;
+  letter-spacing: 0.4rem;
+  color: #FFFFFF;
+}
+#useTicketBox > .messageBox > .QRcode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  height: 12rem;
+  margin-top: 1rem;
+}
+#useTicketBox > .messageBox > .QRcode > image {
+  width: 10rem;
+  height: 5rem;
+}
+#useTicketBox > .messageBox > .empty {
+  position: relative;
+  width: 102.5%;
+  height: 2rem;
+  overflow: hidden;
+}
+#useTicketBox > .messageBox > .empty::after {
+  position: absolute;
+  left: -1rem;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #FAFAFA;
+  content: "";
+}
+#useTicketBox > .messageBox > .empty::before {
+  position: absolute;
+  right: -1rem;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #FAFAFA;
+  content: "";
+}
+#useTicketBox > .messageBox > .text {
+}
+#useTicketBox > .messageBox > .text > view {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+#useTicketBox > .messageBox > .text > view > view:nth-of-type(1) {
+  margin-right: 1rem;
+}
+#useTicketBox > .messageBox > .text > view > view.time:nth-of-type(2) {
+  color: #FE4A54;
+}
+#useTicketBox > .function {
+  display: flex;
+  margin-top: 10%;
+  justify-content: space-between;
+}
+#useTicketBox > .function > view {
+  width: 35%;
+  padding: 3%;
+  border-radius: 1rem;
+  background: #ffffff;
+  text-align: center;
+}

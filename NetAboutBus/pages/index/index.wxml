@@ -1,0 +1,106 @@
+<!--index.wxml-->
+<!-- <image class='img' src='../../img/background/index-bg.png'></image> -->
+<image class='img' src='../../img/background/index-bg-cj.png'></image>
+<view class="mianBody">
+  <view class='tab-list'>
+    <view class='tab-cont'>
+      <view class="{{tabNum == 0?'lineSearch-tab active':'lineSearch-tab' }}" data-id='0'  bindtap="selectTab">查询线路</view>
+      <text class="{{tabNum == 1?'triangle active':'triangle' }}" ></text>
+      <view class="{{tabNum == 1?'lineCustom-tab active':'lineCustom-tab' }}" data-id='1'  bindtap="selectTab">个人定制</view>
+    </view>
+    <!-- 查询线路 -->
+    <view class='lineSearch-cont' wx:if="{{tabNum == 0}}">
+      <view class='initialPoint'>
+        <text>出发地点</text>
+        <view data-type='origin' data-title='{{origin.title}}' data-lat="{{origin.lat}}" data-lng="{{origin.lng}}" 
+              bindtap='selectedSite'>{{origin.title != "" ? origin.title : "我的位置  "}}
+        </view>
+      </view>
+      <image class='arrow' src='../../img/icon/arrow.png'></image>
+      <view class='destination'>
+        <text>目的地点</text>
+        <view data-type="terminus" data-title='{{terminus.title}}' data-lat="{{terminus.lat}}" data-lng="{{terminus.lng}}"
+              bindtap='selectedSite'>{{terminus.title != "" ? terminus.title : "请输入终点"}}
+        </view>
+      </view>
+      <view class='searchLine' bindtap="searchLine" >搜索线路</view>
+    </view>
+    <!-- 线路定制 -->
+    <view class='lineCustom-cont' wx:if="{{tabNum == 1}}">
+      <view class='site'>
+        <view class='site-title'>地点</view>
+        <view class='site-cont'>
+          <view class='site-origin'>
+            <image class='icon-word' src='../../img/icon/origin.png'></image>
+            <view data-type='origin' data-title='{{origin.title}}' data-lat="{{origin.lat}}" data-lng="{{origin.lng}}"
+                  bindtap='selectedSite'>{{origin.title != "" ? origin.title : "出发地点"}}
+            </view>
+          </view>
+          <view class='site-terminus'>
+            <image class='icon-word' src='../../img/icon/terminus.png'></image>
+            <view data-type="terminus" data-title='{{terminus.title}}' data-lat="{{terminus.lat}}" data-lng="{{terminus.lng}}"
+                  bindtap='selectedSite'>{{terminus.title != "" ? terminus.title : "目的地点"}}
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='date'>
+        <view class='date-title'>时间</view>
+        <view class='date-cont'>
+          <view class='date-origin'>
+            <image class='icon-custom' src='../../img/icon/date-origin.png'></image>
+            <picker mode="multiSelector" data-type= "depart" bindchange="pickerChange" 
+                    value="{{multiIndex}}" range="{{multiArray}}" style="width: 80%">
+              <view class='inputText' >{{depart==""? "出发时间" : depart }}</view>
+            </picker>
+          </view>
+        </view>
+      </view>
+      <view class='date'>
+        <view class='date-title'></view>
+        <view class='date-cont'>  
+          <view class='date-termination'>
+            <image class='icon-custom' src='../../img/icon/date-termination.png'></image>
+            <picker mode="multiSelector" data-type= "returns" bindchange="pickerChange" 
+                    value="{{multiIndex}}" range="{{multiArray}}"  style="width: 80%"> 
+              <view class='inputText' >{{returns==""? "返程时间" : returns }}</view>
+            </picker>
+          </view>  
+        </view>
+      </view>
+      <view class='advice-title'>路线建议</view>
+      <view>
+        <textarea placeholder="乘客输入线路建议说明(选填)" bindinput='advice' value='{{advice}}' class='advice-cont'></textarea>
+      </view>
+      <view class='confirmCustom' bindtap="confirmCustom">发起定制</view>
+    </view>
+  </view>
+  <view class='card-list' wx:if="{{tabNum == 0}}">
+    <view bindtap='selectThemeBtn' data-code="{{ themeTypeData[index].code }}" data-index="{{ index }}" wx:for="{{ themeTypeData }}" wx:key="themeTypeData" class='card-item'>
+      <image src='{{themeTypeImages[index].img}}'></image>
+      <text>{{themeTypeData[index].name}}</text>
+    </view>
+  </view>
+</view>
+
+<view class='tabBar'>
+  <tab-bar category="line"></tab-bar>
+</view>
+
+
+
+<!-- 结果弹窗 -->
+<cover-view class='customSuccess' wx:if="{{customSuccess == 1}}">
+  <cover-view class='mainItem'>
+    <cover-image class='closeResultWin' bindtap='closeResultWin' src='../../img/icon/close.png' ></cover-image>
+    <cover-image class='itemTitle' src='../../img/background/custom-title.png'></cover-image>
+    <cover-view class='itemLink'><cover-view>请到</cover-view><cover-view>我的定制</cover-view><cover-view>查看开通状态</cover-view></cover-view>
+    <cover-view class='itemBg'>
+      <cover-image src='../../img/background/custom-bg.png'></cover-image>
+    </cover-view>
+    <cover-view class='invite' wx:if="{{false}}">
+      <cover-view>邀请好友报名</cover-view>
+      <cover-view>邀请更多朋友报名，加快线路开通</cover-view>
+    </cover-view>
+  </cover-view>
+</cover-view>

@@ -1,0 +1,97 @@
+/* pages/mine/wallet/wallet.wxss */
+#walletBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #FAFAFA;
+  font-size: 0.9rem;
+  font-family: PingFang-SC-Medium;
+}
+#walletBox > view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: #FFFFFF;
+}
+.balanceBox {
+  box-sizing: border-box; 
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 7%;
+  padding-top: 5%;
+  background: #FFFFFF;
+}
+.balanceBox > view:nth-of-type(1) {
+  color: #FE4A54;
+}
+.balanceBox > view:nth-of-type(1) > view:nth-of-type(2) {
+  position: relative;
+  margin-top: 0.7rem;
+}
+.balanceBox > view:nth-of-type(1) > view:nth-of-type(2) view:nth-of-type(1) {
+  display: inline-block;
+  vertical-align: sub;
+  margin-right: 0.2rem;
+}
+.balanceBox > view:nth-of-type(1) > view:nth-of-type(2) view:nth-of-type(2) {
+  display: inline-block;
+  font-size: 1.5rem;
+  vertical-align: sub;
+}
+.balanceBox > view:nth-of-type(2)  {
+  display: flex;
+  align-items: flex-start;
+  color: #333333;
+}
+.balanceBox > view:nth-of-type(2) > view  {
+  display: flex;
+  align-items: center;
+}
+.balanceBox > view:nth-of-type(2) > view > image  {
+  width: 0.9rem;
+  height: 0.91rem;
+  margin-right: 0.3rem;
+}
+.balanceBox > view:nth-of-type(2) > view > view  {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.crosswise {
+  width: 93%;
+  height: 0.05rem;
+  margin-top: 0.5rem;
+  background:rgba(213,213,213,1);
+}
+.present {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between; 
+  width: 100%;
+  padding: 2% 7%;
+  font-weight: 500;
+  color:rgba(106,106,106,1);
+}
+.present > view:nth-of-type(2) {
+}
+.present > view:nth-of-type(2) > view:nth-of-type(1) {
+  font-size: 0.8rem;
+  margin-right: 0.2rem;
+}
+.present > view:nth-of-type(2) > view {
+  display: inline-block;
+  box-direction: bottom;
+}
+#walletBox > .recharge {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 42%;
+  width: 7rem;
+  padding: 0.7rem 1rem;
+  border-radius: 2rem;
+  background:rgba(254,74,84,1);
+  color: #FFFFFF;
+}

@@ -1,0 +1,55 @@
+/* pages/common/map/map.wxss */
+.main {
+  height: 100%;
+  position: relative;
+}
+.target {
+  height: 2rem;
+  line-height: 2rem;
+  padding: 5px 1rem;
+  position: relative;
+}
+.target icon {
+  position: absolute;
+  top: 0.625rem;
+  left: 1.5rem;
+}
+.target input {
+  height: 1.8rem;
+  background: #e6e4e4e8;
+  padding: 0 1.8rem;
+  border-radius: 10px;
+}
+.rimList {
+  position: absolute;
+  top: 17.5rem;
+  bottom: 0;
+  padding: 0 1.5rem;
+  overflow-y: auto;
+}
+.disabled {
+  display: none;
+}
+.rimListSearch {
+  position: absolute;
+  top: 2.5rem;
+  bottom: 0;
+  padding: 0 1.5rem;
+  overflow-y: auto;
+}
+.rimItem {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.rimItem view {
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
+}
+.rimItem text {
+  color: #aaa;
+  font-size: 0.75rem;
+}
+
+
+
+

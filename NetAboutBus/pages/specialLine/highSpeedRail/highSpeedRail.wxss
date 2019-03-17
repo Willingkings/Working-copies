@@ -1,0 +1,172 @@
+/* pages/specialLine/highSpeedRail/highSpeedRail.wxss */
+#directBox {
+  width: 100%;
+  height: 100%;
+  background: #FAFAFA;
+  font-size: 0.8rem;
+}
+#directList {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+#directList > view {
+  width: 92%;
+  border-radius: 7%;
+  margin-top: 1rem;
+  background: #FFFFFF;
+}
+#directList > view .title {
+  border-bottom: 2rpx #F1F1F1 solid;
+  padding: .5rem 1.2rem;
+}
+#directList .content {
+  display: flex;
+}
+#directList .content > .station {
+  box-sizing: border-box;
+  width: 70%;
+  padding-top: 0.8rem;
+  padding-left: 1.2rem;
+  padding-bottom: 0.8rem;
+}
+/* 初始站 */
+.station > .begin {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.station > .begin > view:nth-of-type(1) {
+  position: absolute;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  font-size: 0.6rem;
+  text-align: center;
+  color:#FFFFFF;
+  z-index: 10;
+}
+.station > .begin > view:nth-of-type(1) > image {
+  width: 100%;
+  height: 100%;
+}
+.station > .begin > view:nth-of-type(2) {
+  margin-left: 1.4rem;
+  white-space: nowrap;
+}
+.station > .begin > view:nth-of-type(3) {
+  margin-left: 0.4rem;
+  color: #9E9E9E;
+}
+/* 中间站 */
+.station > .middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 0.9rem;
+  height: 2.12rem;
+}
+/* 灰杠 */
+.station > .middle > view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: -0.5rem;
+  width: 0.25rem;
+  height: 3.12rem;
+  background:#ddd;
+}
+/* 绿点 */
+.station > .middle > view  > view:nth-of-type(1) {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  margin-top: 0.8rem;
+  background:#46C559;
+}
+/* 红点 */
+.station > .middle > view  > view:nth-of-type(2) {
+  position: relative;
+  width: 0.4rem;
+  height: 0.4rem;
+  grid-template-columns: 0.4rem;
+  border-radius: 50%;
+  margin-top: 0.3rem;
+  background:#FEAB4B;
+}
+/* 红点 */
+.station > .middle > view  > view:nth-of-type(2) > view {
+  position:absolute;
+  left: 1.1rem;
+  top: -0.4rem;
+  width: 2rem;
+  height: 1rem;
+  font-size: 0.7rem;
+  color: #FFFFFF;
+}
+/* 红点 */
+.station > .middle > view  > view:nth-of-type(2) > view > image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* 终点站 */
+.station > .finish {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.station > .finish > view:nth-of-type(1) {
+  position: absolute;
+  width:0.9rem;
+  height:0.9rem;
+  border-radius:50%;
+  font-size:0.7rem;
+  text-align:center;
+  color:#FFFFFF;
+}
+.station > .finish > view:nth-of-type(1) > image {
+  width: 100%;
+  height: 100%;
+}
+.station > .finish > view:nth-of-type(2) {
+  margin-left: 1.4rem;
+}
+#directList .content > .money {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  border-left: 0.17rem dotted #F8F7FA;
+  color: #FE5760;
+}
+.content > .money > view {
+  display: flex;
+  align-items:center;
+}
+.content > .money > view > view:nth-of-type(1) {
+  margin-right: 0.25rem
+}
+.content > .money > view > view:nth-of-type(2) {
+  font-size: 1.5rem;
+}
+/* 数据为空模块 */
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.empty > view >  image{
+  width: 8rem;
+  height: 8rem;
+}
+.empty > view >  view{
+  text-align:center;
+  color: #ddd;
+}
+
+

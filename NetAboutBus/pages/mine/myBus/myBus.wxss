@@ -1,0 +1,129 @@
+/* pages/mine/myBus/myBus.wxss */
+#myBusBox {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 5% 5%;
+  font-size: 0.8rem;
+  font-family: PingFang-SC-Medium;
+  background: #FAFAFA;
+  color: #313131;
+}
+.myBusList {
+  display: flex;
+  justify-content: center; 
+  font-family: PingFang-SC-Bold;
+  margin-bottom: 1rem;
+  color: #646464;
+}
+.myBusList > view:nth-of-type(2) {
+  width: 3rem;
+}
+.sele {
+  position: relative;
+  color:rgba(254,74,84,1);
+}
+.sele::after {
+  position: absolute;
+  bottom: -0.1rem;
+  left: 0;
+  width: 100%;
+  height: 0.06rem;
+  background: rgba(254,74,84,1);
+  content: "";
+}
+
+
+
+
+#directList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#directList > view {
+  width: 100%;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  background: #FFFFFF;
+}
+#directList > view .title {
+  position: relative;
+  border-bottom: 2rpx #F1F1F1 solid;
+  padding: .5rem 1.2rem;
+}
+#directList > view .title > view:nth-of-type(1) {
+  position: absolute;
+  width: 30%;
+  height: 1.4rem;
+  right: 0;
+  text-align: center;
+  color: #A7A7A7;
+}
+#directList > view .title > view:nth-of-type(2) {
+  white-space: nowrap;
+  color: #808080;
+}
+#directList > view .title > view:nth-of-type(1) > image {
+  width: 100%;
+  height: 100%;
+}
+#directList .content {
+  padding: 1rem;
+}
+.circle {
+  display: flex;
+}
+.circle > view:nth-of-type(1) {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin-right:0.3rem;
+}
+.circle > view:nth-of-type(2) {
+  max-width: 80%;
+}
+.circle.top {
+  align-items: flex-end;
+}
+.circle.top > view:nth-of-type(1) {
+  border: 0.1rem solid  #49BC71;
+}
+.circle.top > view:nth-of-type(3) {
+  margin-left: 1rem;
+  color: #898989
+}
+.circle.bottom {
+  align-items: flex-start;
+}
+.circle.bottom > view:nth-of-type(1) {
+  border: 0.1rem solid  #DD5754;
+}
+.middle {
+  position: relative;
+  height: 1rem;
+}
+.middle > view.whippletree {
+  position: absolute;
+  top: 0;
+  left: 0.35rem;
+  width: 0.1rem;
+  height: 100%;
+  background: #F9F2F3;
+}
+.middle > view.contentRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: -0.5rem;
+  right: 0;
+}
+.middle > view.contentRight > view {
+  padding: 0.1rem 1rem;
+  border-radius: 1rem;
+  background: #FE4A54;
+  color: #FFFFFF;
+  margin: 0.4rem 0;
+}

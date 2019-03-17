@@ -1,0 +1,106 @@
+/* pages/check-in/orderContent/unusedTicket/QR_code/QR_code.wxss */
+#QR_codeBox {
+  box-sizing: border-box;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  font-size: 0.9rem;
+  background: #FAFAFA;
+}
+#QR_codeBox > .messageBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+  background: #FFFFFF;
+}
+#QR_codeBox > .messageBox > .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 1rem 1rem 0 0;
+  font-size: 1rem;
+  letter-spacing: 0.4rem;
+  background: #FF4048;
+  color: #FFFFFF;
+}
+#QR_codeBox > .messageBox > view > .QRcode {
+  width: 12rem;
+  height: 12rem;
+  margin-top: 1rem;
+  background: #000000;
+}
+#QR_codeBox > .messageBox > view > .QRcode > image  {
+  width: 100%;
+  height: 100%;
+}
+#QR_codeBox > .messageBox > view > .QRcode1 {
+  width: 14.5rem;
+  height: 12rem;
+  margin-top: 1rem;
+}
+#QR_codeBox > .messageBox > view > .QRcode1 > image {
+  width: 100%;
+  height: 100%;
+}
+#QR_codeBox > .messageBox > view > .QRcode1text  {
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  color: #FE4A54;
+}
+#QR_codeBox > .messageBox  > .empty {
+  position: relative;
+  width: 102.5%;
+  height: 2rem;
+  overflow: hidden;
+}
+#QR_codeBox > .messageBox > .empty::after {
+  position: absolute;
+  left: -1rem;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #FAFAFA;
+  content: "";
+}
+#QR_codeBox > .messageBox  > .empty::before {
+  position: absolute;
+  right: -1rem;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #FAFAFA;
+  content: "";
+}
+#QR_codeBox > .messageBox  > .text {
+}
+#QR_codeBox > .messageBox  > .text > view {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+#QR_codeBox > .messageBox  > .text > view > view:nth-of-type(1) {
+  margin-right: 1rem;
+}
+#QR_codeBox > .messageBox  > .text > view > view.time:nth-of-type(2) {
+  color: #FE4A54;
+}
+#QR_codeBox > .function {
+  display: flex;
+  margin-top: 10%;
+  justify-content: space-between;
+}
+#QR_codeBox > .function > view {
+  padding: 3% 13%;
+  border-radius: 1rem;
+  background: #ffffff;
+}
+#QR_codeBox > .function > view.NotTo {
+  width: 100%;
+  text-align: center;
+}

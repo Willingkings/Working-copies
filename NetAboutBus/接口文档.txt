@@ -1,0 +1,21 @@
+﻿http://test.api.cusbus.glchuxingwang.com/doc.html
+
+网约公交小程序账户密码：
+glcxwxcx@163.com
+glcxwxcx123
+
+
+腾讯地图KEY：
+
+桂林出行网预订服务  wxbcbce5d1c787fd26         FGGBZ-R4AK5-TGGIR-QXVYH-VPG7J-3SBU7    
+
+桂林出行网旅游订车船票门票  wxadfefedb7be5074a  UDWBZ-U2JRO-RR6WX-SDVZW-NLSPH-BDF72    
+
+6ae0d56512dbf45dd9bcf1a876feba92
+
+评价：
+一星  非常不满意，各方面都很差
+二星  不满意，比较差
+三星  一般，还需改善
+四星  比较满意，仍可改善
+五星  非常满意，无可挑剔

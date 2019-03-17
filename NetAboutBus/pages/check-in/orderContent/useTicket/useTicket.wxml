@@ -1,0 +1,33 @@
+<!--pages/check-in/orderContent/useTicket/useTicket.wxml-->
+<!-- 扫码上车总模块 -->
+<view id="useTicketBox">
+  <!-- 扫码信息模块 -->
+  <view class="messageBox">
+    <view class="title">
+      <view></view>
+    </view>
+    <view class="QRcode">
+      <image src="/img/background/useTicket-img.png"></image>
+    </view>
+    <view class="empty"></view>
+    <view class="text">
+      <view>
+        <view>线路名称</view>
+        <view>{{ messageData.lineName }}</view>
+      </view>
+      <view>
+        <view>订单状态</view>
+        <view>{{ messageData.state == 3?"已使用":"未使用" }}</view>
+      </view>
+      <view>
+        <view>有效日期</view>
+        <view class="time">{{ messageData.runTimeStr }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 功能模块 -->
+  <view class="function">
+    <view bindtap="detailsSkip">车票详情</view>
+    <view bindtap="evaluate">评价</view>
+  </view>
+</view>

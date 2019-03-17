@@ -1,0 +1,40 @@
+<!--pages/component/resultWin/resultWin.wxml-->
+<cover-view class="mainCont">
+  <icon type="cancel" color="#A7A9AD" size='50rpx' class='closeResultWin'  bindtap="closeResultWin"></icon>
+  <!-- 定制成功 -->
+  <cover-view class='mainItem' wx:if="{{category == 'custom'}}">
+    <cover-image class='itemTitle' src='{{custom.title}}'></cover-image>
+    <cover-view class='itemLink'><cover-view>请到</cover-view><cover-view>我的定制</cover-view><cover-view>查看开通状态</cover-view></cover-view>
+    <cover-view class='itemBg'>
+      <cover-image src='{{custom.backgroundUrl}}'></cover-image>
+    </cover-view>
+    <cover-view class='invite'>
+      <cover-view>邀请好友报名</cover-view>
+      <cover-view>邀请更多朋友报名，加快线路开通</cover-view>
+    </cover-view>
+  </cover-view>
+  <!-- 搜索无结果 -->
+  <cover-view class='mainItem' wx:if="{{category == 'nothing'}}">
+    <cover-image class='itemTitle' src='{{nothing.title}}'></cover-image>
+    <cover-view class='itemLink'><cover-view>您可以进行</cover-view><cover-view>个人定制</cover-view><cover-view>开通线路</cover-view></cover-view>
+    <cover-view class='itemBg'>
+      <cover-image src='{{nothing.backgroundUrl}}'></cover-image>
+    </cover-view>
+    <cover-view class='invite'>
+      <cover-view>进入线路定制</cover-view>
+      <cover-view>自由定制您的专属路线</cover-view>
+    </cover-view>
+  </cover-view>
+  <!-- 报名成功 -->
+  <cover-view class='mainItem' wx:if="{{category == 'apply'}}">
+    <cover-image class='itemTitle' src='{{apply.title}}'></cover-image>
+    <cover-view class='itemLink'><cover-view>请到</cover-view><cover-view>我的班车</cover-view><cover-view>进行预定</cover-view></cover-view>
+    <cover-view class='itemBg'>
+      <cover-image style='height:100%' src='{{apply.backgroundUrl}}'></cover-image>
+    </cover-view>
+    <cover-view class='invite'>
+      <cover-view>邀请好友报名</cover-view>
+      <cover-view>邀请更多朋友报名，加快线路开通</cover-view>
+    </cover-view>
+  </cover-view>
+</cover-view>

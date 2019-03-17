@@ -1,0 +1,298 @@
+/* pages/common/evaluation/evaluation.wxss */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+page {
+  background: #EFEFEF;
+}
+.mian {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  bottom: 1.5rem;
+  left: 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.mian::after {
+  position: absolute;
+  content: "";
+  top: 60%;
+  left: -1.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #EFEFEF;
+  border-radius: 50%;
+}
+.mian::before {
+  position: absolute;
+  content: "";
+  top: 60%;
+  right: -1.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #EFEFEF;
+  border-radius: 50%;
+}
+.mainTop {
+  padding: 1rem 1.5rem 0.5rem;
+  border-bottom: 1px solid #ECECEC;
+}
+.title {
+  font-size: 1.25rem;
+  padding-bottom: 0.625rem;
+}
+.orderStatus , .orderNo {
+  font-size: 0.865rem;
+  padding-bottom: 0.625rem;
+}
+.orderStatus text:first-child , .orderNo text:first-child{
+  margin-right: 2rem; 
+}
+.evaluate {
+  padding: 1rem 2.5rem;
+  overflow: hidden;
+}
+.price {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.price text{
+  font-size: 60%;
+}
+.starLevel {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 0.625rem;
+}
+.starItem {
+  width: 2rem;
+  height: 2rem;
+}
+.evaluateLg {
+  color: #FE4A54;
+  font-size: 0.75rem;
+  text-align: center;
+}
+.advice {
+  padding: 2rem 0 1rem;
+}
+.advice-cont {
+  width: 100%;
+  height: 4rem;
+  font-size: 0.75rem;
+  color: #8A8A8A;
+  background: #EFEFEF;
+  padding: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+} 
+.advice > view {
+  width: 100%;
+  height: 4rem;
+  font-size: 0.75rem;
+  color: #8A8A8A;
+  background: #EFEFEF;
+  padding: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+} 
+.submint {
+  color: #fff;
+  background: #FE4A54;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 5px;
+  border-radius: 5px;
+}
+.lineList {
+  padding: 1rem 1.5rem;
+}
+.subtitle {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  padding-bottom: 0.625rem;
+}
+.listCont {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.625rem;
+}
+.site {
+  font-size: 0.865rem;
+  padding-left: 1rem;
+}
+.site view:first-child ,.site view:last-child {
+  position: relative;
+  padding-bottom: 1rem;
+}
+.site view > text {
+  margin-left: 1rem;
+}
+.site view:first-child::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -1.25rem;
+  height: 0.625rem;
+  width: 0.625rem;
+  background: #fff;
+  border: 2px solid #49BC71;
+  border-radius: 50%;
+  z-index: 9;
+}
+.site view:first-child::after {
+  position: absolute;
+  content: "";
+  top: 0.5rem;
+  left: -0.95rem;
+  height: 100%;
+  border-left: 4px solid #F9F2F3;
+}
+.site view:last-child::before {
+  position: absolute;
+  content: "";
+  top: 0.125rem;
+  left: -1.25rem;
+  height: 0.625rem;
+  width: 0.625rem;
+  background: #fff;
+  border: 2px solid #DD5754;
+  border-radius: 50%;
+  z-index: 9;
+}
+.viewDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.viewDetails image {
+  width:  1.75rem;
+  height: 1.5rem;
+}
+.viewDetails text {
+  font-size: 0.865rem;
+  padding-top: 0.75rem
+}
+/* 线路详情弹窗 */
+.circuitPopUp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.circuitPopUp > .shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: #ddd;
+}
+.circuitPopUp > .circuitBox {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 85%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #FFFFFF;
+  z-index: 100;
+}
+.circuitPopUp > .circuitBox > view:nth-of-type(1) {
+  position: relative;
+  background: #FE4A54;
+  color: #FFFFFF;
+}
+.circuitPopUp > .circuitBox > view:nth-of-type(1) > view:nth-of-type(1) {
+  margin-left: 1rem;
+}
+.circuitPopUp > .circuitBox > view:nth-of-type(1) > view:nth-of-type(2) {
+  position: absolute;
+  top: 0.2rem;
+  right: 1rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1rem;
+  background: #DDDDDD;
+  color: #FFFFFF
+}
+.circuitPopUp > .circuitBox > view:nth-of-type(2){
+  width: 100%;
+}
+.circuitList {
+  width: 100%;
+  max-height: 13rem;
+  overflow-y: scroll;
+  background: #FFFFFF;
+}
+.circuitList > view {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 2rem;
+}
+.circuitList > view > view:nth-of-type(1) {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  flex-grow: 1;
+}
+.circuitList > view > view:nth-of-type(1) > image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  z-index: 10;
+}
+.circuitList > view > view:nth-of-type(1) > view:nth-of-type(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #5CC64D;
+  z-index: 10;
+}
+.circuitList > view > view:nth-of-type(1) > view.VerticalBar {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0.05rem;
+  height: 1.8rem;
+  background: #ddd;
+  z-index: 9;
+}
+.circuitList > view > view:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  flex-grow: 10;
+  height: 100%;
+  border-bottom: 0.05rem solid #ddd;
+}
+.circuitList > view > view:nth-of-type(2) > view {
+
+}

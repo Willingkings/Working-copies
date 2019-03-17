@@ -1,0 +1,41 @@
+<!--pages/mine/myBus/myBus.wxml-->
+<view id="myBusBox">
+  <view class="myBusList">
+    <view bindtap="TypeSele" class="{{ TypeIndex == 0?'sele':'' }}" data-TypeIndex="0">已通过</view>
+    <view></view>
+    <view bindtap="TypeSele" class="{{ TypeIndex == 1?'sele':'' }}" data-TypeIndex="1">未通过</view>
+  </view>
+  <!-- 我的班车列表模块 -->
+  <view class="businessList">
+    <view>
+      <!-- 已通过总容器 -->
+      <view id="directList">
+        <view wx:for="{{ myBusData }}" bindtap='BusDetails' wx:key="{{ myBusData }}" hidden='{{ TypeIndex == 0?item.state != 8:item.state != 7 }}' data-Index="{{ index }}" data-lineCode="{{ item.lineCode }}">
+          <!-- 列表标题 -->
+          <view class="title">
+            <view>已通过报名</view>
+            <view>{{ item.lineName }}</view>    
+          </view>
+          <!-- 列表内容 -->
+          <view class="content">
+            <view class="circle top">
+              <view></view>
+              <view>{{ item.startStation }}</view>
+              <!-- <view>{{ item.runTime }}发车</view> -->
+            </view>
+            <view class="middle">
+              <view class="whippletree"></view>
+              <view class="contentRight">
+                <view>详情</view>
+              </view>
+            </view>
+            <view class="circle bottom">
+              <view></view>
+              <view>{{ item.endStation }}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

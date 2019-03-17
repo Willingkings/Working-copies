@@ -1,0 +1,45 @@
+<!--pages/mine/personalData/personalData.wxml-->
+<view id="personalDataBox">
+  <view class="personalDataList">
+    <view>
+      <view>
+        <view>昵称</view>
+        <view>
+          <open-data type="userNickName" lang="zh_CN"></open-data>
+        </view>
+      </view>
+      <view>
+        <view>></view>
+      </view>
+    </view>
+    <view>
+      <view>
+        <view>性别</view>
+        <view>
+          <open-data type="userGender" lang="zh_CN"></open-data>
+        </view>
+      </view>
+      <view>
+        <view>></view>
+      </view>
+    </view>
+    <view>
+      <view>
+        <view>手机号</view>
+        <view>{{ mobileNo }}</view>
+      </view>
+      <view>
+        <view>></view>
+      </view>
+    </view>
+    <!-- <view bindtap='changePassword'>
+      <view>
+        <view>修改密码</view>
+      </view>
+      <view>
+        <view>></view>
+      </view>
+    </view> -->
+  </view>
+  <!-- <view class="quit" bindtap="quitBtn">退出登陆</view> -->
+</view>

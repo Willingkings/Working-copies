@@ -1,0 +1,55 @@
+<!--pages/specialLine/highSpeedRail/highSpeedRail.wxml-->
+<!-- 高铁专线 -->
+<view id="directBox">
+  <!-- 高铁专线列表总容器 -->
+  <view id="directList">
+    <view wx:for="{{ highSpeedRailListData }}" wx:key="{{ highSpeedRailListData }}" bindtap="trainApply" data-lineCode="{{ item.lineCode }}" data-lineName="{{ item.lineName }}" data-Price="{{ item.ticketPrice }}">
+      <!-- 列表标题 -->
+      <view class="title">{{ item.lineName }}</view>
+      <!-- 列表内容 -->
+      <view class="content">
+        <!-- 车站模块 -->
+        <view class="station">
+          <view class="begin">
+            <view>
+              <image src="/img/icon/origin.png"></image>
+            </view>
+            <view>{{ item.startStationName }}</view>
+            <!-- <view>（时间: 10:30~23:55)</view> -->
+          </view>
+          <view class="middle">
+            <view>
+              <view></view>
+              <view>
+                <view>
+                  <image src="../../../img/icon/duozhan.png"></image>                
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="finish">
+            <view>
+              <image src="/img/icon/terminus.png"></image>
+            </view>
+            <view>{{ item.endStationName }}</view>
+          </view>
+        </view>
+        <!-- 金额模块 -->
+        <view class="money"> 
+          <view>
+            <view>¥</view>
+            <view>{{ item.ticketPrice }}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{  highSpeedRailListData.length == 0  }}" class="empty">
+    <view>
+      <image src="../../../img/background/empty.png"></image>
+      <view>这里什么都没有</view>
+    </view>
+  </view>
+</view>
+
+

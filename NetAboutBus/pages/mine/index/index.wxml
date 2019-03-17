@@ -1,0 +1,73 @@
+<!--pages/mine/index/index.wxml-->
+<!-- 我的模块 -->
+<view id="userIndex">
+  <!-- 用户信息 -->
+  <view class="userMessage" bindtap='personal'>
+    <!-- 用户头像 -->
+    <view class="userImg">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <!-- 用户名字 -->
+    <view class="userName">
+      <view>
+        <view>
+          <open-data type="userNickName"></open-data>
+        </view>
+        <view>
+          <image src="../../../img/icon/modification.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 功能模块 -->
+  <view class="functionBox">
+    <view bindtap='myOrder'>
+      <view>
+        <image src="../../../img/icon/function1.png"></image>
+      </view>
+      <view>我的订单</view>
+    </view>
+    <!-- <view bindtap='wallet'>
+      <view>
+        <image src="../../../img/icon/function2.png"></image>
+      </view>
+      <view>我的钱包</view>
+      <view>
+        <view>20.00</view>
+      </view>
+    </view> -->
+    <view  bindtap='myBus' class="Mar">
+      <view>
+        <image src="../../../img/icon/function3.png"></image>
+      </view>
+      <view>我的班车</view>
+    </view>
+    <view  bindtap='myCustomization'>
+      <view>
+        <image src="../../../img/icon/function4.png"></image>
+      </view>
+      <view>我的定制</view>
+    </view>
+    <!-- <view class="Mar">
+      <view>
+        <image src="../../../img/icon/function5.png"></image>
+      </view>
+      <view>退款细则</view>
+    </view>
+    <view class="Mar">
+      <view>
+        <image src="../../../img/icon/function6.png"></image>
+      </view>
+      <view>意见反馈</view>
+    </view>
+    <view>
+      <view>
+        <image src="../../../img/icon/function7.png"></image>
+      </view>
+      <view>常见问题</view>
+    </view> -->
+  </view>
+</view>
+<view class='tabBar'>
+  <tab-bar category="mine"></tab-bar>
+</view>
